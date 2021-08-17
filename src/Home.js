@@ -411,28 +411,28 @@ function Home() {
                           <div className="btn px-2">9 Am to 10 Am</div>
                         </div>
                         <div className="col-4 pt-3">
-                          <div className="btn px-2">9 Am to 10 Am</div>
+                          <div className="btn px-2">10 Am to 11 Am</div>
                         </div>
                         <div className="col-4 pt-3">
-                          <div className="btn px-2">9 Am to 10 Am</div>
+                          <div className="btn px-2">11 Am to 12 Pm</div>
                         </div>
                         <div className="col-4 pt-3">
-                          <div className="btn px-2">9 Am to 10 Am</div>
+                          <div className="btn px-2">12 Pm to 1 Pm</div>
                         </div>
                         <div className="col-4 pt-3">
-                          <div className="btn px-2">9 Am to 10 Am</div>
+                          <div className="btn px-2">1 Pm to 02 Pm</div>
                         </div>
                         <div className="col-4 pt-3">
-                          <div className="btn px-2">9 Am to 10 Am</div>
+                          <div className="btn px-2">02 Pm to 03 Pm</div>
                         </div>
                         <div className="col-4 pt-3">
-                          <div className="btn px-2">9 Am to 10 Am</div>
+                          <div className="btn px-2">03 Pm to 04 Pm</div>
                         </div>
                         <div className="col-4 pt-3">
-                          <div className="btn px-2">9 Am to 10 Am</div>
+                          <div className="btn px-2">04 Pm to 05 Pm</div>
                         </div>
                         <div className="col-4 pt-3">
-                          <div className="btn px-2">9 Am to 10 Am</div>
+                          <div className="btn px-2">05 Pm to 06 Pm</div>
                         </div>
                       </div>
                     </div>
