@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import parents from "./Images/parents.png";
 import smartphone from "./Images/smartphone.png";
 import ellipse from "./Images/Ellipse.png";
+
+
+
 function Navbar() {
+  const [back, setBack] = useState(false);
+const changeBackground = () => {
+  if (window.scrollY >= 150) {
+    setBack(true);
+  } else {
+    setBack(false);
+  }
+};
+window.addEventListener("scroll", changeBackground);
+
   return (
     <section>
-      <nav className="navbar navbar-expand-lg" style={{ background: "black"}}>
+    <div id="top">..</div>
+      <nav className="navbar navbar-expand-lg fixed-top" style={{ background: "black"}}>
         <div className="container-fluid px-5">
           <NavLink className="navbar-brand" to="/">
             <img
@@ -25,13 +39,13 @@ function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="fa fa-bars" style={{color:"white", fontSize:"27px"}}></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav ml-lg-auto mb-2 mb-lg-0 justify-content-center align-items-center d-flex">
               <div
-                className="d-flex mr-auto align-items-center"
-                style={{ width: "400px" }}
+                className="d-flex mr-lg-auto pt-lg-0 pt-4 align-items-center"                
+                style={{ width: "100%", maxWidth:"400px" }}
               >
               <div
               className="fa fa-map-marker fa-2x position-absolute"
@@ -45,12 +59,13 @@ function Navbar() {
                   aria-label="Search"
                   style={{
                     borderRadius: "50px",
+                    width:"400px",
                     textAlign: "center",
                     maxHeight: "40px",
                   }}
                 />
               </div>
-              <li className="nav-item ml-5 mr-4">
+              <li className="nav-item pt-lg-0 pt-4 ml-5 mr-4">
                 <NavLink
                   to="/services"
                   className="nav-link text-white active"
@@ -59,17 +74,17 @@ function Navbar() {
                   Services
                 </NavLink>
               </li>
-              <li className="nav-item mx-4">
+              <li className="nav-item pt-lg-0 pt-3 mx-4">
                 <NavLink to="/" className="nav-link text-white">
                   Register as Professional
                 </NavLink>
               </li>
-              <li className="nav-item mx-4">
+              <li className="nav-item pt-lg-0 pt-3 mx-4">
                 <NavLink to="/blog" className="nav-link text-white">
                   Blog
                 </NavLink>
               </li>
-              <li className="nav-item ml-4">
+              <li className="nav-item pt-lg-0 pt-3 ml-4">
                 <NavLink
                   to="/"
                   data-target="#mymodal"
@@ -359,7 +374,20 @@ function Navbar() {
           </div>
         </div>
       </div>
-    </section>
+    
+      <div className="backtotop container-fluid justify-content-end d-flex">
+      <a
+        href="#top"
+        className={
+          back
+            ? "back active fa fa-arrow-up fa-lg position-absolute text-decoration-none text-white d-flex justify-content-center align-items-center"
+            : "back fa fa-arrow-up position-absolute text-decoration-none text-white d-none"
+        }
+      >
+        {" "}
+      </a>
+    </div>
+      </section>
   );
 }
 

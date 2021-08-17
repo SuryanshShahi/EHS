@@ -32,10 +32,10 @@ const navtabs = () => {
 
 function Home() {
   return (
-    <section id="home">
-      <div className="mx-5 pt-5">
+    <section id="home" style={{marginTop:"60px"}}>
+      <div className="mx-lg-5 pt-5 pb-3">
         <ul
-          className="nav nav-tabs mx-5 px-2"
+          className="nav nav-tabs mx-4 mx-md-5 mx-lg-5 px-2"
           style={{ borderRadius: "0px 22px 22px 0px" }}
           onClick={navtabs}
         >
@@ -43,6 +43,7 @@ function Home() {
             <a
               className="active font-weight-bolder py-2 tab text-decoration-none"
               type="button"
+              id="ac"
               data-toggle="tab"
               href="#AC"
             >
@@ -140,7 +141,7 @@ function Home() {
           </li>
         </ul>
         <div
-          className="px-2 mx-5 pt-3"
+          className="px-2 mx-4 mx-md-5 mx-lg-5 pt-3"
           style={{
             background: "black",
             // height: "fit-content",
@@ -441,8 +442,8 @@ function Home() {
             </div>
           </div>
 
-          <div className="mx-4 py-4 row">
-            <div className="col">
+          <div className="mx-4 py-4 row homebtn">
+            <div className="col-lg-6 col-md-6 col-sm-6 col-12">
               <div
                 className="btn border-0 text-white float-left"
                 style={{
@@ -454,7 +455,7 @@ function Home() {
                 View Details
               </div>
             </div>
-            <div className="col">
+            <div className="col-lg-6 col-md-6 col-sm-6 col-12 pt-3 pt-lg-0 pt-md-0 pt-sm-0">
               <div
                 className="btn border-0 tab text-white"
                 id="next"

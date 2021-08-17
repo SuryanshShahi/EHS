@@ -39,7 +39,7 @@
   font-weight: bold;
 }
 
-#home{
+#home {
   background-image: url("./Images/bg.png");
   background-position-x: 40px;
   background-repeat: no-repeat;
@@ -65,7 +65,7 @@
   height: 87px;
   border-radius: 20px;
 }
-.nav-tabs a:hover{
+.nav-tabs a:hover {
   /* background-color: #6141ee; */
   background-color: #6141ee8c;
   transition: 0.5s;
@@ -76,36 +76,72 @@
   padding-left: 30px;
 }
 
-.col .btn{
+.homebtn .btn {
   background-color: #4627cf;
 }
-.btn:hover{
+.btn:hover {
   background-color: #6141ee;
   transition: 0.5s;
 }
-#Next li{
+#Next li {
   font-size: 14px;
   font-weight: bold;
   padding-left: 30px;
 }
-.time .btn{
+.time .btn {
   border-width: 2px;
   border-radius: 10px;
   padding: 0;
   border-color: white;
   color: white;
 }
-.time .btn:hover{
+.time .btn:hover {
   background-color: rgba(255, 255, 255, 0.808);
   border-color: rgba(255, 255, 255, 0.705);
   transition: 0.5s;
   font-weight: bold;
   color: black;
 }
-/* .time .btn:focus{
-  background-color: rgba(255, 255, 255, 0.705);
-  border-color: rgba(255, 255, 255, 0.705);
+.footer li {
+  font-size: 14px;
+  cursor: pointer;
+  padding-top: 5px;
+  color: #ffffffb5;
+}
+.footer li:hover {
+  color: #ffc107;
+}
+.fa-bars{
+  padding: 7px 9px;
+}
+.fa-bars:hover{
+  background-color: rgba(150, 149, 149, 0.363);
+  padding: 7px 9px;
   transition: 0.5s;
-  font-weight: bold;
+  border-radius: 50px;
+}
+.socials img{
+  transition: transform 0.7s ease-in-out;
+  cursor: pointer;
+}
+.socials img:hover{
+  transform: rotate(360deg);
+}
+
+.backtotop {
+  position: fixed;
+  float: right;
+  z-index: 999;
+  top: 92%;
+}
+
+.back {
+  height: 40px;
+  width: 40px;
+  background-color: #6141ee;
   color: black;
-} */
+  transition: transform 0.7s ease-in-out;
+}
+.back:hover{
+  transform: rotate(360deg);
+}

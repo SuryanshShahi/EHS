@@ -8,6 +8,7 @@ import Login from "./Login";
 import NavBar from "./Navbar";
 import Blog from "./blog";
 import Services from "./Services";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
 
         <Redirect to="/" />
       </Switch>
+      <Footer/>
     </div>
   );
 }
