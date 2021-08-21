@@ -42,6 +42,7 @@
 #home {
   background-image: url("./Images/bg.png");
   background-position-x: 40px;
+  /* background-size: cover; */
   background-repeat: no-repeat;
 }
 .navbar {
