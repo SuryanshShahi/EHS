@@ -10,7 +10,12 @@ import {
   Electrician,
   Plumber,
   Second,
+  Appliance,
+  Repair,
+  Designing,
 } from "./Data/Content";
+import MultiCarousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import Ac from "./Images/air-conditioner.png";
 import fridge from "./Images/fridge.png";
 import plumber from "./Images/plumber.png";
@@ -20,6 +25,31 @@ import tv from "./Images/tv.png";
 import washingM from "./Images/washing-machine.png";
 import water from "./Images/water-filter.png";
 import painter from "./Images/painter.png";
+
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+    slidesToSlide: 5,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+    slidesToSlide: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+var setting = {
+  responsive: responsive,
+  centerMode: true,
+};
 
 const next = () => {
   document.getElementById("Next").style.display = "block";
@@ -32,7 +62,7 @@ const navtabs = () => {
 
 function Home() {
   return (
-    <section id="home" style={{marginTop:"60px"}}>
+    <section id="home" style={{ marginTop: "60px" }}>
       <div className="mx-lg-5 pt-5 pb-3">
         <ul
           className="nav nav-tabs mx-4 mx-md-5 mx-lg-5 px-2"
@@ -408,7 +438,7 @@ function Home() {
                       </h5>
                       <div className="row time">
                         <div className="col-4 pt-3">
-                          <div className="btn px-2">9 Am to 10 Am</div>
+                          <div className="btn px-2">09 Am to 10 Am</div>
                         </div>
                         <div className="col-4 pt-3">
                           <div className="btn px-2">10 Am to 11 Am</div>
@@ -417,10 +447,10 @@ function Home() {
                           <div className="btn px-2">11 Am to 12 Pm</div>
                         </div>
                         <div className="col-4 pt-3">
-                          <div className="btn px-2">12 Pm to 1 Pm</div>
+                          <div className="btn px-2">12 Pm to 01 Pm</div>
                         </div>
                         <div className="col-4 pt-3">
-                          <div className="btn px-2">1 Pm to 02 Pm</div>
+                          <div className="btn px-2">01 Pm to 02 Pm</div>
                         </div>
                         <div className="col-4 pt-3">
                           <div className="btn px-2">02 Pm to 03 Pm</div>
@@ -471,6 +501,114 @@ function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div
+        className="px-5 py-5 mt-5"
+        style={{ background: "rgb(222 224 236 / 92%)" }}
+      >
+        <div className="justify-content-center d-flex pb-4">
+          <div className="text-center">
+            <div className="font-weight-bolder" style={{ fontSize: "24px" }}>
+              Appliance Repair Service
+            </div>
+            <div> Servicing, installation, uninstallation & repair</div>
+          </div>
+        </div>
+        <MultiCarousel {...setting}>
+          {Appliance.map((elem) => {
+            const { name, image, price } = elem;
+            return (
+              <NavLink
+                to="/products"
+                className="text-decoration-none appliance"
+              >
+                <div className="px-2 pt-4">
+                  <div className="text-center pb-3">
+                    <img src={image} className="img-fluid " alt="menupic"></img>
+                  </div>
+                  <div
+                    className="text-center font-weight-bolder"
+                    style={{ fontSize: "16px", color: "black" }}
+                  >
+                    {name}
+                  </div>
+                </div>
+              </NavLink>
+            );
+          })}
+        </MultiCarousel>
+      </div>
+
+      <div className="px-5 py-5">
+        <div className="justify-content-center d-flex pb-4">
+          <div className="text-center">
+            <div className="font-weight-bolder" style={{ fontSize: "24px" }}>
+              Repair & Maintenence
+            </div>
+            <div> Minor repair, fitting, servicing & many more</div>
+          </div>
+        </div>
+        <MultiCarousel {...setting}>
+          {Repair.map((elem) => {
+            const { name, image, price } = elem;
+            return (
+              <NavLink
+                to="/products"
+                className="text-decoration-none appliance"
+              >
+                <div className="px-2 pt-4">
+                  <div className="text-center pb-3">
+                    <img src={image} className="img-fluid " alt="menupic"></img>
+                  </div>
+                  <div
+                    className="text-center font-weight-bolder"
+                    style={{ fontSize: "16px", color: "black" }}
+                  >
+                    {name}
+                  </div>
+                </div>
+              </NavLink>
+            );
+          })}
+        </MultiCarousel>
+      </div>
+
+      <div
+        className="px-5 py-5"
+        style={{ background: "rgb(222 224 236 / 92%)" }}
+      >
+        <div className="justify-content-center d-flex pb-4">
+          <div className="text-center">
+            <div className="font-weight-bolder" style={{ fontSize: "24px" }}>
+              Painter & Interior Designing
+            </div>
+            <div> House painter, house decor, false ceiling & designing</div>
+          </div>
+        </div>
+        <MultiCarousel {...setting}>
+          {Designing.map((elem) => {
+            const { name, image, price } = elem;
+            return (
+              <NavLink
+                to="/products"
+                className="text-decoration-none appliance"
+              >
+                <div className="px-2 pt-4">
+                  <div className="text-center pb-3">
+                    <img src={image} className="img-fluid" alt="menupic"></img>
+                  </div>
+                  <div
+                    className="text-center font-weight-bolder"
+                    style={{ fontSize: "16px", color: "black" }}
+                  >
+                    {name}
+                  </div>
+                </div>
+              </NavLink>
+            );
+          })}
+        </MultiCarousel>
       </div>
     </section>
   );

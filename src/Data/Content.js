@@ -183,3 +183,78 @@ export const Second = [
   //   amount: "Rs 500",
   // },
 ];
+
+export const Appliance = [
+  {
+    image: "images/Appliance/Appliance-ac.png",
+    name: "AC Service",
+  },
+  {
+    image: "images/Appliance/Appliance-washingmachine.png",
+    name: "Washing Machine",
+  },
+  {
+    image: "images/Appliance/Appliance-tv.png",
+    name: "TV Repair",
+  },
+  {
+    image: "images/Appliance/Appliance-fridge.png",
+    name: "Fridge Repair",
+  },
+  {
+    image: "images/Appliance/Appliance-chimney.png",
+    name: "Chimney",
+  },
+  {
+    image: "images/Appliance/Appliance-cctv.png",
+    name: "CCTV Camera",
+  },
+
+  {
+    image: "images/Appliance/Appliance-microwave.png",
+    name: "Microwave",
+  },
+
+  {
+    image: "images/Appliance/Appliance-inverter.png",
+    name: "Inverter",
+  },
+];
+
+export const Repair = [
+  {
+    image: "images/Repair/Repair-plumber.png",
+    name: "Plumber",
+  },
+  {
+    image: "images/Repair/Repair-electrician.png",
+    name: "Electrician",
+  },
+  {
+    image: "images/Repair/Repair-carpenter.png",
+    name: "Carpenter",
+  },
+  {
+    image: "images/Repair/Repair-handyman.png",
+    name: "Handyman",
+  },
+];
+
+export const Designing = [
+  {
+    image: "images/Painter/painter.png",
+    name: "Painter",
+  },
+  {
+    image: "images/Painter/Painter-house.png",
+    name: "House Interior",
+  },
+  {
+    image: "images/Painter/Painter-faise.png",
+    name: "Faise Ceiling",
+  },
+  {
+    image: "images/Painter/Painter-lightning.png",
+    name: "Lightning",
+  },
+];
