@@ -504,7 +504,7 @@ function Home() {
       </div>
 
       <div
-        className="px-5 py-5 mt-5"
+        className="px-5 py-5 mt-5 position-relative"
         style={{ background: "rgb(222 224 236 / 92%)" }}
       >
         <div className="justify-content-center d-flex pb-4">

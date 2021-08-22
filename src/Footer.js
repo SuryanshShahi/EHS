@@ -8,7 +8,7 @@ import play from "./Images/playstore.png";
 
 function Footer() {
   return (
-    <section>
+    <section id="footer">
       <footer
         className="mt-5 pt-2 text-white footer"
         style={{ background: "black" }}
