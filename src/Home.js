@@ -64,7 +64,7 @@ function Home() {
   return (
     <section style={{ marginTop: "48px" }}>
       <div className="py-5" id="home">
-        <div className="mx-lg-5">
+        <div className="mx-lg-5 position-relative">
           <ul
             className="nav nav-tabs mx-4 mx-md-5 mx-lg-5 px-2"
             style={{ borderRadius: "0px 22px 22px 0px" }}
