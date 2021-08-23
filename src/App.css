@@ -40,9 +40,9 @@
 }
 
 #home {
-  background-image: url("./Images/bg.png");
-  background-position-x: 40px;
-  /* background-size: 165vh; */
+  background-image: url("./Images/bg1.png");
+  /* background-position-x: 40px; */
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .navbar {
@@ -166,7 +166,7 @@
 }
 .react-multiple-carousel__arrow--left {
   left: -1px !important;
-}
+} 
 .react-multiple-carousel__arrow--right {
   right: -1px !important;
 }
@@ -178,7 +178,7 @@
   top: 0;
   border-radius: 20px;
   z-index: -1;
-  box-shadow: 2px 2px 4px 0px #b5b2b29e;
+  box-shadow: 2px 2px 4px 0px #805d5d9e;
   transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .appliance:hover img {
