@@ -27,12 +27,16 @@
   height: 0px;
 }
 .content::-webkit-scrollbar-track {
-  background: black;
+  background: transparent;
   border-radius: 15px;
 }
 #Next::-webkit-scrollbar-track {
-  background: black;
+  background: transparent;
   border-radius: 15px;
+}
+#Next::-webkit-scrollbar {
+  width: 8px;
+  height: 0px;
 }
 ::placeholder {
   color: black;
@@ -69,7 +73,7 @@
 }
 .nav-tabs {
   height: 107px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
   width: fit-content;
   border-bottom: none !important;
 }

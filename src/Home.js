@@ -64,7 +64,7 @@ function Home() {
   return (
     <section style={{ marginTop: "48px" }}>
       <div className="py-5" id="home">
-        <div className="mx-lg-5 position-relative">
+        <div className="mx-lg-5 position-relative pb-1">
           <ul
             className="nav nav-tabs mx-4 mx-md-5 mx-lg-5 px-2"
             style={{ borderRadius: "0px 22px 22px 0px" }}
@@ -174,8 +174,7 @@ function Home() {
           <div
             className="px-2 mx-4 mx-md-5 mx-lg-5 pt-3"
             style={{
-              background: "black",
-              // height: "fit-content",
+              background: "rgba(0, 0, 0, 0.6)",
               maxWidth: "550px",
             }}
           >
@@ -193,14 +192,14 @@ function Home() {
                         <h5>
                           <b>{name}</b>
                         </h5>
-                        <li className="row text-center py-1">
+                        <li className="row py-1">
                           <div className="col">Split {name}</div>
-                          <div className="col">{amount}</div>
+                          <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
-                        <li className="row text-center py-1">
+                        <li className="row py-1">
                           <div className="col">Window {name}</div>
-                          <div className="col">{amount}</div>
+                          <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
                       </ul>
@@ -211,26 +210,66 @@ function Home() {
 
               <div id="Fridge" className="tab-pane fade">
                 <div className="py-2">
-                  {Fridge.map((elem) => {
-                    const { name, amount } = elem;
-                    return (
-                      <ul className="list-unstyled">
-                        <h5>
-                          <b>{name}</b>
-                        </h5>
-                        <li className="row text-center py-1">
-                          <div className="col">Split {name}</div>
-                          <div className="col">{amount}</div>
-                          <div className="col"></div>
-                        </li>
-                        <li className="row text-center py-1">
-                          <div className="col">Window {name}</div>
-                          <div className="col">{amount}</div>
-                          <div className="col"></div>
-                        </li>
-                      </ul>
-                    );
-                  })}
+                  <ul className="list-unstyled">
+                    <h5>
+                      <b>Repair</b>
+                    </h5>
+                    <li className="row py-1">
+                      <div className="col">
+                        Fully Automatic (Top load) Checkup
+                      </div>
+                      <div className="col-2">
+                        <input
+                          type="checkbox"
+                          className="form-check w-25"
+                          style={{ cursor: "pointer" }}
+                        ></input>
+                      </div>
+                    </li>
+                    <li className="row py-1">
+                      <div className="col">
+                        Fully Automatic (Front load) Checkup
+                      </div>
+                      <div className="col-2">
+                        <input
+                          type="checkbox"
+                          className="form-check w-25"
+                          style={{ cursor: "pointer" }}
+                        ></input>
+                      </div>
+                    </li>
+                    <li className="row py-1">
+                      <div className="col">Semi Automatic Checkup</div>
+                      <div className="col-2">
+                        <input
+                          type="checkbox"
+                          className="form-check w-25"
+                          style={{ cursor: "pointer" }}
+                        ></input>
+                      </div>
+                    </li>
+                    <div
+                      className="text-center py-4"
+                      style={{ fontSize: "14px" }}
+                    >
+                      Visiting Charges Rs 299 For Checking
+                    </div>
+
+                    <h5>
+                      <b>Installation</b>
+                    </h5>
+                    {Fridge.map((elem) => {
+                      const { name, amount } = elem;
+                      return (
+                        <div>
+                          <li className="row py-1">
+                            <div className="col">{name}</div>
+                            <div className="col">{amount}</div>
+                          </li>
+                        </div>
+                      );
+                    })}
+                  </ul>
                 </div>
               </div>
 
@@ -243,14 +282,14 @@ function Home() {
                         <h5>
                           <b>{name}</b>
                         </h5>
-                        <li className="row text-center py-1">
+                        <li className="row py-1">
                           <div className="col">Split {name}</div>
-                          <div className="col">{amount}</div>
+                          <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
-                        <li className="row text-center py-1">
+                        <li className="row py-1">
                           <div className="col">Window {name}</div>
-                          <div className="col">{amount}</div>
+                          <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
                       </ul>
@@ -268,14 +307,14 @@ function Home() {
                         <h5>
                           <b>{name}</b>
                         </h5>
-                        <li className="row text-center py-1">
+                        <li className="row py-1">
                           <div className="col">Split {name}</div>
-                          <div className="col">{amount}</div>
+                          <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
-                        <li className="row text-center py-1">
+                        <li className="row py-1">
                           <div className="col">Window {name}</div>
-                          <div className="col">{amount}</div>
+                          <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
                       </ul>
@@ -293,14 +332,14 @@ function Home() {
                         <h5>
                           <b>{name}</b>
                         </h5>
-                        <li className="row text-center py-1">
+                        <li className="row py-1">
                           <div className="col">Split {name}</div>
-                          <div className="col">{amount}</div>
+                          <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
-                        <li className="row text-center py-1">
+                        <li className="row py-1">
                           <div className="col">Window {name}</div>
-                          <div className="col">{amount}</div>
+                          <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
                       </ul>
@@ -318,14 +357,14 @@ function Home() {
                         <h5>
                           <b>{name}</b>
                         </h5>
-                        <li className="row text-center py-1">
+                        <li className="row py-1">
                           <div className="col">Split {name}</div>
-                          <div className="col">{amount}</div>
+                          <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
-                        <li className="row text-center py-1">
+                        <li className="row py-1">
                           <div className="col">Window {name}</div>
-                          <div className="col">{amount}</div>
+                          <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
                       </ul>
@@ -343,14 +382,14 @@ function Home() {
                         <h5>
                           <b>{name}</b>
                         </h5>
-                        <li className="row text-center py-1">
+                        <li className="row py-1">
                           <div className="col">Split {name}</div>
-                          <div className="col">{amount}</div>
+                          <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
-                        <li className="row text-center py-1">
+                        <li className="row py-1">
                           <div className="col">Window {name}</div>
-                          <div className="col">{amount}</div>
+                          <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
                       </ul>
@@ -368,14 +407,14 @@ function Home() {
                         <h5>
                           <b>{name}</b>
                         </h5>
-                        <li className="row text-center py-1">
+                        <li className="row py-1">
                           <div className="col">Split {name}</div>
-                          <div className="col">{amount}</div>
+                          <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
-                        <li className="row text-center py-1">
+                        <li className="row py-1">
                           <div className="col">Window {name}</div>
-                          <div className="col">{amount}</div>
+                          <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
                       </ul>
@@ -389,7 +428,6 @@ function Home() {
               id="Next"
               style={{
                 height: "450px",
-                background: "black",
                 display: "none",
                 overflowY: "auto",
                 color: "white",

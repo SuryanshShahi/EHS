@@ -19,21 +19,20 @@ export const AC = [
 
 export const Fridge = [
   {
-    name: "Fridge Service",
-    amount: "Rs 500",
+    id:"1",
+    name: "Front load Installation",
+    amount: "Rs 350",
   },
   {
-    name: "Fridge Installation",
-    amount: "Rs 500",
+    id:"2",
+    name: "Top load Installation",
+    amount: "Rs 350",
   },
   {
-    name: "Fridge Uninstall",
-    amount: "Rs 500",
-  },
-  {
-    name: "Fridge Gas Filling",
-    amount: "Rs 500",
-  },
+    id:"3",
+    name: "Semi Automatic Installation",
+    amount: "Rs 350",
+  }
 ];
 
 export const WashingMachine = [
@@ -92,6 +91,7 @@ export const RO = [
     amount: "Rs 500",
   },
 ];
+
 export const Painter = [
   {
     name: "Painter Service",
