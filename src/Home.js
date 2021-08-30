@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
   AC,
@@ -16,6 +16,7 @@ import {
 } from "./Data/Content";
 import MultiCarousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+// import bg1 from "./Images/bg.png";
 import Ac from "./Images/air-conditioner.png";
 import fridge from "./Images/fridge.png";
 import plumber from "./Images/plumber.png";
@@ -27,6 +28,30 @@ import water from "./Images/water-filter.png";
 import painter from "./Images/painter.png";
 
 const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+    slidesToSlide: 5,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+    slidesToSlide: 4,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+var setting = {
+  responsive: responsive,
+  centerMode: true,
+};
+const responsive1 = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
     items: 5,
@@ -46,21 +71,57 @@ const responsive = {
     items: 1,
   },
 };
-var setting = {
-  responsive: responsive,
+var settings = {
+  responsive: responsive1,
   centerMode: true,
 };
 
-const next = () => {
-  document.getElementById("Next").style.display = "block";
-  document.getElementById("show").style.display = "none";
-};
-const navtabs = () => {
-  document.getElementById("Next").style.display = "none";
-  document.getElementById("show").style.display = "block";
-};
-
 function Home() {
+  const [count, setCount] = useState(0);
+  const [counter, setCounter] = useState(0);
+
+  const handleIncrement = (id) => {
+    // const updatedImg = AC.filter((curElem) => {
+    //   if (curElem.id === id) {
+    //     // return curElem.id;
+    //     setCount((prevCount) => prevCount + 1);
+    //   console.log(curElem.id);
+    //   }
+    // });
+    setCount((prevCount) => prevCount + 1);
+    // setCount(updatedImg);
+  };
+
+  const handleDecrement = (id) => {
+    setCount((prevCount) => (prevCount - 1 < 0 ? 0 : prevCount - 1));
+  };
+
+  const handleIncrement1 = () => {
+    setCounter((prevCount) => prevCount + 1);
+  };
+
+  const handleDecrement1 = () => {
+    setCounter((prevCount) => (prevCount - 1 < 0 ? 0 : prevCount - 1));
+  };
+
+  const next = () => {
+    document.getElementById("Next").style.display = "block";
+    document.getElementById("show").style.display = "none";
+  };
+  const navtabs = () => {
+    setCount(0);
+    setCounter(0);
+    document.getElementById("Next").style.display = "none";
+    document.getElementById("show").style.display = "block";
+  };
+  const background = () => {
+    document.getElementById("home").style.background =
+      "url('https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F0x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349') fixed no-repeat";
+    document.getElementById("home").style.backgroundSize = "100% 100%";
+  };
+  const Orgbackground = () => {
+    document.getElementById("home").style.background = "";
+  };
   return (
     <section style={{ marginTop: "48px" }}>
       <div className="py-5" id="home">
@@ -77,6 +138,7 @@ function Home() {
                 id="ac"
                 data-toggle="tab"
                 href="#AC"
+                onClick={Orgbackground}
               >
                 <img src={Ac} className="img-fluid"></img>
                 <div className="text-white pt-2">AC Service</div>
@@ -88,6 +150,7 @@ function Home() {
                 type="button"
                 data-toggle="tab"
                 href="#Fridge"
+                onClick={background}
               >
                 <img src={fridge} className="img-fluid"></img>
                 <div className="text-white pt-2">Fridge Repair</div>
@@ -98,6 +161,7 @@ function Home() {
                 className="mx-1 font-weight-bolder px-2 py-2 tab text-decoration-none"
                 type="button"
                 data-toggle="tab"
+                // style={{width:"100px"}}
                 href="#WashingMachine"
               >
                 <img src={washingM} className="img-fluid"></img>
@@ -164,7 +228,7 @@ function Home() {
                 className="mx-1 font-weight-bolder px-2 py-2 tab text-decoration-none"
                 type="button"
                 data-toggle="tab"
-                href="#Plumber"
+                href=""
               >
                 <img src={more} className="img-fluid"></img>
                 <div className="text-white pt-2">More Services</div>
@@ -174,7 +238,7 @@ function Home() {
           <div
             className="px-2 mx-4 mx-md-5 mx-lg-5 pt-3"
             style={{
-              background: "rgba(0, 0, 0, 0.6)",
+              background: "rgba(0, 0, 0, 0.7)",
               maxWidth: "550px",
             }}
           >
@@ -186,7 +250,7 @@ function Home() {
               <div id="AC" className="active tab-pane">
                 <div className="py-2">
                   {AC.map((elem) => {
-                    const { name, amount } = elem;
+                    const { name, amount, id } = elem;
                     return (
                       <ul className="list-unstyled">
                         <h5>
@@ -195,12 +259,68 @@ function Home() {
                         <li className="row py-1">
                           <div className="col">Split {name}</div>
                           <div className="col text-center">{amount}</div>
-                          <div className="col"></div>
+                          <div className="col d-flex justify-content-end pb-2 pr-4 counter">
+                            <div
+                              className="text-white btn"
+                              onClick={() => handleDecrement(id)}
+                              style={{
+                                fontSize: "45px",
+                                marginTop: "-30px",
+                                cursor: "pointer",
+                                height: "0px",
+                              }}
+                            >
+                              -
+                            </div>
+                            <span className="px-2" style={{ fontSize: "17px" }}>
+                              {count}
+                            </span>
+                            <div
+                              className="text-white btn"
+                              onClick={() => handleIncrement(id)}
+                              style={{
+                                fontSize: "30px",
+                                marginTop: "-19px",
+                                cursor: "pointer",
+                                height: "0px",
+                              }}
+                            >
+                              +
+                            </div>
+                          </div>
                         </li>
                         <li className="row py-1">
                           <div className="col">Window {name}</div>
                           <div className="col text-center">{amount}</div>
-                          <div className="col"></div>
+                          <div className="col d-flex justify-content-end pr-4 counter">
+                            <div
+                              className="text-white btn"
+                              onClick={() => handleDecrement1(id)}
+                              style={{
+                                fontSize: "45px",
+                                marginTop: "-30px",
+                                cursor: "pointer",
+                                height: "0px",
+                              }}
+                            >
+                              -
+                            </div>
+                            <span className="px-2" style={{ fontSize: "17px" }}>
+                              {counter}
+                            </span>
+                            <div
+                              className="text-white btn"
+                              onClick={() => handleIncrement1(id)}
+                              style={{
+                                fontSize: "30px",
+                                marginTop: "-19px",
+                                cursor: "pointer",
+                                height: "0px",
+                              }}
+                            >
+                              +
+                            </div>
+                          </div>
                         </li>
                       </ul>
                     );
@@ -221,8 +341,8 @@ function Home() {
                       <div className="col-2">
                         <input
                           type="checkbox"
-                          className="form-check w-25"
-                          style={{ cursor: "pointer" }}
+                          className="form-check"
+                          style={{ cursor: "pointer", width: "18px" }}
                         ></input>
                       </div>
                     </li>
@@ -233,8 +353,8 @@ function Home() {
                       <div className="col-2">
                         <input
                           type="checkbox"
-                          className="form-check w-25"
-                          style={{ cursor: "pointer" }}
+                          className="form-check"
+                          style={{ cursor: "pointer", width: "18px" }}
                         ></input>
                       </div>
                     </li>
@@ -243,28 +363,60 @@ function Home() {
                       <div className="col-2">
                         <input
                           type="checkbox"
-                          className="form-check w-25"
-                          style={{ cursor: "pointer" }}
+                          className="form-check"
+                          style={{ cursor: "pointer", width: "18px" }}
                         ></input>
                       </div>
                     </li>
                     <div
-                      className="text-center py-4"
+                      className="text-center text-success py-4"
                       style={{ fontSize: "14px" }}
                     >
-                      Visiting Charges Rs 299 For Checking
+                      *Visiting Charges Rs 299 For Checking
                     </div>
 
                     <h5>
                       <b>Installation</b>
                     </h5>
                     {Fridge.map((elem) => {
-                      const { name, amount } = elem;
+                      const { name, amount, id } = elem;
                       return (
                         <div>
                           <li className="row py-1">
                             <div className="col">{name}</div>
                             <div className="col">{amount}</div>
+                            <div className="col d-flex justify-content-end pr-4 counter">
+                              <div
+                                className="text-white btn"
+                                onClick={() => handleDecrement(id)}
+                                style={{
+                                  fontSize: "45px",
+                                  marginTop: "-30px",
+                                  cursor: "pointer",
+                                  height: "0px",
+                                }}
+                              >
+                                -
+                              </div>
+                              <span
+                                className="px-2"
+                                style={{ fontSize: "17px" }}
+                              >
+                                {count}
+                              </span>
+                              <div
+                                className="text-white btn"
+                                onClick={() => handleIncrement(id)}
+                                style={{
+                                  fontSize: "30px",
+                                  marginTop: "-19px",
+                                  cursor: "pointer",
+                                  height: "0px",
+                                }}
+                              >
+                                +
+                              </div>
+                            </div>
                           </li>
                         </div>
                       );
@@ -401,7 +553,7 @@ function Home() {
               <div id="Plumber" className="tab-pane fade">
                 <div className="py-2">
                   {Plumber.map((elem) => {
-                    const { name, amount } = elem;
+                    const { name, amount, id } = elem;
                     return (
                       <ul className="list-unstyled">
                         <h5>
@@ -410,12 +562,68 @@ function Home() {
                         <li className="row py-1">
                           <div className="col">Split {name}</div>
                           <div className="col text-center">{amount}</div>
-                          <div className="col"></div>
+                          <div className="col d-flex justify-content-end pr-4 counter">
+                            <div
+                              className="text-white btn"
+                              onClick={() => handleDecrement(id)}
+                              style={{
+                                fontSize: "45px",
+                                marginTop: "-30px",
+                                cursor: "pointer",
+                                height: "0px",
+                              }}
+                            >
+                              -
+                            </div>
+                            <span className="px-2" style={{ fontSize: "17px" }}>
+                              {count}
+                            </span>
+                            <div
+                              className="text-white btn"
+                              onClick={() => handleIncrement(id)}
+                              style={{
+                                fontSize: "30px",
+                                marginTop: "-19px",
+                                cursor: "pointer",
+                                height: "0px",
+                              }}
+                            >
+                              +
+                            </div>
+                          </div>
                         </li>
                         <li className="row py-1">
                           <div className="col">Window {name}</div>
                           <div className="col text-center">{amount}</div>
-                          <div className="col"></div>
+                          <div className="col d-flex justify-content-end pr-4 counter">
+                            <div
+                              className="text-white btn"
+                              onClick={() => handleDecrement1(id)}
+                              style={{
+                                fontSize: "45px",
+                                marginTop: "-30px",
+                                cursor: "pointer",
+                                height: "0px",
+                              }}
+                            >
+                              -
+                            </div>
+                            <span className="px-2" style={{ fontSize: "17px" }}>
+                              {counter}
+                            </span>
+                            <div
+                              className="text-white btn"
+                              onClick={() => handleIncrement1(id)}
+                              style={{
+                                fontSize: "30px",
+                                marginTop: "-19px",
+                                cursor: "pointer",
+                                height: "0px",
+                              }}
+                            >
+                              +
+                            </div>
+                          </div>
                         </li>
                       </ul>
                     );
@@ -461,10 +669,13 @@ function Home() {
                           type="date"
                           id="Date"
                           name="Date"
-                          className="border-0 text-center"
+                          className="border-0 text-center pr-3"
                           style={{
                             outline: "none",
                             height: "40px",
+                            borderRadius: "50px",
+                            color: "white",
+                            background: "#ffffff59",
                             cursor: "pointer",
                             fontSize: "17px",
                           }}
@@ -512,7 +723,7 @@ function Home() {
             </div>
 
             <div className="mx-4 py-4 row homebtn">
-              <div className="col-lg-6 col-md-6 col-sm-6 col-12">
+              <div className="col-lg-6 col-md-6 col-sm-6 col-19">
                 <div
                   className="btn border-0 text-white float-left"
                   style={{
@@ -524,7 +735,7 @@ function Home() {
                   View Details
                 </div>
               </div>
-              <div className="col-lg-6 col-md-6 col-sm-6 col-12 pt-3 pt-lg-0 pt-md-0 pt-sm-0">
+              <div className="col-lg-6 col-md-6 col-sm-6 col-19 pt-3 pt-lg-0 pt-md-0 pt-sm-0">
                 <div
                   className="btn border-0 tab text-white"
                   id="next"
@@ -589,7 +800,7 @@ function Home() {
             <div> Minor repair, fitting, servicing & many more</div>
           </div>
         </div>
-        <MultiCarousel {...setting}>
+        <MultiCarousel {...settings}>
           {Repair.map((elem) => {
             const { name, image, price } = elem;
             return (
@@ -626,7 +837,7 @@ function Home() {
             <div> House painter, house decor, false ceiling & designing</div>
           </div>
         </div>
-        <MultiCarousel {...setting}>
+        <MultiCarousel {...settings}>
           {Designing.map((elem) => {
             const { name, image, price } = elem;
             return (

@@ -1,17 +1,21 @@
 export const AC = [
   {
+    id:"1",
     name: "AC Service",
     amount: "Rs 500",
   },
   {
+    id:"2",
     name: "AC Installation",
     amount: "Rs 500",
   },
   {
+    id:"3",
     name: "AC Uninstall",
     amount: "Rs 500",
   },
   {
+    id:"4",
     name: "AC Gas Filling",
     amount: "Rs 500",
   },
@@ -19,17 +23,17 @@ export const AC = [
 
 export const Fridge = [
   {
-    id:"1",
+    id:"11",
     name: "Front load Installation",
     amount: "Rs 350",
   },
   {
-    id:"2",
+    id:"12",
     name: "Top load Installation",
     amount: "Rs 350",
   },
   {
-    id:"3",
+    id:"13",
     name: "Semi Automatic Installation",
     amount: "Rs 350",
   }
@@ -132,18 +136,22 @@ export const Electrician = [
 
 export const Plumber = [
   {
+    id:"11",
     name: "Plumber Service",
     amount: "Rs 500",
   },
   {
+    id:"12",
     name: "Plumber Installation",
     amount: "Rs 500",
   },
   {
+    id:"13",
     name: "Plumber Uninstall",
     amount: "Rs 500",
   },
   {
+    id:"14",
     name: "Plumber Gas Filling",
     amount: "Rs 500",
   },

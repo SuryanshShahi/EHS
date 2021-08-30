@@ -44,10 +44,11 @@
 }
 
 #home {
-  background-image: url("./Images/bg1.png");
+  background: url("./Images/bg1.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
+  transition: 0.9s;
 }
 
 @media (min-width: 0px) {
@@ -73,7 +74,7 @@
 }
 .nav-tabs {
   height: 107px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   width: fit-content;
   border-bottom: none !important;
 }
@@ -81,7 +82,7 @@
 .nav-tabs a {
   margin: 10px;
   text-align: center;
-  width: 100px;
+  min-width: 100px;
   font-size: 12px;
   height: 87px;
   border-radius: 20px;
@@ -123,6 +124,7 @@
   font-weight: bold;
   color: black;
 }
+
 .footer li {
   font-size: 14px;
   cursor: pointer;
@@ -216,7 +218,16 @@
   z-index: -1;
 }
 .appliance:hover::before {
-  background: rgba(0, 0, 0, 0.4);
+  background: #00000066;
   z-index: 1;
   top: 0;
+}
+
+/* .counter .btn{
+  background-color: transparent;
+  border-radius: 50px;
+} */
+.counter .btn:hover{
+  background-color: transparent;
+  border-radius: 50px;
 }
