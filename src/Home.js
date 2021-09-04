@@ -126,11 +126,12 @@ function Home() {
     <section style={{ marginTop: "48px" }}>
       <div className="py-5" id="home">
         <div className="mx-lg-5 position-relative pb-1">
-          <ul
-            className="nav nav-tabs mx-4 mx-md-5 mx-lg-5 px-2"
-            style={{ borderRadius: "0px 22px 22px 0px" }}
+        <ul
+            className="nav nav-tabs mx-4 mx-md-5 mx-lg-5 px-2 d-flex"
+            style={{ borderRadius: "0px 22px 22px 0px",overflowX:"auto" }}
             onClick={navtabs}
           >
+          
             <li>
               <a
                 className="active font-weight-bolder py-2 tab text-decoration-none"
@@ -161,7 +162,7 @@ function Home() {
                 className="mx-1 font-weight-bolder px-2 py-2 tab text-decoration-none"
                 type="button"
                 data-toggle="tab"
-                // style={{width:"100px"}}
+                style={{width:"112px"}}
                 href="#WashingMachine"
               >
                 <img src={washingM} className="img-fluid"></img>
@@ -234,7 +235,7 @@ function Home() {
                 <div className="text-white pt-2">More Services</div>
               </a>
             </li>
-          </ul>
+            </ul>
           <div
             className="px-2 mx-4 mx-md-5 mx-lg-5 pt-3"
             style={{

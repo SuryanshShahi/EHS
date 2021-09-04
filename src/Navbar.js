@@ -4,23 +4,24 @@ import parents from "./Images/parents.png";
 import smartphone from "./Images/smartphone.png";
 import ellipse from "./Images/Ellipse.png";
 
-
-
 function Navbar() {
   const [back, setBack] = useState(false);
-const changeBackground = () => {
-  if (window.scrollY >= 150) {
-    setBack(true);
-  } else {
-    setBack(false);
-  }
-};
-window.addEventListener("scroll", changeBackground);
+  const backtotop = () => {
+    if (window.scrollY >= 150) {
+      setBack(true);
+    } else {
+      setBack(false);
+    }
+  };
+  window.addEventListener("scroll", backtotop);
 
   return (
     <section>
-    <div id="top">..</div>
-      <nav className="navbar navbar-expand-lg fixed-top" style={{ background: "black"}}>
+      <div id="top">..</div>
+      <nav
+        className="navbar navbar-expand-lg fixed-top"
+        style={{ background: "black" }}
+      >
         <div className="container-fluid px-5">
           <NavLink className="navbar-brand" to="/">
             <img
@@ -39,19 +40,22 @@ window.addEventListener("scroll", changeBackground);
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="fa fa-bars" style={{color:"white", fontSize:"27px"}}></span>
+            <span
+              className="fa fa-bars"
+              style={{ color: "white", fontSize: "27px" }}
+            ></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-lg-auto mb-2 mb-lg-0 justify-content-center align-items-center d-flex">
               <div
-                className="d-flex mr-lg-auto pt-lg-0 pt-4 align-items-center"                
-                style={{ width: "100%", maxWidth:"400px" }}
+                className="d-flex mr-lg-auto pt-lg-0 pt-4 align-items-center"
+                style={{ width: "100%", maxWidth: "400px" }}
               >
-              <div
-              className="fa fa-map-marker fa-2x position-absolute"
-              style={{ padding: "3px 10px" }}
-            ></div>
-                
+                <div
+                  className="fa fa-map-marker fa-2x position-absolute"
+                  style={{ padding: "3px 10px" }}
+                ></div>
+
                 <input
                   className="form-control border-0"
                   type="search"
@@ -59,7 +63,7 @@ window.addEventListener("scroll", changeBackground);
                   aria-label="Search"
                   style={{
                     borderRadius: "50px",
-                    width:"400px",
+                    width: "400px",
                     textAlign: "center",
                     maxHeight: "40px",
                   }}
@@ -70,6 +74,8 @@ window.addEventListener("scroll", changeBackground);
                   to="/services"
                   className="nav-link text-white active"
                   aria-current="page"
+                  // data-toggle="collapse"
+                  // data-target="#navbarTogglerDemo02"
                 >
                   Services
                 </NavLink>
@@ -130,7 +136,7 @@ window.addEventListener("scroll", changeBackground);
                 Continue with Phone
               </div>
               <div className="justify-content-center d-flex pb-5">
-            <img src={smartphone} className="img-fluid"></img>
+                <img src={smartphone} className="img-fluid"></img>
               </div>
               <div className="justify-content-center d-flex pt-3 pb-4">
                 <input
@@ -141,7 +147,7 @@ window.addEventListener("scroll", changeBackground);
                     borderRadius: "50px",
                     borderWidth: "2.5px",
                     borderColor: "black",
-                    color:"black"
+                    color: "black",
                   }}
                 ></input>
               </div>
@@ -197,7 +203,7 @@ window.addEventListener("scroll", changeBackground);
                 OTP
               </div>
               <div className="justify-content-center d-flex pb-3">
-              <img src={smartphone} className="img-fluid"></img>
+                <img src={smartphone} className="img-fluid"></img>
               </div>
               <div className="font-weight-bolder" style={{ fontSize: "26px" }}>
                 Enter Verification Code
@@ -227,7 +233,7 @@ window.addEventListener("scroll", changeBackground);
                     borderRadius: "50px",
                     borderWidth: "2.5px",
                     borderColor: "black",
-                    color:"black"
+                    color: "black",
                   }}
                 ></input>
               </div>
@@ -291,7 +297,7 @@ window.addEventListener("scroll", changeBackground);
                 OTP
               </div>
               <div className="justify-content-center d-flex pb-3">
-              <img src={parents} className="img-fluid"></img>
+                <img src={parents} className="img-fluid"></img>
               </div>
 
               <div className="justify-content-center d-flex pt-3 pb-1">
@@ -303,7 +309,7 @@ window.addEventListener("scroll", changeBackground);
                     borderRadius: "50px",
                     borderWidth: "2.5px",
                     borderColor: "black",
-                    color:"black"
+                    color: "black",
                   }}
                 ></input>
               </div>
@@ -316,7 +322,7 @@ window.addEventListener("scroll", changeBackground);
                     borderRadius: "50px",
                     borderWidth: "2.5px",
                     borderColor: "black",
-                    color:"black"
+                    color: "black",
                   }}
                 ></input>
               </div>
@@ -374,20 +380,20 @@ window.addEventListener("scroll", changeBackground);
           </div>
         </div>
       </div>
-    
+
       <div className="backtotop container-fluid justify-content-end d-flex">
-      <a
-        href="#top"
-        className={
-          back
-            ? "back active fa fa-arrow-up fa-lg position-absolute text-decoration-none text-white d-flex justify-content-center align-items-center"
-            : "back fa fa-arrow-up position-absolute text-decoration-none text-white d-none"
-        }
-      >
-        {" "}
-      </a>
-    </div>
-      </section>
+        <a
+          href="#top"
+          className={
+            back
+              ? "back active fa fa-arrow-up fa-lg position-absolute text-decoration-none text-white d-flex justify-content-center align-items-center"
+              : "back fa fa-arrow-up position-absolute text-decoration-none text-white d-none"
+          }
+        >
+          {" "}
+        </a>
+      </div>
+    </section>
   );
 }
 

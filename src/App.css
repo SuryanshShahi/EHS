@@ -87,6 +87,10 @@
   height: 87px;
   border-radius: 20px;
 }
+/* .nav-tabs{
+  overflow-x: scroll;
+} */
+
 .nav-tabs a:hover {
   /* background-color: #6141ee; */
   background-color: #6141ee8c;
@@ -227,7 +231,12 @@
   background-color: transparent;
   border-radius: 50px;
 } */
-.counter .btn:hover{
+.counter .btn:hover {
   background-color: transparent;
   border-radius: 50px;
+}
+@media(max-width:600px){
+  .nav-tabs{
+    border-radius: 0 !important;
+  }
 }
