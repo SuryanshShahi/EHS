@@ -81,15 +81,7 @@ function Home() {
   const [counter, setCounter] = useState(0);
 
   const handleIncrement = (id) => {
-    // const updatedImg = AC.filter((curElem) => {
-    //   if (curElem.id === id) {
-    //     // return curElem.id;
-    //     setCount((prevCount) => prevCount + 1);
-    //   console.log(curElem.id);
-    //   }
-    // });
     setCount((prevCount) => prevCount + 1);
-    // setCount(updatedImg);
   };
 
   const handleDecrement = (id) => {
@@ -251,14 +243,14 @@ function Home() {
               <div id="AC" className="active tab-pane">
                 <div className="py-2">
                   {AC.map((elem) => {
-                    const { name, amount, id } = elem;
+                    const { name, amount, id, subServices } = elem;
                     return (
                       <ul className="list-unstyled">
                         <h5>
                           <b>{name}</b>
                         </h5>
                         <li className="row py-1">
-                          <div className="col">Split {name}</div>
+                          <div className="col">{subServices[0]["name1"]}</div>                          
                           <div className="col text-center">{amount}</div>
                           <div className="col d-flex justify-content-end pb-2 pr-4 counter">
                             <div
@@ -737,7 +729,7 @@ function Home() {
                 </div>
               </div>
               <div className="col-lg-6 col-md-6 col-sm-6 col-19 pt-3 pt-lg-0 pt-md-0 pt-sm-0">
-                <div
+                <NavLink to="/WashingMachine"><div
                   className="btn border-0 tab text-white"
                   id="next"
                   style={{
@@ -748,7 +740,7 @@ function Home() {
                   onClick={next}
                 >
                   Next
-                </div>
+                </div></NavLink>
               </div>
             </div>
           </div>

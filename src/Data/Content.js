@@ -3,22 +3,32 @@ export const AC = [
     id:"1",
     name: "AC Service",
     amount: "Rs 500",
+    subServices:[
+      {
+        name1:"split AC",
+        count:0
+      },
+      {
+        name1:"window AC",
+        count:0 
+      }
+    ]
   },
-  {
-    id:"2",
-    name: "AC Installation",
-    amount: "Rs 500",
-  },
-  {
-    id:"3",
-    name: "AC Uninstall",
-    amount: "Rs 500",
-  },
-  {
-    id:"4",
-    name: "AC Gas Filling",
-    amount: "Rs 500",
-  },
+  // {
+  //   id:"2",
+  //   name: "AC Installation",
+  //   amount: "Rs 500",
+  // },
+  // {
+  //   id:"3",
+  //   name: "AC Uninstall",
+  //   amount: "Rs 500",
+  // },
+  // {
+  //   id:"4",
+  //   name: "AC Gas Filling",
+  //   amount: "Rs 500",
+  // },
 ];
 
 export const Fridge = [
