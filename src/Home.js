@@ -118,12 +118,11 @@ function Home() {
     <section style={{ marginTop: "48px" }}>
       <div className="py-5" id="home">
         <div className="mx-lg-5 position-relative pb-1">
-        <ul
+          <ul
             className="nav nav-tabs mx-4 mx-md-5 mx-lg-5 px-2 d-flex"
-            style={{ borderRadius: "0px 22px 22px 0px",overflowX:"auto" }}
+            style={{ borderRadius: "0px 22px 22px 0px", overflowX: "auto" }}
             onClick={navtabs}
           >
-          
             <li>
               <a
                 className="active font-weight-bolder py-2 tab text-decoration-none"
@@ -154,7 +153,7 @@ function Home() {
                 className="mx-1 font-weight-bolder px-2 py-2 tab text-decoration-none"
                 type="button"
                 data-toggle="tab"
-                style={{width:"112px"}}
+                style={{ width: "112px" }}
                 href="#WashingMachine"
               >
                 <img src={washingM} className="img-fluid"></img>
@@ -227,7 +226,7 @@ function Home() {
                 <div className="text-white pt-2">More Services</div>
               </a>
             </li>
-            </ul>
+          </ul>
           <div
             className="px-2 mx-4 mx-md-5 mx-lg-5 pt-3"
             style={{
@@ -250,7 +249,7 @@ function Home() {
                           <b>{name}</b>
                         </h5>
                         <li className="row py-1">
-                          <div className="col">{subServices[0]["name1"]}</div>                          
+                          <div className="col">{subServices[0]["name1"]}</div>
                           <div className="col text-center">{amount}</div>
                           <div className="col d-flex justify-content-end pb-2 pr-4 counter">
                             <div
@@ -421,14 +420,14 @@ function Home() {
               <div id="WashingMachine" className="tab-pane fade">
                 <div className="py-2">
                   {WashingMachine.map((elem) => {
-                    const { name, amount } = elem;
+                    const { name, amount, subServices } = elem;
                     return (
                       <ul className="list-unstyled">
                         <h5>
                           <b>{name}</b>
                         </h5>
                         <li className="row py-1">
-                          <div className="col">Split {name}</div>
+                          <div className="col">{subServices[0]["name1"]}</div>
                           <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
@@ -446,14 +445,14 @@ function Home() {
               <div id="TV" className="tab-pane fade">
                 <div className="py-2">
                   {TV.map((elem) => {
-                    const { name, amount } = elem;
+                    const { name, amount, subServices } = elem;
                     return (
                       <ul className="list-unstyled">
                         <h5>
                           <b>{name}</b>
                         </h5>
                         <li className="row py-1">
-                          <div className="col">Split {name}</div>
+                          <div className="col">{subServices[0]["name1"]}</div>
                           <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
@@ -471,14 +470,14 @@ function Home() {
               <div id="RO" className="tab-pane fade">
                 <div className="py-2">
                   {RO.map((elem) => {
-                    const { name, amount } = elem;
+                    const { name, amount, subServices } = elem;
                     return (
                       <ul className="list-unstyled">
                         <h5>
                           <b>{name}</b>
                         </h5>
                         <li className="row py-1">
-                          <div className="col">Split {name}</div>
+                          <div className="col">{subServices[0]["name1"]}</div>
                           <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
@@ -496,14 +495,14 @@ function Home() {
               <div id="Painter" className="tab-pane fade">
                 <div className="py-2">
                   {Painter.map((elem) => {
-                    const { name, amount } = elem;
+                    const { name, amount, subServices } = elem;
                     return (
                       <ul className="list-unstyled">
                         <h5>
                           <b>{name}</b>
                         </h5>
                         <li className="row py-1">
-                          <div className="col">Split {name}</div>
+                          <div className="col">{subServices[0]["name1"]}</div>
                           <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
@@ -521,14 +520,14 @@ function Home() {
               <div id="Electrician" className="tab-pane fade">
                 <div className="py-2">
                   {Electrician.map((elem) => {
-                    const { name, amount } = elem;
+                    const { name, amount, subServices } = elem;
                     return (
                       <ul className="list-unstyled">
                         <h5>
                           <b>{name}</b>
                         </h5>
                         <li className="row py-1">
-                          <div className="col">Split {name}</div>
+                          <div className="col">{subServices[0]["name1"]}</div>
                           <div className="col text-center">{amount}</div>
                           <div className="col"></div>
                         </li>
@@ -546,14 +545,14 @@ function Home() {
               <div id="Plumber" className="tab-pane fade">
                 <div className="py-2">
                   {Plumber.map((elem) => {
-                    const { name, amount, id } = elem;
+                    const { name, amount, subServices, id } = elem;
                     return (
                       <ul className="list-unstyled">
                         <h5>
                           <b>{name}</b>
                         </h5>
                         <li className="row py-1">
-                          <div className="col">Split {name}</div>
+                          <div className="col">{subServices[0]["name1"]}</div>
                           <div className="col text-center">{amount}</div>
                           <div className="col d-flex justify-content-end pr-4 counter">
                             <div
@@ -730,17 +729,19 @@ function Home() {
                 </div>
               </div>
               <div className="col-lg-6 col-md-6 col-sm-6 col-19 pt-3 pt-lg-0 pt-md-0 pt-sm-0">
-                <NavLink to="/WashingMachine"><div
-                  className="btn border-0 tab text-white"
-                  id="next"
-                  style={{
-                    borderRadius: "50px",
-                    width: "100%",
-                    padding: "11px 0px",
-                  }}
-                >
-                  Next
-                </div></NavLink>
+                <NavLink to="/WashingMachine">
+                  <div
+                    className="btn border-0 tab text-white"
+                    id="next"
+                    style={{
+                      borderRadius: "50px",
+                      width: "100%",
+                      padding: "11px 0px",
+                    }}
+                  >
+                    Next
+                  </div>
+                </NavLink>
               </div>
             </div>
           </div>
