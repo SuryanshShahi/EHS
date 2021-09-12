@@ -724,6 +724,7 @@ function Home() {
                     width: "100%",
                     padding: "11px 0px",
                   }}
+                  onClick={next}
                 >
                   View Details
                 </div>
@@ -737,7 +738,6 @@ function Home() {
                     width: "100%",
                     padding: "11px 0px",
                   }}
-                  onClick={next}
                 >
                   Next
                 </div></NavLink>

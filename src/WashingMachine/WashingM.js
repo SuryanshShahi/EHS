@@ -15,7 +15,6 @@ import {
   Designing,
 } from "../Data/Content";
 import "./WashingM.css";
-import MultiCarousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Vector from "./Images/Vector.png";
 import Date from "./Images/date.png";
@@ -31,15 +30,7 @@ function WashingM() {
   const [counter, setCounter] = useState(0);
 
   const handleIncrement = (id) => {
-    // const updatedImg = AC.filter((curElem) => {
-    //   if (curElem.id === id) {
-    //     // return curElem.id;
-    //     setCount((prevCount) => prevCount + 1);
-    //   console.log(curElem.id);
-    //   }
-    // });
     setCount((prevCount) => prevCount + 1);
-    // setCount(updatedImg);
   };
 
   const handleDecrement = (id) => {
@@ -54,25 +45,6 @@ function WashingM() {
     setCounter((prevCount) => (prevCount - 1 < 0 ? 0 : prevCount - 1));
   };
 
-  const next = () => {
-    document.getElementById("Next").style.display = "block";
-    document.getElementById("show").style.display = "none";
-    document.getElementById("ViewDetails").style.display = "none";
-  };
-  const navtabs = () => {
-    setCount(0);
-    setCounter(0);
-    document.getElementById("Next").style.display = "none";
-    document.getElementById("show").style.display = "block";
-  };
-  const background = () => {
-    document.getElementById("home").style.background =
-      "url('https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F0x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349') fixed no-repeat";
-    document.getElementById("home").style.backgroundSize = "100% 100%";
-  };
-  const Orgbackground = () => {
-    document.getElementById("home").style.background = "";
-  };
   return (
     <section style={{ marginTop: "48px" }}>
       <div className="py-5 " id="WashingM">
@@ -88,10 +60,10 @@ function WashingM() {
               </ul>
             </div>
           </div>
-          <div className="col-lg-6 col-md-6 col-12">
-            <div className="mx-lg-5 position-relative py-3 justify-content-end d-flex">
+          <div className="col-lg-6 col-md-6 col-12 justify-content-center justify-content-lg-end d-flex">
+            <div className="px-lg-5 position-relative py-3">
               <div
-                className="px-2 mx-4 mx-md-5 mx-lg-5 pt-3"
+                className="pt-3 px-2"
                 style={{
                   background: "rgba(0, 0, 0, 0.8)",
                   // background: "black",
@@ -99,9 +71,9 @@ function WashingM() {
                 }}
               >
                 <div
-                  className="tab-content text-white px-4 content overflow-auto"
+                  className="tab-content text-white content overflow-auto px-2 px-lg-4"
                   id="show"
-                  style={{ height: "450px" }}
+                  style={{ height: "450px"}}
                 >
                   <div id="Fridge" className="active tab-pane">
                     <div className="py-2">
@@ -291,21 +263,8 @@ function WashingM() {
                   </div>
                 </div>
 
-                <div className="mx-4 py-4 row homebtn">
-                  <div className="col-lg-6 col-md-6 col-sm-6 col-19">
-                    <div
-                      className="btn border-0 text-white float-left"
-                      id="ViewDetails"
-                      style={{
-                        borderRadius: "50px",
-                        width: "100%",
-                        padding: "11px 0px",
-                      }}
-                    >
-                      View Details
-                    </div>
-                  </div>
-                  <div className="col-lg-6 col-md-6 col-sm-6 col-19 pt-3 pt-lg-0 pt-md-0 pt-sm-0">
+                <div className="mx-5 py-4 row homebtn">
+                   <div className="pt-3 pt-lg-0 pt-md-0 pt-sm-0">
                     <div
                       className="btn border-0 tab text-white"
                       id="next"
@@ -314,7 +273,6 @@ function WashingM() {
                         width: "100%",
                         padding: "11px 0px",
                       }}
-                      onClick={next}
                     >
                       Next
                     </div>
@@ -341,7 +299,7 @@ function WashingM() {
             <span style={{ fontSize: "17px" }}>3 steps booking process</span>
           </div>
           <div className="row text-center pb-5">
-            <div className="col-lg-4 col-md-4 col-12">
+            <div className="col-lg-4 col-md-4 col-12 pb-5">
               <img src={Vector} className="img-fluid"></img>
               <div
                 className="font-weight-bolder pt-3"
@@ -350,7 +308,7 @@ function WashingM() {
                 Choose service you need
               </div>
             </div>
-            <div className="col-lg-4 col-md-4 col-12">
+            <div className="col-lg-4 col-md-4 col-12 pb-5">
               <img src={Date} className="img-fluid"></img>
               <div
                 className="font-weight-bolder pt-3"
@@ -359,7 +317,7 @@ function WashingM() {
                 Choose your date & time slot
               </div>
             </div>
-            <div className="col-lg-4 col-md-4 col-12">
+            <div className="col-lg-4 col-md-4 col-12 pb-2">
               <img src={Sit} className="img-fluid"></img>
               <div
                 className="font-weight-bolder pt-3"
@@ -372,7 +330,7 @@ function WashingM() {
         </div>
       </div>
 
-      <div className="container-fluid px-5">
+      <div className="container-fluid px-lg-5">
         <div className="text-center py-5">
           <h4
             className="font-weight-bolder"
@@ -383,7 +341,7 @@ function WashingM() {
           <div style={{ fontSize: "17px" }}>Approx time: 1 Hour</div>
         </div>
         <div className="container-fluid px-lg-5">
-          <div className="row pb-4 px-5" style={{ fontSize: "16.5px" }}>
+          <div className="row pb-4 px-lg-5" style={{ fontSize: "16.5px" }}>
             <div className="col-lg-6 col-md-6 col-12 list-unstyled pb-5">
               <li>
                 <div className="fa fa-check-circle pr-2 text-"></div>Servicing
@@ -429,7 +387,7 @@ function WashingM() {
         className=""
         style={{ backgroundColor: "rgba(222, 224, 236, 0.92)" }}
       >
-        <div className="container-fluid px-5">
+        <div className="container-fluid px-lg-5 px-md-4">
           <div className="text-center py-5">
             <h4
               className="font-weight-bolder"
@@ -575,7 +533,7 @@ function WashingM() {
         </div>
       </div>
 
-      <div className="container-fluid px-5">
+      <div className="container-fluid px-lg-5 px-md-5 px-sm-4">
         <div className="py-5">
           <h4
             className="font-weight-bolder text-center pb-4"
@@ -583,7 +541,7 @@ function WashingM() {
           >
             All About Washing Machine Repair in Chandigarh
           </h4>
-          <div className="mx-5" style={{ fontSize: "17px" }}>
+          <div className="mx-lg-5" style={{ fontSize: "17px" }}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -599,9 +557,9 @@ function WashingM() {
             versions of Lorem Ipsum.
           </div>
         </div>
-        <div className="container-fluid px-lg-5">
-          <div className="row pb-4 px-5" style={{ fontSize: "16.5px" }}>
-            <div className="col-lg-6 col-md-6 col-12 list-unstyled pb-5 px-4">
+        <div className="px-lg-5">
+          <div className="row pb-4 px-lg-5" style={{ fontSize: "16.5px" }}>
+            <div className="col-lg-6 col-md-6 col-12 list-unstyled pb-5 px-lg-4">
               <b>5 Common Washing Machine Problems</b>
               <ol className="ml-4">
                 <li className="pt-2">
@@ -631,7 +589,7 @@ function WashingM() {
                 </li>
               </ol>
             </div>
-            <div className="col-lg-6 col-md-6 col-12 list-unstyled px-4">
+            <div className="col-lg-6 col-md-6 col-12 list-unstyled px-lg-4">
               <b>
                 Why Epic Home Service for Washing Machine Repair Service in
                 Chandigarh{" "}
@@ -659,7 +617,7 @@ function WashingM() {
                 </li>
               </ol>
             </div>
-            <div className="col-lg-6 col-md-6 col-12 list-unstyled px-4">
+            <div className="col-lg-6 col-md-6 col-12 list-unstyled px-lg-4">
               <b>Service offered in Washing Machine Repaired</b>
               <ol className="ml-4">
                 <li className="pt-2">
