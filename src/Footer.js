@@ -10,11 +10,11 @@ function Footer() {
   return (
     <section id="footer">
       <footer
-        className="mt-5 pt-2 text-white footer"
+        className="pt-2 text-white footer"
         style={{ background: "black" }}
       >
         <div className="row mx-5 py-4">
-          <div className="col-lg-2 col-6 pb-3">
+          <div className="col-lg-3 col-6 pb-3">
             <b>CITIES WE SERVE</b>
             <ul className="list-unstyled pt-2">
               <li>Chandigarh</li>
@@ -26,7 +26,7 @@ function Footer() {
               <li>Noida</li>
             </ul>
           </div>
-          <div className="col-lg-2 col-6 pb-3">
+          <div className="col-lg-3 col-6 pb-3">
             <b>COMPANY</b>
             <ul className="list-unstyled pt-2">
               <li>About us</li>
@@ -39,7 +39,7 @@ function Footer() {
               <li>Near Me Services</li>
             </ul>
           </div>
-          <div className="col-lg-4 col-md-6 col-12 pb-4">
+          <div className="col-lg-6 col-12 pb-4">
             <b>SERVICES</b>
             <div className="row pt-2">
               <div className="col list-unstyled">
@@ -67,14 +67,6 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 col-12">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3432.650246939581!2d76.74300621472712!3d30.6438130969645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feb0ef52bb239%3A0xeb63e5e8a6be72fc!2sEpic%20Vila!5e0!3m2!1sen!2sin!4v1629208244622!5m2!1sen!2sin"
-              style={{ border: "0", width: "100%", height: "100%" }}
-              allowfullscreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
         </div>
         <hr className="" style={{ height: "2px", margin: "0" }}></hr>
         <div className="mx-5 py-3 row">
@@ -85,7 +77,9 @@ function Footer() {
               alt="image"
               width={135}
             ></img>
-            COPYRIGHT 2017-2021 EPIC VILA PRO SERVICES PRIVATE LIMITED
+            <span style={{ fontSize: "14px" }}>
+              COPYRIGHT 2017-2021 EPIC VILA PRO SERVICES PRIVATE LIMITED
+            </span>
           </div>
           <div className="col-lg-4 col-12 align-items-center d-flex justify-content-center pt-4 pt-lg-0 socials">
             <img
@@ -124,3 +118,12 @@ function Footer() {
 }
 
 export default Footer;
+
+// <div className="col-lg-4 col-md-6 col-12">
+// <iframe
+//   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3432.650246939581!2d76.74300621472712!3d30.6438130969645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feb0ef52bb239%3A0xeb63e5e8a6be72fc!2sEpic%20Vila!5e0!3m2!1sen!2sin!4v1629208244622!5m2!1sen!2sin"
+//   style={{ border: "0", width: "100%", height: "100%" }}
+//   allowfullscreen=""
+//   loading="lazy"
+// ></iframe>
+// </div>

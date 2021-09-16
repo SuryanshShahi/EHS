@@ -24,6 +24,7 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import arrow from "../Images/left.png";
 
 function WashingM() {
   const [count, setCount] = useState(0);
@@ -43,6 +44,17 @@ function WashingM() {
 
   const handleDecrement1 = () => {
     setCounter((prevCount) => (prevCount - 1 < 0 ? 0 : prevCount - 1));
+  };
+
+  const next = () => {
+    document.getElementById("Next").style.display = "block";
+    document.getElementById("show").style.display = "none";
+    document.getElementById("arrow").style.display = "block";
+  };
+  const back = () => {
+    document.getElementById("Next").style.display = "none";
+    document.getElementById("show").style.display = "block";
+    document.getElementById("arrow").style.display = "none";
   };
 
   return (
@@ -73,7 +85,7 @@ function WashingM() {
                 <div
                   className="tab-content text-white content overflow-auto px-2 px-lg-4"
                   id="show"
-                  style={{ height: "450px"}}
+                  style={{ height: "450px" }}
                 >
                   <div id="Fridge" className="active tab-pane">
                     <div className="py-2">
@@ -263,16 +275,30 @@ function WashingM() {
                   </div>
                 </div>
 
-                <div className="mx-5 py-4 row homebtn">
-                   <div className="pt-3 pt-lg-0 pt-md-0 pt-sm-0">
+                <div className="mx-4 py-4 row homebtn">
+                  <div className="pt-3 pt-lg-0 pt-md-0 pt-sm-0 d-flex align-items-center">
+                    <div className="mr-5" id="arrow" style={{display:"none"}}>
+                      <img
+                        src={arrow}
+                        style={{
+                          cursor: "pointer",
+                          color:"white"
+                        }}
+                        className="img-fluid arrow"
+                        alt="arrow"
+                        onClick={back}
+                      />
+                    </div>
                     <div
                       className="btn border-0 tab text-white"
                       id="next"
                       style={{
                         borderRadius: "50px",
                         width: "100%",
+                        maxHeight: "46px",
                         padding: "11px 0px",
                       }}
+                      onClick={next}
                     >
                       Next
                     </div>

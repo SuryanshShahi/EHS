@@ -92,7 +92,7 @@
 } */
 
 .nav-tabs a:hover {
-  /* background-color: #6141ee; */
+  background-color: #6141ee;
   background-color: #6141ee8c;
   transition: 0.5s;
 }
@@ -204,7 +204,7 @@
   border-radius: 20px;
   z-index: -1;
   box-shadow: 2px 2px 4px 0px #805d5d9e;
-  transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .appliance:hover img {
   top: -10px;
@@ -217,20 +217,8 @@
   left: 0;
   bottom: 0;
   top: 100%;
-  transition: all 0.4s;
-  /* transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1); */
-  z-index: -1;
-}
-.appliance:hover::before {
-  background: #00000066;
-  z-index: 1;
-  top: 0;
 }
 
-/* .counter .btn{
-  background-color: transparent;
-  border-radius: 50px;
-} */
 .counter .btn:hover {
   background-color: transparent;
   border-radius: 50px;

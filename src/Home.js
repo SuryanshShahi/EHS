@@ -16,7 +16,6 @@ import {
 } from "./Data/Content";
 import MultiCarousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-// import bg1 from "./Images/bg.png";
 import Ac from "./Images/air-conditioner.png";
 import fridge from "./Images/fridge.png";
 import plumber from "./Images/plumber.png";
@@ -115,7 +114,7 @@ function Home() {
     document.getElementById("home").style.background = "";
   };
   return (
-    <section style={{ marginTop: "48px" }}>
+    <section style={{ marginTop: "46px" }}>
       <div className="py-5" id="home">
         <div className="mx-lg-5 position-relative pb-1">
           <ul
@@ -227,6 +226,7 @@ function Home() {
               </a>
             </li>
           </ul>
+        
           <div
             className="px-2 mx-4 mx-md-5 mx-lg-5 pt-3"
             style={{
@@ -716,8 +716,23 @@ function Home() {
 
             <div className="mx-4 py-4 row homebtn">
               <div className="col-lg-6 col-md-6 col-sm-6 col-19">
+                <NavLink to="/WashingMachine">
+                  <div
+                    className="btn border-0 text-white float-left"
+                    style={{
+                      borderRadius: "50px",
+                      width: "100%",
+                      padding: "11px 0px",
+                    }}
+                  >
+                    View Details
+                  </div>
+                </NavLink>
+              </div>
+              <div className="col-lg-6 col-md-6 col-sm-6 col-19 pt-3 pt-lg-0 pt-md-0 pt-sm-0">
                 <div
-                  className="btn border-0 text-white float-left"
+                  className="btn border-0 tab text-white"
+                  id="next"
                   style={{
                     borderRadius: "50px",
                     width: "100%",
@@ -725,23 +740,8 @@ function Home() {
                   }}
                   onClick={next}
                 >
-                  View Details
+                  Next
                 </div>
-              </div>
-              <div className="col-lg-6 col-md-6 col-sm-6 col-19 pt-3 pt-lg-0 pt-md-0 pt-sm-0">
-                <NavLink to="/WashingMachine">
-                  <div
-                    className="btn border-0 tab text-white"
-                    id="next"
-                    style={{
-                      borderRadius: "50px",
-                      width: "100%",
-                      padding: "11px 0px",
-                    }}
-                  >
-                    Next
-                  </div>
-                </NavLink>
               </div>
             </div>
           </div>
@@ -749,12 +749,15 @@ function Home() {
       </div>
 
       <div
-        className="px-5 py-5 mt-5 position-relative"
+        className="px-5 py-5 position-relative"
         style={{ background: "rgb(222 224 236 / 92%)" }}
       >
         <div className="justify-content-center d-flex pb-4">
           <div className="text-center">
-            <div className="font-weight-bolder" style={{ fontSize: "24px" }}>
+            <div
+              className="font-weight-bolder"
+              style={{ fontSize: "22px", fontFamily: "sans-serif" }}
+            >
               Appliance Repair Service
             </div>
             <div> Servicing, installation, uninstallation & repair</div>
@@ -788,7 +791,10 @@ function Home() {
       <div className="px-5 py-5">
         <div className="justify-content-center d-flex pb-4">
           <div className="text-center">
-            <div className="font-weight-bolder" style={{ fontSize: "24px" }}>
+            <div
+              className="font-weight-bolder"
+              style={{ fontSize: "22px", fontFamily: "sans-serif" }}
+            >
               Repair & Maintenence
             </div>
             <div> Minor repair, fitting, servicing & many more</div>
@@ -825,7 +831,10 @@ function Home() {
       >
         <div className="justify-content-center d-flex pb-4">
           <div className="text-center">
-            <div className="font-weight-bolder" style={{ fontSize: "24px" }}>
+            <div
+              className="font-weight-bolder"
+              style={{ fontSize: "22px", fontFamily: "sans-serif" }}
+            >
               Painter & Interior Designing
             </div>
             <div> House painter, house decor, false ceiling & designing</div>

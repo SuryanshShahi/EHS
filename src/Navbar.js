@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import parents from "./Images/parents.png";
 import smartphone from "./Images/smartphone.png";
-import ellipse from "./Images/Ellipse.png";
 
 function Navbar() {
   const [back, setBack] = useState(false);
@@ -14,16 +13,6 @@ function Navbar() {
     }
   };
   window.addEventListener("scroll", backtotop);
-
-  const Location = () => {
-    var x = document.getElementById("location");
-
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  };
 
   return (
     <section>
@@ -57,9 +46,11 @@ function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-lg-auto mb-2 mb-lg-0 justify-content-center align-items-center d-flex">
-              <div
-                onClick={Location}
-                className="fa fa-map-marker text-white fa-lg pr-3"
+              <NavLink
+                to="/"
+                data-target="#mymodalLocation"
+                data-toggle="modal"
+                className="fa fa-map-marker text-white fa-lg pr-3 text-decoration-none"
                 style={{ cursor: "pointer" }}
               >
                 &nbsp;&nbsp;
@@ -67,7 +58,7 @@ function Navbar() {
                   Chandigarh
                 </span>{" "}
                 <b style={{ fontSize: "20px" }}>🡓</b>
-              </div>
+              </NavLink>
               <div
                 className="d-flex mr-lg-auto pt-lg-0 pt-4 align-items-center"
                 style={{ width: "100%", maxWidth: "300px" }}
@@ -89,7 +80,7 @@ function Navbar() {
                   }}
                 />
               </div>
-              <li className="nav-item pt-lg-0 pt-4 ml-5 mr-4">
+              <li className="nav-item pt-lg-0 pt-4 ml-4 mr-2">
                 <NavLink
                   to="/services"
                   className="nav-link text-white active"
@@ -100,17 +91,17 @@ function Navbar() {
                   Services
                 </NavLink>
               </li>
-              <li className="nav-item pt-lg-0 pt-3 mx-4">
+              <li className="nav-item pt-lg-0 pt-3 mx-2">
                 <NavLink to="/" className="nav-link text-white">
                   Register as Professional
                 </NavLink>
               </li>
-              <li className="nav-item pt-lg-0 pt-3 mx-4">
+              <li className="nav-item pt-lg-0 pt-3 mx-2">
                 <NavLink to="/blog" className="nav-link text-white">
                   Blog
                 </NavLink>
               </li>
-              <li className="nav-item pt-lg-0 pt-3 ml-4">
+              <li className="nav-item pt-lg-0 pt-3 ml-2">
                 <NavLink
                   to="/"
                   data-target="#mymodal"
@@ -131,24 +122,16 @@ function Navbar() {
             className="modal-content justify-content-center d-flex border-0"
             style={{ background: "#dedeea" }}
           >
-            <div className="modal-header">
-              <img
-                src="https://www.epicvila.com/image/logo1.png"
-                className="img-fluid"
-                alt="image"
-                width={120}
-                style={{ background: "black" }}
-              ></img>
-              <img src={ellipse} className="img-fluid bg-white"></img>
+            <div className="ml-auto pt-3">
               <div
-                className="close pt-4"
+                className="close pr-3"
                 data-dismiss="modal"
                 style={{ cursor: "pointer" }}
               >
                 &times;
               </div>
             </div>
-            <div className="container text-center px-lg-4  py-5">
+            <div className="container text-center px-lg-4 pb-5 pt-3">
               <div
                 className="font-weight-bolder pb-4"
                 style={{ fontSize: "26px" }}
@@ -199,23 +182,16 @@ function Navbar() {
             className="modal-content justify-content-center d-flex border-0"
             style={{ background: "#dedeea" }}
           >
-            <div className="modal-header">
-              <img
-                src="https://www.epicvila.com/image/logo1.png"
-                className="img-fluid"
-                alt="image"
-                width={120}
-                style={{ background: "black" }}
-              ></img>
+            <div className="ml-auto mt-3">
               <div
-                className="close pt-4"
+                className="close pr-3"
                 data-dismiss="modal"
                 style={{ cursor: "pointer" }}
               >
                 &times;
               </div>
             </div>
-            <div className="container text-center px-lg-4  py-5">
+            <div className="container text-center px-lg-4 pb-5 pt-4">
               <div
                 className="font-weight-bolder pb-4"
                 style={{ fontSize: "26px" }}
@@ -293,23 +269,16 @@ function Navbar() {
             className="modal-content justify-content-center d-flex border-0"
             style={{ background: "#dedeea" }}
           >
-            <div className="modal-header">
-              <img
-                src="https://www.epicvila.com/image/logo1.png"
-                className="img-fluid"
-                alt="image"
-                width={120}
-                style={{ background: "black" }}
-              ></img>
+            <div className="ml-auto pt-3">
               <div
-                className="close pt-4"
+                className="close pr-3"
                 data-dismiss="modal"
                 style={{ cursor: "pointer" }}
               >
                 &times;
               </div>
             </div>
-            <div className="container text-center px-lg-4  py-5">
+            <div className="container text-center px-lg-4 pb-5 pt-4">
               <div
                 className="font-weight-bolder pb-4"
                 style={{ fontSize: "26px" }}
@@ -414,80 +383,72 @@ function Navbar() {
         </a>
       </div>
 
-      <div
-        id="location"
-        className="w-25 position-absolute border-0"
-        style={{
-          marginTop: "48px",
-          zIndex: "999",
-          height: "300px",
-          display: "none",
-          background: "rgb(222 224 236)",
-          left: "36%",
-          borderRadius: "10px",
-        }}
-      >
-        <div className="row px-4 py-2">
-          <div className="col">
-            <div className="fa fa-map-marker fa-lg pr-2"></div>Current Location
-          </div>
+      <div className="modal fade" id="mymodalLocation">
+        <div className="modal-dialog">
           <div
-            className="col justify-content-end d-flex font-weight-bold text-primary"
-            style={{ fontSize: "14px" }}
+            className="modal-content justify-content-center d-flex border-0"
+            style={{ background: "#dedeea" }}
           >
-            Detact Using GPS
-          </div>
-        </div>
-        <hr style={{ height: "2px", margin: "0" }}></hr>
-
-        <div className="mx-4 mt-4 px-2">
-          <div
-            className="d-flex mr-lg-auto pt-lg-0 pt-4 align-items-center"
-            style={{ width: "100%" }}
-          >
-            <div
-              className="fa fa-search fa-sm pl-4 position-absolute"
-              style={{ padding: "0px 10px" }}
-            ></div>
-            <input
-              className="form-control border-0 py-2 pl-5"
-              type="search"
-              placeholder="Search for Locality/Appartment/Society"
-              aria-label="Search"
-              style={{
-                borderRadius: "18px",
-                width: "400px",
-                fontSize: "14px",
-                height: "41px",
-                maxHeight: "41px",
-              }}
-            />
-          </div>
-
-          <div
-            className="position-absolute pb-3"
-            style={{ maxHeight: "185px", bottom: "0" }}
-          >
-            <div
-              className="text-primary font-weight-bold py-1"
-            >
-              Saved Address
+            <div className="modal-header mx-2" style={{ padding: "13px" }}>
+              <div className="">
+                <div className="fa fa-map-marker fa-lg pr-2"></div>
+                <b>Current Location</b>
+              </div>
+              <div
+                className="justify-content-end d-flex font-weight-bold text-primary"
+                style={{ fontSize: "14px" }}
+              >
+                Detact Using GPS
+              </div>
             </div>
-            <div
-              className="fa fa-map-marker fa-sm"
-              // style={{ padding: "0px 10px" }}
-            >
-              <span className="pl-2 font-weight-bold" style={{ fontSize: "14px" }}>
-                Flat no 298, 1st Floor, TDI City, Sector 110, Mohali......
-              </span>
+
+            <hr style={{ height: "2px", margin: "0" }}></hr>
+
+            <div className="justify-content-center d-flex pt-3">
+              <div
+                className="d-flex align-items-center modal-body"
+                style={{ width: "100%" }}
+              >
+                <div
+                  className="fa fa-search fa-sm pl-4 ml-5 position-absolute"
+                  style={{ padding: "0px 10px" }}
+                ></div>
+                <input
+                  className="form-control border-0 py-2 pl-5 mx-5"
+                  type="search"
+                  placeholder="Search for Locality/Appartment/Society"
+                  aria-label="Search"
+                  style={{
+                    borderRadius: "18px",
+                    // width: "400px",
+                    fontSize: "14px",
+                    height: "41px",
+                    maxHeight: "41px",
+                  }}
+                />
+              </div>
             </div>
-            <div
-              className="fa fa-map-marker fa-sm"
-              // style={{ padding: "0px 10px" }}
-            >
-              <span className="pl-2 font-weight-bold" style={{ fontSize: "14px" }}>
-                Flat no 298, 1st Floor, TDI City, Sector 110, Mohali......
-              </span>
+
+            <div className="pb-3 px-4 pt-5" style={{ bottom: "0" }}>
+              <div className="text-primary font-weight-bold py-1">
+                Saved Address
+              </div>
+              <div className="fa fa-map-marker fa-sm">
+                <span
+                  className="pl-2 font-weight-bold"
+                  style={{ fontSize: "14px" }}
+                >
+                  Flat no 298, 1st Floor, TDI City, Sector 110, Mohali......
+                </span>
+              </div>
+              <div className="fa fa-map-marker fa-sm">
+                <span
+                  className="pl-2 font-weight-bold"
+                  style={{ fontSize: "14px" }}
+                >
+                  Flat no 298, 1st Floor, TDI City, Sector 110, Mohali......
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -497,3 +458,11 @@ function Navbar() {
 }
 
 export default Navbar;
+
+// <img
+// src="https://www.epicvila.com/image/logo1.png"
+// className="img-fluid"
+// alt="image"
+// width={120}
+// style={{ background: "black" }}
+// ></img>
