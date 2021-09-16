@@ -58,7 +58,7 @@ function WashingM() {
   };
 
   return (
-    <section style={{ marginTop: "48px" }}>
+    <section style={{ marginTop: "46px" }}>
       <div className="py-5 " id="WashingM">
         <div className="container-fluid row">
           <div className="col-lg-6 col-md-6 col-12 text-white justify-content-center d-flex my-5">
