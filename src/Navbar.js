@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import { NavLink } from "react-router-dom";
 import parents from "./Images/parents.png";
 import smartphone from "./Images/smartphone.png";
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [back, setBack] = useState(false);
@@ -107,9 +108,9 @@ function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item pt-lg-0 pt-3 mx-2">
-                <NavLink to="https://blog.epicvila.com/" className="nav-link text-white">
+                <Link to={{ pathname:"https://blog.epicvila.com/"}}  target="_blank" className="text-white text-decoration-none px-2">
                   Blog
-                </NavLink>
+                </Link>
               </li>
               <li className="nav-item pt-lg-0 pt-3 ml-2">
                 <NavLink
