@@ -725,7 +725,7 @@ function Home() {
                       padding: "11px 0px",
                     }}
                   >
-                    View Details
+                    Know More
                   </div>
                 </NavLink>
               </div>

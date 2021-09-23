@@ -1,18 +1,7 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import {
-  AC,
   Fridge,
-  WashingMachine,
-  TV,
-  RO,
-  Painter,
-  Electrician,
-  Plumber,
   Second,
-  Appliance,
-  Repair,
-  Designing,
 } from "../Data/Content";
 import "./WashingM.css";
 import "react-multi-carousel/lib/styles.css";
@@ -326,7 +315,7 @@ function WashingM() {
           </div>
           <div className="row text-center pb-5">
             <div className="col-lg-4 col-md-4 col-12 pb-5">
-              <img src={Vector} className="img-fluid"></img>
+              <img src={Vector} className="img-fluid" alt="vector"></img>
               <div
                 className="font-weight-bolder pt-3"
                 style={{ fontSize: "20px" }}
@@ -335,7 +324,7 @@ function WashingM() {
               </div>
             </div>
             <div className="col-lg-4 col-md-4 col-12 pb-5">
-              <img src={Date} className="img-fluid"></img>
+              <img src={Date} className="img-fluid" alt="date"></img>
               <div
                 className="font-weight-bolder pt-3"
                 style={{ fontSize: "20px" }}
@@ -344,7 +333,7 @@ function WashingM() {
               </div>
             </div>
             <div className="col-lg-4 col-md-4 col-12 pb-2">
-              <img src={Sit} className="img-fluid"></img>
+              <img src={Sit} className="img-fluid" alt="sit"></img>
               <div
                 className="font-weight-bolder pt-3"
                 style={{ fontSize: "20px" }}

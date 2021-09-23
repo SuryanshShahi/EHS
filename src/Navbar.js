@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import { NavLink } from "react-router-dom";
 import parents from "./Images/parents.png";
 import smartphone from "./Images/smartphone.png";
 
 function Navbar() {
   const [back, setBack] = useState(false);
+  const [location1, setLocation] = useState([]);
+
   const backtotop = () => {
     if (window.scrollY >= 150) {
       setBack(true);
@@ -14,6 +16,14 @@ function Navbar() {
   };
   window.addEventListener("scroll", backtotop);
 
+  const getLocation = () => {
+    fetch(
+      "https://geolocation-db.com/json/b6e7f2d0-1874-11ec-9f88-41fa3915186f"
+    )
+      .then((res) => res.json())
+      .then((data) => setLocation(data));
+  };
+  
   return (
     <section>
       <div id="top">..</div>
@@ -97,7 +107,7 @@ function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item pt-lg-0 pt-3 mx-2">
-                <NavLink to="/blog" className="nav-link text-white">
+                <NavLink to="https://blog.epicvila.com/" className="nav-link text-white">
                   Blog
                 </NavLink>
               </li>
@@ -396,7 +406,8 @@ function Navbar() {
               </div>
               <div
                 className="justify-content-end d-flex font-weight-bold text-primary"
-                style={{ fontSize: "14px" }}
+                style={{ fontSize: "14px", cursor:"pointer" }}
+                onClick={getLocation}
               >
                 Detact Using GPS
               </div>
@@ -430,9 +441,12 @@ function Navbar() {
             </div>
 
             <div className="pb-3 px-4 pt-5" style={{ bottom: "0" }}>
-              <div className="text-primary font-weight-bold py-1">
-                Saved Address
-              </div>
+              {location1 && 
+                <div className="text-primary font-weight-bold py-1">
+                  Saved Address:{" "}
+                  {`${location1.country_code},${location1.country_name},${location1.postal}`}
+                </div>
+              }
               <div className="fa fa-map-marker fa-sm">
                 <span
                   className="pl-2 font-weight-bold"
