@@ -10,6 +10,7 @@ import Blog from "./blog";
 import Services from "./Services";
 import Footer from "./Footer";
 import WashingMachine from "./WashingMachine/WashingM";
+import Register from "./Register/Register";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/services" component={Services} />
         <Route exact path="/blog" component={Blog} />
-        <Route exact path="/WashingMachine" component={WashingMachine} />
+        <Route exact path="/washingMachine" component={WashingMachine} />
+        <Route exact path="/register" component={Register} />
 
         <Redirect to="/" />
       </Switch>

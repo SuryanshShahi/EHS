@@ -4,7 +4,6 @@ import {
   Second,
 } from "../Data/Content";
 import "./WashingM.css";
-import "react-multi-carousel/lib/styles.css";
 import Vector from "./Images/Vector.png";
 import Date from "./Images/date.png";
 import Sit from "./Images/sit.png";

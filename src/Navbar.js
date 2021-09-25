@@ -103,7 +103,7 @@ function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item pt-lg-0 pt-3 mx-2">
-                <NavLink to="/" className="nav-link text-white">
+                <NavLink to="/register" className="nav-link text-white">
                   Register as Professional
                 </NavLink>
               </li>

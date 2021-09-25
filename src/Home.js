@@ -80,10 +80,16 @@ function Home() {
   const [counter, setCounter] = useState(0);
 
   const handleIncrement = (id) => {
+    // const updatedCount = AC.filter((curElem) => {
+    //   if (curElem.id === id) {
+    //     return ((prevCount) => prevCount + 1);
+    //     // console.log(curElem.id);
+    //   }
+    // });
     setCount((prevCount) => prevCount + 1);
+    // setCount(updatedCount);
   };
-
-  const handleDecrement = (id) => {
+  const handleDecrement = () => {
     setCount((prevCount) => (prevCount - 1 < 0 ? 0 : prevCount - 1));
   };
 
@@ -226,7 +232,7 @@ function Home() {
               </a>
             </li>
           </ul>
-        
+
           <div
             className="px-2 mx-4 mx-md-5 mx-lg-5 pt-3"
             style={{
@@ -248,7 +254,7 @@ function Home() {
                         <h5>
                           <b>{name}</b>
                         </h5>
-                        <li className="row py-1">
+                        <li className="row py-1" key={id}>
                           <div className="col">{subServices[0]["name1"]}</div>
                           <div className="col text-center">{amount}</div>
                           <div className="col d-flex justify-content-end pb-2 pr-4 counter">
@@ -716,7 +722,7 @@ function Home() {
 
             <div className="mx-4 py-4 row homebtn">
               <div className="col-lg-6 col-md-6 col-sm-6 col-19">
-                <NavLink to="/WashingMachine">
+                <NavLink to="/washingMachine">
                   <div
                     className="btn border-0 text-white float-left"
                     style={{
