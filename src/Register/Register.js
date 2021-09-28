@@ -5,20 +5,22 @@ import Date from "../WashingMachine/Images/date.png";
 import Sit from "../WashingMachine/Images/sit.png";
 
 function Register() {
-  const border = () => {
+  const border = (e) => {
     var x = document.getElementById("select");
     if (x.style.borderRadius === "50px") {
       x.style.borderRadius = "10px 10px 0px 0px";
     } else {
       x.style.borderRadius = "50px";
     }
+    if (!x.contains(e.target)) {
+      x.style.display = 'none';
+  }
   };
   return (
     <section style={{ marginTop: "46px" }}>
       <div
         className="py-5 align-items-center d-flex"
         id="Register"
-        style={{ height: "80vh" }}
       >
         <div className="container-fluid row pr-5">
           <div className="col-lg-6 col-md-6 col-12 justify-content-lg-end justify-content-center d-flex my-5">
@@ -32,8 +34,8 @@ function Register() {
               </ul>
             </div>
           </div>
-          <div className="col-lg-6 col-md-6 col-12 justify-content-center justify-content-lg-end d-flex">
-            <div className="px-lg-5 position-relative py-3 w-75">
+          <div className="col-lg-6 col-md-6 col-12 justify-content-center py-4 justify-content-lg-end d-flex">
+            <div className="px-lg-5 position-relative py-3 w-75 py-4">
               <div
                 className="pt-3 px-2"
                 style={{
@@ -43,8 +45,9 @@ function Register() {
                 }}
               >
                 <div
-                  className="text-white content overflow-auto px-2 px-lg-4"
+                  className="tab-content text-white content overflow-auto px-2 px-lg-4"
                   id="show"
+                  // style={{ height: "450px" }}
                 >
                   <h4 className="text-center font-weight-bold pt-2">
                     Fill up The Form
