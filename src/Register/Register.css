@@ -1,32 +1,31 @@
 #Register {
-    /* background: url("./Images/Register.png"); */
-    background-size: 100% 100%;
-    background-position-y: 70px;
-    background-repeat: no-repeat;
-    position: relative;
-    transition: 0.5s;
+  background: url("../Images/register.png");
+  background-size: 100% 745px;
+  /* background-position-y: -70px; */
+  background-repeat: no-repeat;
+  position: relative;
+  transition: 0.5s;
+}
+@media (min-width: 0px) {
+  #Register {
+    background-attachment: fixed;
   }
-  @media (min-width: 0px) {
-    #Register {
-      background-attachment: fixed;
-    }
-  }
-  
-  .arrow {
-    position: relative;
-    left: 0;
-  }
-  .arrow:hover {
-    transition: 0.9s;
-    left: -20px;
-  }
-  #Register:before {
-      content: "";
-      background: rgba(0, 0, 0, 0.6);
-      position: absolute;
-      bottom: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
-  
+}
+
+.arrow {
+  position: relative;
+  left: 0;
+}
+.arrow:hover {
+  transition: 0.9s;
+  left: -20px;
+}
+#Register:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}

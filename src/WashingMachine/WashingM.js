@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import {
-  Fridge,
-  Second,
-} from "../Data/Content";
+import { Fridge, Second } from "../Data/Content";
 import "./WashingM.css";
 import Vector from "./Images/Vector.png";
 import Date from "./Images/date.png";
@@ -265,12 +262,16 @@ function WashingM() {
 
                 <div className="mx-4 py-4 row homebtn">
                   <div className="pt-3 pt-lg-0 pt-md-0 pt-sm-0 d-flex align-items-center">
-                    <div className="mr-5" id="arrow" style={{display:"none"}}>
+                    <div
+                      className="mr-5"
+                      id="arrow"
+                      style={{ display: "none" }}
+                    >
                       <img
                         src={arrow}
                         style={{
                           cursor: "pointer",
-                          color:"white"
+                          color: "white",
                         }}
                         className="img-fluid arrow"
                         alt="arrow"

@@ -1,14 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Register.css";
+import Vector from "../WashingMachine/Images/Vector.png";
+import Date from "../WashingMachine/Images/date.png";
+import Sit from "../WashingMachine/Images/sit.png";
 
 function Register() {
-
+  const border = () => {
+    var x = document.getElementById("select");
+    if (x.style.borderRadius === "50px") {
+      x.style.borderRadius = "10px 10px 0px 0px";
+    } else {
+      x.style.borderRadius = "50px";
+    }
+  };
   return (
     <section style={{ marginTop: "46px" }}>
-      <div className="py-5 " id="Register">
-        <div className="container-fluid row">
-          <div className="col-lg-6 col-md-6 col-12 text-white justify-content-center d-flex my-5">
-            <div className="pt-5 text-dark">
+      <div
+        className="py-5 align-items-center d-flex"
+        id="Register"
+        style={{ height: "80vh" }}
+      >
+        <div className="container-fluid row pr-5">
+          <div className="col-lg-6 col-md-6 col-12 justify-content-lg-end justify-content-center d-flex my-5">
+            <div className="pt-5" style={{ color: "black" }}>
               <h1 className="font-weight-bolder pt-4">
                 Join with Epic Home<br></br> Service
               </h1>
@@ -23,33 +37,133 @@ function Register() {
               <div
                 className="pt-3 px-2"
                 style={{
-                  background: "rgba(0, 0, 0, 0.8)",
-                  // background: "black",
+                  // background: "rgba(0, 0, 0, 0.8)",
+                  background: "black",
                   maxWidth: "550px",
                 }}
               >
                 <div
-                  className="tab-content text-white content overflow-auto px-2 px-lg-4"
+                  className="text-white content overflow-auto px-2 px-lg-4"
                   id="show"
-                  style={{ height: "450px" }}
                 >
-                  <h4 className="text-center font-weight-bold">Join Now</h4>
+                  <h4 className="text-center font-weight-bold pt-2">
+                    Fill up The Form
+                  </h4>
+
+                  <div className="px-lg-4 py-4">
+                    <input
+                      type="text"
+                      className="form-control border-0 mt-4 pl-4"
+                      placeholder="Name"
+                      style={{
+                        borderRadius: "50px",
+                        height: "41px",
+                        marginBottom: " 30px",
+                      }}
+                    ></input>
+                    <input
+                      type="text"
+                      className="form-control border-0 pl-4"
+                      placeholder="Mobile Number"
+                      style={{
+                        borderRadius: "50px",
+                        height: "41px",
+                        marginBottom: " 30px",
+                      }}
+                    ></input>
+                    <input
+                      type="text"
+                      className="form-control border-0 pl-4"
+                      placeholder="Email"
+                      style={{
+                        borderRadius: "50px",
+                        height: "41px",
+                        marginBottom: " 30px",
+                      }}
+                    ></input>
+                    <select
+                      className="border-0"
+                      id="select"
+                      style={{
+                        paddingLeft: "20px",
+                        cursor: "pointer",
+                        width: "100%",
+                        transition: "0.5s",
+                        outline: "none",
+                        height: "41px",
+                        borderRadius: "50px",
+                      }}
+                      onClick={border}
+                    >
+                      <option selected="selected">Service</option>
+                      <option value="NA">NA</option>
+                      <option value="NA">NA</option>
+                      <option value="NA">NA</option>
+                    </select>{" "}
+                  </div>
                 </div>
-                <div className=" mx-5">
-                <div
-                  className="btn border-0 tab text-white my-3"
-                  id="next"
-                  style={{
-                    borderRadius: "50px",
-                    width: "100%",
-                    maxHeight: "46px",
-                    padding: "11px 0px",
-                    background: "#4627cf",
-                  }}
-                >
-                  Next
+                <div className="mx-5 justify-content-center d-flex pb-2">
+                  <div
+                    className="btn nextbtn border-0 tab text-white my-3"
+                    id="next"
+                    style={{
+                      borderRadius: "50px",
+                      width: "100%",
+                      maxWidth: "250px",
+                      maxHeight: "46px",
+                      padding: "11px 0px",
+                      background: "#4627cf",
+                    }}
+                  >
+                    Next
+                  </div>
                 </div>
-                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className=""
+        style={{ backgroundColor: "rgba(222, 224, 236, 0.92)" }}
+      >
+        <div className="container-fluid px-5">
+          <div className="text-center py-5">
+            <h4
+              className="font-weight-bolder"
+              style={{ fontFamily: "sans-serif" }}
+            >
+              How to Book Service
+            </h4>
+            <span style={{ fontSize: "17px" }}>3 easy steps </span>
+          </div>
+          <div className="row text-center pb-5">
+            <div className="col-lg-4 col-md-4 col-12 pb-5">
+              <img src={Vector} className="img-fluid" alt="vector"></img>
+              <div
+                className="font-weight-bolder pt-3"
+                style={{ fontSize: "20px" }}
+              >
+                Fill up the Form & Submit
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-4 col-12 pb-5">
+              <img src={Date} className="img-fluid" alt="date"></img>
+              <div
+                className="font-weight-bolder pt-3"
+                style={{ fontSize: "20px" }}
+              >
+                Choose your Expertise Service & Submit Documents
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-4 col-12 pb-2">
+              <img src={Sit} className="img-fluid" alt="sit"></img>
+              <div
+                className="font-weight-bolder pt-3"
+                style={{ fontSize: "20px" }}
+              >
+                Our Team will verify all your Documents
               </div>
             </div>
           </div>

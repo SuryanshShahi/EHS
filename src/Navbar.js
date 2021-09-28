@@ -1,8 +1,8 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import parents from "./Images/parents.png";
 import smartphone from "./Images/smartphone.png";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [back, setBack] = useState(false);
@@ -24,7 +24,7 @@ function Navbar() {
       .then((res) => res.json())
       .then((data) => setLocation(data));
   };
-  
+
   return (
     <section>
       <div id="top">..</div>
@@ -108,7 +108,11 @@ function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item pt-lg-0 pt-3 mx-2">
-                <Link to={{ pathname:"https://blog.epicvila.com/"}}  target="_blank" className="text-white text-decoration-none px-2">
+                <Link
+                  to={{ pathname: "https://blog.epicvila.com/" }}
+                  target="_blank"
+                  className="text-white text-decoration-none px-2"
+                >
                   Blog
                 </Link>
               </li>
@@ -407,7 +411,7 @@ function Navbar() {
               </div>
               <div
                 className="justify-content-end d-flex font-weight-bold text-primary"
-                style={{ fontSize: "14px", cursor:"pointer" }}
+                style={{ fontSize: "14px", cursor: "pointer" }}
                 onClick={getLocation}
               >
                 Detact Using GPS
@@ -442,12 +446,12 @@ function Navbar() {
             </div>
 
             <div className="pb-3 px-4 pt-5" style={{ bottom: "0" }}>
-              {location1 && 
+              {location1 && (
                 <div className="text-primary font-weight-bold py-1">
                   Saved Address:{" "}
                   {`${location1.country_code},${location1.country_name},${location1.postal}`}
                 </div>
-              }
+              )}
               <div className="fa fa-map-marker fa-sm">
                 <span
                   className="pl-2 font-weight-bold"

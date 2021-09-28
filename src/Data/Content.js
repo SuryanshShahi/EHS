@@ -379,7 +379,7 @@ export const Plumber = [
     id: "11",
     name: "Plumber Service",
     amount: "Rs 500",
-     subServices: [
+    subServices: [
       {
         name1: "Split Plumber Service",
         count: 0,
@@ -394,7 +394,7 @@ export const Plumber = [
     id: "12",
     name: "Plumber Installation",
     amount: "Rs 500",
-     subServices: [
+    subServices: [
       {
         name1: "Split Plumber Installation",
         count: 0,
@@ -409,7 +409,7 @@ export const Plumber = [
     id: "13",
     name: "Plumber Uninstall",
     amount: "Rs 500",
-     subServices: [
+    subServices: [
       {
         name1: "Split Plumber Uninstall",
         count: 0,
@@ -424,7 +424,7 @@ export const Plumber = [
     id: "14",
     name: "Plumber Gas Filling",
     amount: "Rs 500",
-     subServices: [
+    subServices: [
       {
         name1: "Split Plumber Gas Filling",
         count: 0,
