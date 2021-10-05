@@ -1,0 +1,43 @@
+.user .nav-tabs .active {
+  background-color: black;
+  color: white;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.25);
+}
+.user .nav-tabs {
+  min-height: 54px;
+  border-bottom: none !important;
+}
+@media (max-width: 866px) {
+  .user .nav-tabs {
+    margin-top: 53px;
+  }
+}
+.user .nav-tabs .tab:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+.user .nav-tabs li {
+  height: 60px;
+}
+.user .tab-content li {
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 30px;
+}
+
+#MyBookings li {
+  background-color: white;
+  border-radius: 20px;
+  height: 55px;
+}
+#MyBookings .nav-tabs .active {
+  background-color: black;
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#MyBookings .nav-tabs .tab:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}

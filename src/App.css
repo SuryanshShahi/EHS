@@ -69,17 +69,17 @@
 .navbar {
   padding: 3px !important;
 }
-.nav-tabs .active {
+#home .nav-tabs .active {
   background-color: #4627cf;
 }
-.nav-tabs {
+#home .nav-tabs {
   height: 107px;
   background-color: rgba(0, 0, 0, 0.7);
   width: fit-content;
   border-bottom: none !important;
 }
 
-.nav-tabs a {
+#home .nav-tabs a {
   margin: 10px;
   text-align: center;
   min-width: 100px;
@@ -91,12 +91,12 @@
   overflow-x: scroll;
 } */
 
-.nav-tabs a:hover {
+#home .nav-tabs a:hover {
   background-color: #6141ee;
   background-color: #6141ee8c;
   transition: 0.5s;
 }
-.tab-content li {
+#home .tab-content li {
   font-size: 14px;
   font-weight: bold;
   padding-left: 30px;

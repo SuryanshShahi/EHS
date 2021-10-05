@@ -25,6 +25,9 @@ function Navbar() {
       .then((data) => setLocation(data));
   };
 
+  const showUser =()=>{
+    document.getElementById("user").style.display = "block";
+  }
   return (
     <section>
       <div id="top">..</div>
@@ -124,6 +127,14 @@ function Navbar() {
                   className="nav-link text-white"
                 >
                   Login/Signup
+                </NavLink>
+              </li>
+              <li className="nav-item pt-lg-0 pt-3 ml-2" id="user" style={{display:"none"}}>
+                <NavLink
+                  to="/userProfile"
+                  className="nav-link text-white"
+                >
+                  User<span className="fa fa-user-circle-o text-white fa-lg pl-2"></span>
                 </NavLink>
               </li>
             </ul>
@@ -367,6 +378,8 @@ function Navbar() {
                   }}
                   data-target="#mymodalDetails"
                   data-toggle="modal"
+                  data-dismiss="modal"
+                  onClick={showUser}
                 >
                   Submit
                 </div>

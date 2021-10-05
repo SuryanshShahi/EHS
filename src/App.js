@@ -11,6 +11,7 @@ import Services from "./Services";
 import Footer from "./Footer";
 import WashingMachine from "./WashingMachine/WashingM";
 import Register from "./Register/Register";
+import User from "./UserProfile/User"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/blog" component={Blog} />
         <Route exact path="/washingMachine" component={WashingMachine} />
         <Route exact path="/register" component={Register} />
+        <Route exact path="/userProfile" component={User} />
 
         <Redirect to="/" />
       </Switch>
