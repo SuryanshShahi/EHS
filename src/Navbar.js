@@ -27,6 +27,7 @@ function Navbar() {
 
   const showUser =()=>{
     document.getElementById("user").style.display = "block";
+    document.getElementById("login").style.display = "none";
   }
   return (
     <section>
@@ -119,7 +120,7 @@ function Navbar() {
                   Blog
                 </Link>
               </li>
-              <li className="nav-item pt-lg-0 pt-3 ml-2">
+              <li className="nav-item pt-lg-0 pt-3 ml-2" id="login">
                 <NavLink
                   to="/"
                   data-target="#mymodal"
