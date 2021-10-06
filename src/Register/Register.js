@@ -13,15 +13,12 @@ function Register() {
       x.style.borderRadius = "50px";
     }
     if (!x.contains(e.target)) {
-      x.style.display = 'none';
-  }
+      x.style.display = "none";
+    }
   };
   return (
     <section style={{ marginTop: "46px" }}>
-      <div
-        className="py-5 align-items-center d-flex"
-        id="Register"
-      >
+      <div className="py-5 align-items-center d-flex" id="Register">
         <div className="container-fluid row pr-5">
           <div className="col-lg-6 col-md-6 col-12 justify-content-lg-end justify-content-center d-flex my-5">
             <div className="pt-5" style={{ color: "black" }}>
@@ -44,83 +41,90 @@ function Register() {
                   maxWidth: "550px",
                 }}
               >
-                <div
-                  className="tab-content text-white content overflow-auto px-2 px-lg-4"
-                  id="show"
-                  // style={{ height: "450px" }}
-                >
-                  <h4 className="text-center font-weight-bold pt-2">
-                    Fill up The Form
-                  </h4>
-
-                  <div className="px-lg-4 py-4">
-                    <input
-                      type="text"
-                      className="form-control border-0 mt-4 pl-4"
-                      placeholder="Name"
-                      style={{
-                        borderRadius: "50px",
-                        height: "41px",
-                        marginBottom: " 30px",
-                      }}
-                    ></input>
-                    <input
-                      type="text"
-                      className="form-control border-0 pl-4"
-                      placeholder="Mobile Number"
-                      style={{
-                        borderRadius: "50px",
-                        height: "41px",
-                        marginBottom: " 30px",
-                      }}
-                    ></input>
-                    <input
-                      type="text"
-                      className="form-control border-0 pl-4"
-                      placeholder="Email"
-                      style={{
-                        borderRadius: "50px",
-                        height: "41px",
-                        marginBottom: " 30px",
-                      }}
-                    ></input>
-                    <select
-                      className="border-0"
-                      id="select"
-                      style={{
-                        paddingLeft: "20px",
-                        cursor: "pointer",
-                        width: "100%",
-                        transition: "0.5s",
-                        outline: "none",
-                        height: "41px",
-                        borderRadius: "50px",
-                      }}
-                      onClick={border}
-                    >
-                      <option selected="selected">Service</option>
-                      <option value="NA">NA</option>
-                      <option value="NA">NA</option>
-                      <option value="NA">NA</option>
-                    </select>{" "}
-                  </div>
-                </div>
-                <div className="mx-5 justify-content-center d-flex pb-2">
+                <form action="/">
                   <div
-                    className="btn nextbtn border-0 tab text-white my-3"
-                    id="next"
-                    style={{
-                      borderRadius: "50px",
-                      width: "100%",
-                      maxWidth: "250px",
-                      maxHeight: "46px",
-                      padding: "11px 0px",
-                      background: "#4627cf",
-                    }}
+                    className="tab-content text-white content overflow-auto px-2 px-lg-4"
+                    id="show"
+                    // style={{ height: "450px" }}
                   >
-                    Next
+                    <h4 className="text-center font-weight-bold pt-2">
+                      Fill up The Form
+                    </h4>
+
+                    <div className="px-lg-4 py-4">
+                      <input
+                        type="text"
+                        className="form-control border-0 mt-4 pl-4"
+                        placeholder="Name"
+                        required
+                        style={{
+                          borderRadius: "50px",
+                          height: "41px",
+                          marginBottom: " 30px",
+                        }}
+                      ></input>
+                      <input
+                        type="phone"
+                        className="form-control border-0 pl-4"
+                        placeholder="Mobile Number"
+                        required
+                        style={{
+                          borderRadius: "50px",
+                          height: "41px",
+                          marginBottom: " 30px",
+                        }}
+                      ></input>
+                      <input
+                        type="email"
+                        className="form-control border-0 pl-4"
+                        placeholder="Email"
+                        required
+                        style={{
+                          borderRadius: "50px",
+                          height: "41px",
+                          marginBottom: " 30px",
+                        }}
+                      ></input>
+                      <select
+                        className="border-0"
+                        id="select"
+                        required
+                        style={{
+                          paddingLeft: "20px",
+                          cursor: "pointer",
+                          width: "100%",
+                          transition: "0.5s",
+                          outline: "none",
+                          height: "41px",
+                          borderRadius: "50px",
+                        }}
+                        onClick={border}
+                      >
+                        <option value="">Select Service</option>
+                        <option value="NA">NA</option>
+                        <option value="NA">NA</option>
+                        <option value="NA">NA</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
+                  <div className="mx-5 justify-content-center d-flex pb-2">
+                    <button
+                      type="submit"
+                      className="btn nextbtn border-0 tab text-white my-3"
+                      id="next"
+                      style={{
+                        borderRadius: "50px",
+                        width: "100%",
+                        maxWidth: "250px",
+                        maxHeight: "46px",
+                        padding: "11px 0px",
+                        background: "#4627cf",
+                      }}
+                    >
+                      Next
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>

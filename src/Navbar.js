@@ -25,10 +25,10 @@ function Navbar() {
       .then((data) => setLocation(data));
   };
 
-  const showUser =()=>{
+  const showUser = () => {
     document.getElementById("user").style.display = "block";
     document.getElementById("login").style.display = "none";
-  }
+  };
   return (
     <section>
       <div id="top">..</div>
@@ -130,12 +130,14 @@ function Navbar() {
                   Login/Signup
                 </NavLink>
               </li>
-              <li className="nav-item pt-lg-0 pt-3 ml-2" id="user" style={{display:"none"}}>
-                <NavLink
-                  to="/userProfile"
-                  className="nav-link text-white"
-                >
-                  User<span className="fa fa-user-circle-o text-white fa-lg pl-2"></span>
+              <li
+                className="nav-item pt-lg-0 pt-3 ml-2"
+                id="user"
+                style={{ display: "none" }}
+              >
+                <NavLink to="/userProfile" className="nav-link text-white">
+                  User
+                  <span className="fa fa-user-circle-o text-white fa-lg pl-2"></span>
                 </NavLink>
               </li>
             </ul>
@@ -170,7 +172,7 @@ function Navbar() {
               </div>
               <div className="justify-content-center d-flex pt-3 pb-4">
                 <input
-                  type="phone"
+                  type="tel"
                   placeholder="Enter Phone No."
                   className="form-control text-center bg-transparent"
                   style={{
