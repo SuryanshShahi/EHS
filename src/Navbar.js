@@ -68,10 +68,10 @@ function Navbar() {
                 style={{ cursor: "pointer" }}
               >
                 &nbsp;&nbsp;
-                <span className="font-weight-bold text-white" style={{ fontSize: "17px" }}>
+                <span className="font-weight-bold" style={{ fontSize: "17px" }}>
                   Chandigarh
                 </span>{" "}
-                <b style={{ fontSize: "20px", color:"white" }}>🡓</b>
+                <b style={{ fontSize: "20px" }}>🡓</b>
               </NavLink>
               <div
                 className="d-flex mr-lg-auto pt-lg-0 pt-4 align-items-center"

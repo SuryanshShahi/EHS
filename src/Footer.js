@@ -15,7 +15,7 @@ function Footer() {
       >
         <div className="row mx-5 py-4">
           <div className="col-lg-3 col-6 pb-3">
-            <b className="text-white">CITIES WE SERVE</b>
+            <b>CITIES WE SERVE</b>
             <ul className="list-unstyled pt-2">
               <li>Chandigarh</li>
               <li>Mohali</li>
@@ -27,7 +27,7 @@ function Footer() {
             </ul>
           </div>
           <div className="col-lg-3 col-6 pb-3">
-            <b className="text-white">COMPANY</b>
+            <b>COMPANY</b>
             <ul className="list-unstyled pt-2">
               <li>About us</li>
               <li>Terms & Condition</li>
@@ -40,7 +40,7 @@ function Footer() {
             </ul>
           </div>
           <div className="col-lg-6 col-12 pb-4">
-            <b className="text-white">SERVICES</b>
+            <b>SERVICES</b>
             <div className="row pt-2">
               <div className="col list-unstyled">
                 <li className="">Ac Service</li>
@@ -77,7 +77,7 @@ function Footer() {
               alt="image"
               width={135}
             ></img>
-            <span className="text-white" style={{ fontSize: "14px" }}>
+            <span style={{ fontSize: "14px" }}>
               COPYRIGHT 2017-2021 EPIC VILA PRO SERVICES PRIVATE LIMITED
             </span>
           </div>
@@ -103,7 +103,7 @@ function Footer() {
               className="img-fluid px-3 px-sm-4 px-md-4 px-lg-4"
             ></img>
           </div>
-          <div className="col-lg-4 col-12 d-flex text-white justify-content-center align-items-center pt-4 mt-2 pt-lg-0">
+          <div className="col-lg-4 col-12 d-flex justify-content-center align-items-center pt-4 mt-2 pt-lg-0">
             <img
               src={play}
               className="img-fluid ml-lg-auto"

@@ -59,10 +59,10 @@ function User() {
         </div>
       </div>
       <div
-        className="tab-content"
+        className="tab-content pb-5"
         style={{ background: "rgba(222, 224, 236, 0.92)" }}
       >
-        <div id="MyBookings" className="active tab-pane pt-2">
+        <div id="MyBookings" className="active tab-pane pt-2 pb-5">
           <h4 className="text-center font-weight-bolder py-4">My Booking</h4>
           <div className="justify-content-center d-flex">
             <div
@@ -238,7 +238,7 @@ function User() {
                             </div>
                             <div className="col-6">
                               <div
-                                className="font-weight-bold"
+                                className="font-weight-bold py-1"
                                 style={{ fontSize: "14px" }}
                               >
                                 Date:{date}
@@ -395,10 +395,11 @@ function User() {
             return (
               <div className="justify-content-center d-flex">
                 <div
-                  className="bg-white w-50 py-4 px-5"
+                  className="container forwidth bg-white py-4 px-5 mx-3"
                   style={{
                     borderRadius: "20px",
                     boxShadow: "#8080808c 0px 0px 2px 0.5px",
+                    // maxWidth:"853px"
                   }}
                 >
                   <div
@@ -460,7 +461,7 @@ function User() {
             return (
               <div className=" justify-content-center d-flex">
                 <div
-                  className="bg-white w-50 py-4 px-5"
+                  className="container forwidth bg-white py-4 px-5 mx-3"
                   style={{
                     borderRadius: "20px",
                     boxShadow: "#8080808c 0px 0px 2px 0.5px",
@@ -541,7 +542,7 @@ function User() {
             return (
               <div className=" justify-content-center d-flex">
                 <div
-                  className="bg-white w-50 py-4 px-5"
+                  className="container forwidth bg-white py-4 px-5 mx-3"
                   style={{
                     borderRadius: "20px",
                     boxShadow: "#8080808c 0px 0px 2px 0.5px",
@@ -579,7 +580,7 @@ function User() {
             return (
               <div className=" justify-content-center d-flex">
                 <div
-                  className="bg-white w-50 py-4 px-5"
+                  className="container forwidth bg-white py-4 px-5 mx-3"
                   style={{
                     borderRadius: "20px",
                     boxShadow: "#8080808c 0px 0px 2px 0.5px",
