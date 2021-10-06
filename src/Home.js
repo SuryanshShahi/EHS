@@ -34,15 +34,15 @@ const responsive = {
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 4,
+    items: 3,
     slidesToSlide: 4,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 1024, min: 800 },
     items: 2,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 800, min: 0 },
     items: 1,
   },
 };
@@ -62,11 +62,11 @@ const responsive1 = {
     slidesToSlide: 3,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 1024, min: 800 },
     items: 2,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 800, min: 0 },
     items: 1,
   },
 };
@@ -755,7 +755,7 @@ function Home() {
       </div>
 
       <div
-        className="px-5 py-5 position-relative"
+        className="px-4 px-lg-5 py-5 position-relative"
         style={{ background: "rgb(222 224 236 / 92%)" }}
       >
         <div className="justify-content-center d-flex pb-4">
@@ -794,7 +794,7 @@ function Home() {
         </MultiCarousel>
       </div>
 
-      <div className="px-5 py-5">
+      <div className="px-4 px-lg-5 py-5">
         <div className="justify-content-center d-flex pb-4">
           <div className="text-center">
             <div
@@ -832,7 +832,7 @@ function Home() {
       </div>
 
       <div
-        className="px-5 py-5"
+        className="px-4 px-lg-5 py-5"
         style={{ background: "rgb(222 224 236 / 92%)" }}
       >
         <div className="justify-content-center d-flex pb-4">

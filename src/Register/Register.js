@@ -19,7 +19,7 @@ function Register() {
   return (
     <section style={{ marginTop: "46px" }}>
       <div className="py-5 align-items-center d-flex" id="Register">
-        <div className="container-fluid row pr-5">
+        <div className="container-fluid row pr-lg-5">
           <div className="col-lg-6 col-md-6 col-12 justify-content-lg-end justify-content-center d-flex my-5">
             <div className="pt-5" style={{ color: "black" }}>
               <h1 className="font-weight-bolder pt-4">
