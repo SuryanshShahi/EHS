@@ -551,62 +551,78 @@ export const Ongoing = [
   {
     name: "AC Service",
     price: "Rs500",
-    date:"27/10/2021",
-    time:"1pm to 2pm",
-    technician:"Harinder Singh"
+    date: "27/10/2021",
+    time: "1pm to 2pm",
+    technician: "Harinder Singh",
   },
   {
     name: "AC Service",
     price: "Rs500",
-    date:"27/10/2021",
-    time:"1pm to 2pm",
-    technician:"Harinder Singh"
+    date: "27/10/2021",
+    time: "1pm to 2pm",
+    technician: "Harinder Singh",
   },
   {
     name: "AC Service",
     price: "Rs500",
-    date:"27/10/2021",
-    time:"1pm to 2pm",
-    technician:"Harinder Singh"
+    date: "27/10/2021",
+    time: "1pm to 2pm",
+    technician: "Harinder Singh",
   },
 ];
 export const Completed = [
   {
     name: "AC Service",
-    date:"27/10/2021",
-    amount:"Rs500",
-    time:"1pm to 2pm",
-    technician:"Harinder Singh"
+    date: "27/10/2021",
+    amount: "Rs500",
+    time: "1pm to 2pm",
+    technician: "Harinder Singh",
   },
   {
     name: "Chimney Service",
-    date:"27/10/2021",
-    amount:"Rs500",
-    time:"1pm to 2pm",
-    technician:"Harinder Singh"
+    date: "27/10/2021",
+    amount: "Rs500",
+    time: "1pm to 2pm",
+    technician: "Harinder Singh",
   },
   {
     name: "Carpenter",
-    date:"27/10/2021",
-    amount:"Rs500",
-    time:"1pm to 2pm",
-    technician:"Harinder Singh"
+    date: "27/10/2021",
+    amount: "Rs500",
+    time: "1pm to 2pm",
+    technician: "Harinder Singh",
   },
 ];
 export const Cancelled = [
   {
     name: "AC Service",
-    date:"27/10/2021",
-    time:"1pm to 2pm",
+    date: "27/10/2021",
+    time: "1pm to 2pm",
   },
   {
     name: "AC Service",
-    date:"27/10/2021",
-    time:"1pm to 2pm",
+    date: "27/10/2021",
+    time: "1pm to 2pm",
   },
   {
     name: "AC Service",
-    date:"27/10/2021",
-    time:"1pm to 2pm",
+    date: "27/10/2021",
+    time: "1pm to 2pm",
   },
 ];
+export const Address = [
+  {
+    home: "Flat no 298, 1st Floor, TDI City, Sector 110, Mohali, Punjab - 140307",
+    home1:
+      "House no 197, 1st Floor, Khushal Enclave, Bhabt Road, Zirakpur, Mohali, Punjab -140603",
+  },
+];
+export const Profile = [
+  {
+    name: "Manish Kumar",
+    email: "manishjaiswal35@gmail.com",
+    number: "+91 9546182770",
+  },
+];
+export const Payment = [{}];
+export const Refer = [{}];
