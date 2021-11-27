@@ -149,7 +149,7 @@ function Navbar() {
         <div className="modal-dialog">
           <div
             className="modal-content justify-content-center d-flex border-0"
-            style={{ background: "#dedeea" }}
+            style={{ background: "#E8E4FD" }}
           >
             <div className="ml-auto pt-3">
               <div
@@ -209,7 +209,7 @@ function Navbar() {
         <div className="modal-dialog">
           <div
             className="modal-content justify-content-center d-flex border-0"
-            style={{ background: "#dedeea" }}
+            style={{ background: "#E8E4FD" }}
           >
             <div className="ml-auto mt-3">
               <div
@@ -296,7 +296,7 @@ function Navbar() {
         <div className="modal-dialog">
           <div
             className="modal-content justify-content-center d-flex border-0"
-            style={{ background: "#dedeea" }}
+            style={{ background: "#E8E4FD" }}
           >
             <div className="ml-auto pt-3">
               <div
@@ -418,7 +418,7 @@ function Navbar() {
         <div className="modal-dialog">
           <div
             className="modal-content justify-content-center d-flex border-0"
-            style={{ background: "#dedeea" }}
+            style={{ background: "#E8E4FD" }}
           >
             <div className="modal-header mx-2" style={{ padding: "13px" }}>
               <div className="">

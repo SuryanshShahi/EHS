@@ -1,0 +1,7 @@
+               <div className="nav nav-tabs">
+                      <div data-toggle="tab" className="btn tab active d-flex mt-3 justify-content-center text-center rounded-pill font-weight-bolder" style={{background:"white", color:"black", maxWidth:"220px"}}>Pay Ondivne After Service</div>
+                      <div data-toggle="tab" className="btn tab d-flex mt-3 justify-content-center text-center rounded-pill font-weight-bolder" style={{background:"white", color:"black", maxWidth:"220px"}}>Pay Cash After Service</div>
+                      <div data-toggle="tab" className="btn tab d-flex mt-3 justify-content-center text-center rounded-pill font-weight-bolder" style={{background:"white", color:"black", maxWidth:"220px"}}>Pay with Debit Card</div>
+                      <div data-toggle="tab" className="btn tab d-flex mt-3 justify-content-center text-center rounded-pill font-weight-bolder" style={{background:"white", color:"black", maxWidth:"220px"}}>Pay with Credit Card</div>
+                      <div data-toggle="tab" className="btn tab d-flex mt-3 justify-content-center text-center rounded-pill font-weight-bolder" style={{background:"white", color:"black", maxWidth:"220px"}}>Wallets</div>
+                      </div>

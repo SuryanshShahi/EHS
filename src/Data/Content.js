@@ -440,36 +440,19 @@ export const Plumber = [
 export const Second = [
   {
     name1: "AC Service",
-    amount: "Rs 500",
+    quantity: "2",
+    amount: 500,
   },
-  // {
-  //   name2: "Fridge Service",
-  //   amount: "Rs 500",
-  // },
-  // {
-  //   name3: "Washing Machine",
-  //   amount: "Rs 500",
-  // },
-  // {
-  //   name4: "TV",
-  //   amount: "Rs 500",
-  // },
-  // {
-  //   name4: "RO",
-  //   amount: "Rs 500",
-  // },
-  // {
-  //   name4: "Painter",
-  //   amount: "Rs 500",
-  // },
-  // {
-  //   name4: "Electrician",
-  //   amount: "Rs 500",
-  // },
-  // {
-  //   name4: "Plumber",
-  //   amount: "Rs 500",
-  // },
+  {
+    name1: "AC Installation",
+    quantity: "1",
+    amount: 1000,
+  },
+  {
+    name1: "AC Installation",
+    quantity: "2",
+    amount: 1500,
+  },
 ];
 
 export const Appliance = [
@@ -622,6 +605,18 @@ export const Profile = [
     name: "Manish Kumar",
     email: "manishjaiswal35@gmail.com",
     number: "+91 9546182770",
+  },
+];
+
+export const BookingAddress = [
+  {
+    Address: "Flat no 298, 1st Floor, TDI City, Sector 110, Mohali, Punjab",
+  },
+  {
+    Address: "Flat no 298, 1st Floor, TDI City, Sector 110, Mohali, Punjab",
+  },
+  {
+    Address: "Flat no 298, 1st Floor, TDI City, Sector 110, Mohali, Punjab",
   },
 ];
 export const Payment = [{}];

@@ -180,83 +180,80 @@ function WashingM() {
                   }}
                 >
                   <div className="py-2 px-4">
-                    {Second.map((elem) => {
-                      const { name1, amount } = elem;
-                      return (
-                        <ul className="list-unstyled">
-                          <h5>
-                            <b>Service Details</b>
-                          </h5>
-                          <li className="row text-center py-1">
-                            <div className="col">Split {name1}</div>
-                            <div className="col">2</div>
-                            <div className="col">{amount}</div>
-                          </li>
-                          <li className="row text-center py-1">
-                            <div className="col">Split {name1}</div>
-                            <div className="col">1</div>
-                            <div className="col">{amount}</div>
-                          </li>
-                          <br></br>
-                          <h5>
-                            <b>Choose Date</b>
-                          </h5>
-                          <div className="text-center pt-4 mt-4 pb-4">
-                            <label for="Date"></label>
-                            <input
-                              type="date"
-                              id="Date"
-                              name="Date"
-                              className="border-0 text-center pr-3"
-                              style={{
-                                outline: "none",
-                                height: "40px",
-                                borderRadius: "50px",
-                                color: "white",
-                                background: "#ffffff59",
-                                cursor: "pointer",
-                                fontSize: "17px",
-                              }}
-                            />
-                          </div>
-                          <br></br>
+                    <ul className="list-unstyled">
+                      <h5>
+                        <b>Service Details</b>
+                      </h5>
+                      {Second.map((elem) => {
+                        const { name1, amount, quantity } = elem;
+                        return (
                           <div>
-                            <h5>
-                              <b>Choose Time Slot</b>
-                            </h5>
-                            <div className="row time">
-                              <div className="col-4 pt-3">
-                                <div className="btn px-2">09 Am to 10 Am</div>
-                              </div>
-                              <div className="col-4 pt-3">
-                                <div className="btn px-2">10 Am to 11 Am</div>
-                              </div>
-                              <div className="col-4 pt-3">
-                                <div className="btn px-2">11 Am to 12 Pm</div>
-                              </div>
-                              <div className="col-4 pt-3">
-                                <div className="btn px-2">12 Pm to 01 Pm</div>
-                              </div>
-                              <div className="col-4 pt-3">
-                                <div className="btn px-2">01 Pm to 02 Pm</div>
-                              </div>
-                              <div className="col-4 pt-3">
-                                <div className="btn px-2">02 Pm to 03 Pm</div>
-                              </div>
-                              <div className="col-4 pt-3">
-                                <div className="btn px-2">03 Pm to 04 Pm</div>
-                              </div>
-                              <div className="col-4 pt-3">
-                                <div className="btn px-2">04 Pm to 05 Pm</div>
-                              </div>
-                              <div className="col-4 pt-3">
-                                <div className="btn px-2">05 Pm to 06 Pm</div>
-                              </div>
-                            </div>
+                            <li className="row text-center py-1">
+                              <div className="col">{name1}</div>
+                              <div className="col">{quantity}</div>
+                              <div className="col">Rs {amount}</div>
+                            </li>
                           </div>
-                        </ul>
-                      );
-                    })}
+                        );
+                      })}
+                      <br></br>
+                      <h5>
+                        <b>Choose Date</b>
+                      </h5>
+                      <div className="text-center pt-4 mt-4 pb-4">
+                        <label for="Date"></label>
+                        <input
+                          type="date"
+                          id="Date"
+                          name="Date"
+                          className="border-0 text-center pr-3"
+                          style={{
+                            outline: "none",
+                            height: "40px",
+                            borderRadius: "50px",
+                            color: "white",
+                            background: "#ffffff59",
+                            cursor: "pointer",
+                            fontSize: "17px",
+                          }}
+                        />
+                      </div>
+                      <br></br>
+                      <div>
+                        <h5>
+                          <b>Choose Time Slot</b>
+                        </h5>
+                        <div className="row time">
+                          <div className="col-4 pt-3">
+                            <div className="btn px-2">09 Am to 10 Am</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-2">10 Am to 11 Am</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-2">11 Am to 12 Pm</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-2">12 Pm to 01 Pm</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-2">01 Pm to 02 Pm</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-2">02 Pm to 03 Pm</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-2">03 Pm to 04 Pm</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-2">04 Pm to 05 Pm</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-2">05 Pm to 06 Pm</div>
+                          </div>
+                        </div>
+                      </div>
+                    </ul>
                   </div>
                 </div>
 

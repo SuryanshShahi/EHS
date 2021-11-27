@@ -69,17 +69,17 @@
 .navbar {
   padding: 3px !important;
 }
-#home .nav-tabs .active {
+#hometabs .nav-tabs .active {
   background-color: #4627cf;
 }
-#home .nav-tabs {
+#hometabs .nav-tabs {
   height: 107px;
   background-color: rgba(0, 0, 0, 0.7);
   width: fit-content;
   border-bottom: none !important;
 }
 
-#home .nav-tabs a {
+#hometabs .nav-tabs a {
   margin: 10px;
   text-align: center;
   min-width: 100px;
@@ -116,18 +116,21 @@
 }
 .time .btn {
   border-width: 2px;
-  border-radius: 10px;
-  padding: 0;
+  border-radius: 20px;
+  padding: 10;
   border-color: white;
-  color: white;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  font-size: 14px;
 }
-.time .btn:hover {
+/* .time .btn:hover {
   background-color: rgba(255, 255, 255, 0.808);
   border-color: rgba(255, 255, 255, 0.705);
   transition: 0.5s;
   font-weight: bold;
   color: black;
-}
+} */
 
 .footer li {
   font-size: 14px;
@@ -232,7 +235,19 @@
     z-index: 1000 !important;
     height: auto;
     color: white !important;
-    background: rgba(0, 0, 0, 0.5) !important;
+    background: rgba(131, 130, 130, 0.5) !important;
     cursor: pointer !important;
   }
+}
+
+#paymentMethod .nav-tabs .active {
+  background-color: black;
+  color: white;
+}
+#paymentMethod .btn {
+  background-color: white;
+}
+#paymentMethod .btn:hover {
+  background-color: black;
+  color: white;
 }

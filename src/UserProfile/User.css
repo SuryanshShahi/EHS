@@ -41,12 +41,12 @@
   color: white;
   transition: 0.5s;
 }
-.tab-content{
+.tab-content {
   transition: 0.5s linear;
 }
 
 @media (min-width: 1000px) {
-  .forwidth{
+  .forwidth {
     width: 50%;
   }
 }
