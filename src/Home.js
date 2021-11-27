@@ -779,7 +779,7 @@ function Home() {
                   data-target="#foraddress"
                   data-toggle="modal"
                 >
-                  Nextq
+                  Next
                 </div>
               </div>
 
