@@ -587,8 +587,8 @@ function User() {
                   }}
                 >
                   <div
-                    className="bg-primary"
-                    style={{ borderRadius: "20px 20px 0px 0px" }}
+                    className=""
+                    style={{ backgroundColor:"#101652d1",borderRadius: "20px 20px 0px 0px" }}
                   >
                     <div className="text-center py-4">
                       <div className="text-white">
