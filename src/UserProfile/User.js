@@ -578,12 +578,13 @@ function User() {
           {Refer.map((elem) => {
             const { home, home1 } = elem;
             return (
-              <div className=" justify-content-center d-flex">
+              <div className="justify-content-center d-flex">
                 <div
-                  className="border-0 forwidth bg-white mx-3"
+                  className="border-0 forwidth mx-3"
                   style={{
                     borderRadius: "20px",
                     boxShadow: "#8080808c 0px 0px 2px 0.5px",
+                    backgroundColor:"#eee"
                   }}
                 >
                   <div
@@ -635,7 +636,6 @@ function User() {
                   </div>
                   <div
                     className="py-2 px-4"
-                    style={{ backgroundColor: "#eee" }}
                   >
                     <div className="row pt-3">
                       <div className="col-lg-6 col-12">
@@ -652,7 +652,7 @@ function User() {
                           }}
                         >
                           <div className="py-2 px-2">
-                            <b style={{fontFamily:"sans-serif"}}>EKREF5368</b>
+                            <b style={{fontFamily:"sans-serif", fontSize:"17px"}}>EKREF5368</b>
                             <span className="float-right">Tap to copy</span>
                           </div>
                         </div>
@@ -662,7 +662,7 @@ function User() {
                         <div className="font-weight-bolder pb-4 text-primary">
                           Redeem Code
                         </div>
-                        <div className="bg-white d-flex py-1 px-2">
+                        <div className="bg-white rounded d-flex py-1 px-2" style={{boxShadow:"rgb(128 128 128 / 55%) 0px 0.5px 0px 0.5px"}}>
                           <div className="fa fa-money fa-2x pt-2"></div>
                           <div className="pl-3">
                             <span
@@ -678,7 +678,7 @@ function User() {
                             </div>
                           </div>
                         </div>
-                        <div className="bg-white d-flex mt-3 py-1 px-2">
+                        <div className="bg-white rounded d-flex mt-3 py-1 px-2" style={{boxShadow:"rgb(128 128 128 / 55%) 0px 0.5px 0px 0.5px"}}>
                           <div className="fa fa-group fa-2x pt-2"></div>
                           <div className="pl-3">
                             <span
@@ -701,7 +701,7 @@ function User() {
                     </div>
                   </div>
 
-                  <div className="text-center pt-5">
+                  <div className="text-center py-3">
                     <button
                       className="text-white border-0 px-5 py-1"
                       style={{
