@@ -43,22 +43,23 @@ function WashingM() {
   };
 
   return (
-    <section style={{ marginTop: "46px" }}>
-      <div className="py-5 " id="WashingM">
-        <div className="container-fluid row">
+    <section>
+      <div className="py-lg-5 py-md-5 " id="WashingM">
+        <div className="container-fluid">
+        <div className="row">
           <div className="col-lg-6 col-md-6 col-12 text-white justify-content-center d-flex my-5">
             <div className="pt-5">
-              <h1 className="font-weight-bolder pt-4">
+              <h1 className="font-weight-bolder pt-4"  style={{fontFamily:"Poppins"}}>
                 Washing Machine Repair<br></br> in Chandigarh
               </h1>
-              <ul className="font-weight-bolder pt-4">
+              <ul className="font-weight-bolder pt-4"  style={{fontFamily:"Poppins"}}>
                 <li className="pb-4">30 Days service warranty </li>
                 <li>Experienced technician at your doorstep</li>
               </ul>
             </div>
           </div>
-          <div className="col-lg-6 col-md-6 col-12 justify-content-center justify-content-lg-end d-flex">
-            <div className="px-lg-5 position-relative py-3">
+          <div className="col-lg-6 col-md-6 col-12 justify-content-center justify-content-lg-end d-flex gx-0">
+            <div className="px-lg-5 position-relative py-lg-3">
               <div
                 className="pt-3 px-2"
                 style={{
@@ -294,6 +295,7 @@ function WashingM() {
             </div>
           </div>
         </div>
+        </div>
       </div>
 
       <div
@@ -304,7 +306,7 @@ function WashingM() {
           <div className="text-center py-5">
             <h4
               className="font-weight-bolder"
-              style={{ fontFamily: "sans-serif" }}
+              style={{fontFamily:"Poppins"}}
             >
               How to Book Service
             </h4>
@@ -346,7 +348,7 @@ function WashingM() {
         <div className="text-center py-5">
           <h4
             className="font-weight-bolder"
-            style={{ fontFamily: "sans-serif" }}
+            style={{fontFamily:"Poppins"}}
           >
             Service Inclusions & Exclusions
           </h4>
@@ -403,7 +405,7 @@ function WashingM() {
           <div className="text-center py-5">
             <h4
               className="font-weight-bolder"
-              style={{ fontFamily: "sans-serif" }}
+              style={{fontFamily:"Poppins"}}
             >
               Frequently Asked Questions
             </h4>
@@ -549,7 +551,7 @@ function WashingM() {
         <div className="py-5">
           <h4
             className="font-weight-bolder text-center pb-4"
-            style={{ fontFamily: "sans-serif" }}
+            style={{fontFamily:"Poppins"}}
           >
             All About Washing Machine Repair in Chandigarh
           </h4>

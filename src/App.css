@@ -1,9 +1,17 @@
 @font-face {
   font-family: Nunito;
-  src: url(./font/Nunito-Light.ttf);
+  src: url(./font/Nunito/Nunito-Light.ttf);
+}
+@font-face {
+  font-family: Alata;
+  src: url(./font/Alata/Alata-Regular.ttf);
+}
+@font-face {
+  font-family: Poppins;
+  src: url(./font/Poppins/Poppins-Light.ttf);
 }
 * {
-  font-family: Nunito;
+  font-family: Poppins;
   scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {

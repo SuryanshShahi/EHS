@@ -13,7 +13,7 @@ import send from "../Images/send.png";
 import sendfade from "../Images/sendfade.png";
 function User() {
   return (
-    <div style={{ marginTop: "47px" }}>
+    <section>
       <div className="user">
         <div className="nav nav-tabs w-100 bg-white justify-content-center d-flex overflow-auto">
           <div
@@ -182,7 +182,7 @@ function User() {
                                 borderRadius: "0px 0px 0px 20px",
                                 background: "black",
                                 marginLeft: "10px",
-                                cursor:"pointer"
+                                cursor: "pointer",
                               }}
                             >
                               {" "}
@@ -196,7 +196,7 @@ function User() {
                                 borderRadius: "0px 0px 20px 0px",
                                 background: "black",
                                 marginRight: "10px",
-                                cursor:"pointer"
+                                cursor: "pointer",
                               }}
                             >
                               {" "}
@@ -283,7 +283,7 @@ function User() {
                               style={{
                                 borderRadius: "0px 0px 20px 20px",
                                 background: "black",
-                                cursor:"pointer"
+                                cursor: "pointer",
                               }}
                             >
                               {" "}
@@ -373,7 +373,7 @@ function User() {
                               style={{
                                 borderRadius: "0px 0px 20px 20px",
                                 background: "black",
-                                cursor:"pointer"
+                                cursor: "pointer",
                               }}
                             >
                               {" "}
@@ -580,20 +580,84 @@ function User() {
             return (
               <div className=" justify-content-center d-flex">
                 <div
-                  className="container forwidth bg-white py-4 px-5 mx-3"
+                  className="border-0 forwidth bg-white mx-3"
                   style={{
                     borderRadius: "20px",
                     boxShadow: "#8080808c 0px 0px 2px 0.5px",
                   }}
                 >
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
+                  <div
+                    className="bg-primary"
+                    style={{ borderRadius: "20px 20px 0px 0px" }}
+                  >
+                    <div className="text-center py-4">
+                      <div className="text-white">
+                        {" "}
+                        You and your colleague will get
+                      </div>
+                      <span
+                        className="font-weight-bolder text-white"
+                        style={{ fontSize: "24px" }}
+                      >
+                        1 Referral = Rs.100/-
+                      </span>
+                    </div>
+
+                    <div className="d-flex justify-content-center">
+                      <div
+                        className="fa fa-user-circle-o fa-4x text-white text-center"
+                        style={{ width: "150px" }}
+                      >
+                        <div className="py-2" style={{ fontSize: "14px" }}>
+                          Refer a colleague
+                        </div>
+                      </div>
+                      <div
+                        className="fa fa-user-circle-o fa-4x text-white text-center"
+                        style={{ width: "150px" }}
+                      >
+                        <div className="py-2" style={{ fontSize: "14px" }}>
+                          Rs.50/- on joining
+                        </div>
+                      </div>
+                      <div
+                        className="fa fa-user-circle-o fa-4x text-white text-center"
+                        style={{ width: "150px" }}
+                      >
+                        <div className="py-2" style={{ fontSize: "14px" }}>
+                          Rs.50/- on first complete transation
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="py-2 px-4">
+                    <div className="font-weight-bolder pb-1">REFERRAL CODE</div>
+                    <div
+                      className="w-50"
+                      style={{
+                        backgroundColor: "#ffd00082",
+                        borderColor: "orange",
+                        borderStyle: "dotted",
+                        cursor: "pointer",
+                      }}
+                    >
+                      <div className="py-2 px-2">
+                        <b>EKREF5368</b>
+                        <span className="float-right">Tap to copy</span>
+                      </div>
+                    </div>
+                    <div className="pt-4">Do you have any referral code?</div>
+                    <div className="font-weight-bolder pb-1 text-primary">
+                      Redeem Code
+                    </div>
+
+                    <div className="">
+                      <div className="fa fa-money fa-3x"></div>
+                      <span style={{fontSize:"14px"}}>Rs.500.00</span>
+                      <div className="">You've earned till now</div>
+                    </div>
+                  </div>
+
                   <div className="text-center pt-5">
                     <button
                       className="text-white border-0 px-5 py-1"
@@ -613,7 +677,7 @@ function User() {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

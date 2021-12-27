@@ -130,12 +130,12 @@ function Home() {
     document.getElementById("home").style.background = "";
   };
   return (
-    <section style={{ marginTop: "46px" }}>
-      <div className="py-5" id="home">
+    <section>
+      <div className="py-lg-5 py-md-4" id="home">
         <div className="mx-lg-5 position-relative pb-1">
           <div id="hometabs">
             <ul
-              className="nav nav-tabs mx-4 mx-md-5 mx-lg-5 px-2 d-flex"
+              className="nav nav-tabs mx-md-5 mx-lg-5 px-2 d-flex"
               style={{ borderRadius: "0px 22px 22px 0px", overflowX: "auto" }}
               onClick={navtabs}
             >
@@ -245,7 +245,7 @@ function Home() {
             </ul>
           </div>
           <div
-            className="px-2 mx-4 mx-md-5 mx-lg-5 pt-3"
+            className="px-2 mx-md-5 mx-lg-5 pt-3"
             style={{
               background: "rgba(0, 0, 0, 0.7)",
               maxWidth: "550px",
@@ -1060,7 +1060,7 @@ function Home() {
             >
               Appliance Repair Service
             </div>
-            <div> Servicing, installation, uninstallation & repair</div>
+            <div style={{color:"#524E4E", fontFamily:"Nunito"}}><b>Servicing, installation, uninstallation & repair</b></div>
           </div>
         </div>
         <MultiCarousel {...setting}>
@@ -1097,7 +1097,7 @@ function Home() {
             >
               Repair & Maintenence
             </div>
-            <div> Minor repair, fitting, servicing & many more</div>
+            <div style={{color:"#524E4E", fontFamily:"Nunito"}}><b>Minor repair, fitting, servicing & many more</b></div>
           </div>
         </div>
         <MultiCarousel {...settings}>
@@ -1137,7 +1137,7 @@ function Home() {
             >
               Painter & Interior Designing
             </div>
-            <div> House painter, house decor, false ceiling & designing</div>
+            <div style={{color:"#524E4E", fontFamily:"Nunito"}}><b>House painter, house decor, false ceiling & designing</b></div>
           </div>
         </div>
         <MultiCarousel {...settings}>

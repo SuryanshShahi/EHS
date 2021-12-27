@@ -11,7 +11,7 @@ function Footer() {
     <section id="footer">
       <footer
         className="pt-2 text-white footer"
-        style={{ background: "black" }}
+        style={{ background: "black", fontFamily:"Poppins" }}
       >
         <div className="row mx-5 py-4">
           <div className="col-lg-3 col-6 pb-3">

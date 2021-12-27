@@ -31,9 +31,9 @@ function Navbar() {
   };
   return (
     <section>
-      <div id="top">..</div>
+      <div id="top" className="position-absolute">..</div>
       <nav
-        className="navbar navbar-expand-lg fixed-top"
+        className="navbar navbar-expand-lg"
         style={{ background: "black" }}
       >
         <div className="container-fluid px-5">
@@ -45,6 +45,22 @@ function Navbar() {
               width={120}
             ></img>
           </NavLink>
+
+          <NavLink
+          to="/"
+          data-target="#mymodalLocation"
+          data-toggle="modal"
+          className="fa fa-map-marker text-white fa-lg pr-3 text-decoration-none d-flex"
+          style={{ cursor: "pointer" }}
+        >
+          &nbsp;&nbsp;
+        
+          <div className="font-weight-bold" style={{ fontSize: "17px" }}>
+            Chandigarh
+          </div>
+          <div className="fa fa-arrow-down pl-2"></div>
+        </NavLink>
+
           <button
             className="navbar-toggler"
             type="button"
@@ -59,21 +75,11 @@ function Navbar() {
               style={{ color: "white", fontSize: "27px" }}
             ></span>
           </button>
+         
+
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-lg-auto mb-2 mb-lg-0 justify-content-center align-items-center d-flex">
-              <NavLink
-                to="/"
-                data-target="#mymodalLocation"
-                data-toggle="modal"
-                className="fa fa-map-marker text-white fa-lg pr-3 text-decoration-none"
-                style={{ cursor: "pointer" }}
-              >
-                &nbsp;&nbsp;
-                <span className="font-weight-bold" style={{ fontSize: "17px" }}>
-                  Chandigarh
-                </span>{" "}
-                <b style={{ fontSize: "20px" }}>🡓</b>
-              </NavLink>
+              
               <div
                 className="d-flex mr-lg-auto pt-lg-0 pt-4 align-items-center"
                 style={{ width: "100%", maxWidth: "300px" }}
