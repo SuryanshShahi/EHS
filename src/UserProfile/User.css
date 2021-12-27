@@ -7,11 +7,11 @@
   min-height: 54px;
   border-bottom: none !important;
 }
-@media (max-width: 866px) {
+/* @media (max-width: 866px) {
   .user .nav-tabs {
     margin-top: 53px;
   }
-}
+} */
 .user .nav-tabs .tab:hover {
   background-color: black;
   color: white;

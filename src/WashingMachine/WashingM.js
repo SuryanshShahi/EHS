@@ -59,7 +59,7 @@ function WashingM() {
             </div>
           </div>
           <div className="col-lg-6 col-md-6 col-12 justify-content-center justify-content-lg-end d-flex gx-0">
-            <div className="px-lg-5 position-relative py-lg-3">
+            <div className="px-lg-5 position-relative py-lg-3 py-md-3">
               <div
                 className="pt-3 px-2"
                 style={{
@@ -411,7 +411,7 @@ function WashingM() {
             </h4>
           </div>
           <div className="container-fluid px-lg-5">
-            <div className="row pb-4 px-lg-5" style={{ fontSize: "16.5px" }}>
+            <div className="row pb-4 px-lg-5" style={{ fontSize: "16.5px",textAlign:"justify" }}>
               <div className="col-lg-6 col-md-6 col-12 list-unstyled pb-5">
                 <Accordion expanded>
                   <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -555,7 +555,7 @@ function WashingM() {
           >
             All About Washing Machine Repair in Chandigarh
           </h4>
-          <div className="mx-lg-5" style={{ fontSize: "17px" }}>
+          <div className="mx-lg-5" style={{ fontSize: "17px",textAlign:"justify" }}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -572,7 +572,7 @@ function WashingM() {
           </div>
         </div>
         <div className="px-lg-5">
-          <div className="row pb-4 px-lg-5" style={{ fontSize: "16.5px" }}>
+          <div className="row pb-4 px-lg-5" style={{ fontSize: "16.5px",textAlign:"justify" }}>
             <div className="col-lg-6 col-md-6 col-12 list-unstyled pb-5 px-lg-4">
               <b>5 Common Washing Machine Problems</b>
               <ol className="ml-4">

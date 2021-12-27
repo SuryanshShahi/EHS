@@ -17,7 +17,7 @@ function Register() {
     }
   };
   return (
-    <section style={{ marginTop: "46px" }}>
+    <section>
       <div className="py-5 align-items-center d-flex" id="Register">
         <div className="container-fluid row pr-lg-5">
           <div className="col-lg-6 col-md-6 col-12 justify-content-lg-end justify-content-center d-flex my-5">

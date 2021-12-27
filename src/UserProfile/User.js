@@ -609,24 +609,24 @@ function User() {
 
                     <div className="d-flex justify-content-center">
                       <div
-                        className="fa fa-user-circle-o fa-4x text-white text-center"
-                        style={{ width: "150px" }}
+                        className="fa fa-user-circle-o mx-lg-4 mx-3 fa-4x text-white text-center"
+                        style={{ maxWidth: "150px" }}
                       >
                         <div className="py-2" style={{ fontSize: "14px" }}>
                           Refer a colleague
                         </div>
                       </div>
                       <div
-                        className="fa fa-user-circle-o fa-4x text-white text-center"
-                        style={{ width: "150px" }}
+                        className="fa fa-user-circle-o mx-lg-4 mx-3 fa-4x text-white text-center"
+                        style={{ maxWidth: "150px" }}
                       >
                         <div className="py-2" style={{ fontSize: "14px" }}>
                           Rs.50/- on joining
                         </div>
                       </div>
                       <div
-                        className="fa fa-user-circle-o fa-4x text-white text-center"
-                        style={{ width: "150px" }}
+                        className="fa fa-user-circle-o mx-lg-4 mx-3 fa-4x text-white text-center"
+                        style={{ maxWidth: "150px" }}
                       >
                         <div className="py-2" style={{ fontSize: "14px" }}>
                           Rs.50/- on first complete transation
@@ -645,7 +645,7 @@ function User() {
                         <div
                           className=""
                           style={{
-                            backgroundColor: "#ffd00082",
+                            backgroundColor: "rgb(244 255 0 / 29%)",
                             borderColor: "orange",
                             borderStyle: "dotted",
                             cursor: "pointer",
