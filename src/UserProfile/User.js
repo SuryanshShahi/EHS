@@ -588,7 +588,10 @@ function User() {
                 >
                   <div
                     className=""
-                    style={{ backgroundColor:"#101652d1",borderRadius: "20px 20px 0px 0px" }}
+                    style={{
+                      backgroundColor: "#101652d1",
+                      borderRadius: "20px 20px 0px 0px",
+                    }}
                   >
                     <div className="text-center py-4">
                       <div className="text-white">
@@ -630,31 +633,71 @@ function User() {
                       </div>
                     </div>
                   </div>
-                  <div className="py-2 px-4">
-                    <div className="font-weight-bolder pb-1">REFERRAL CODE</div>
-                    <div
-                      className="w-50"
-                      style={{
-                        backgroundColor: "#ffd00082",
-                        borderColor: "orange",
-                        borderStyle: "dotted",
-                        cursor: "pointer",
-                      }}
-                    >
-                      <div className="py-2 px-2">
-                        <b>EKREF5368</b>
-                        <span className="float-right">Tap to copy</span>
+                  <div
+                    className="py-2 px-4"
+                    style={{ backgroundColor: "#eee" }}
+                  >
+                    <div className="row pt-3">
+                      <div className="col-lg-6 col-12">
+                        <div className="font-weight-bolder pb-1">
+                          REFERRAL CODE
+                        </div>
+                        <div
+                          className=""
+                          style={{
+                            backgroundColor: "#ffd00082",
+                            borderColor: "orange",
+                            borderStyle: "dotted",
+                            cursor: "pointer",
+                          }}
+                        >
+                          <div className="py-2 px-2">
+                            <b style={{fontFamily:"sans-serif"}}>EKREF5368</b>
+                            <span className="float-right">Tap to copy</span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div className="pt-4">Do you have any referral code?</div>
-                    <div className="font-weight-bolder pb-1 text-primary">
-                      Redeem Code
-                    </div>
-
-                    <div className="">
-                      <div className="fa fa-money fa-3x"></div>
-                      <span style={{fontSize:"14px"}}>Rs.500.00</span>
-                      <div className="">You've earned till now</div>
+                      <div className="col-lg-6 col-12">
+                        Do you have any referral code?
+                        <div className="font-weight-bolder pb-4 text-primary">
+                          Redeem Code
+                        </div>
+                        <div className="bg-white d-flex py-1 px-2">
+                          <div className="fa fa-money fa-2x pt-2"></div>
+                          <div className="pl-3">
+                            <span
+                              style={{
+                                fontSize: "17px",
+                                fontFamily: "sans-serif",
+                              }}
+                            >
+                              <b>₹ 500.00</b>
+                            </span>
+                            <div className="" style={{ fontSize: "14px" }}>
+                              You've earned till now
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-white d-flex mt-3 py-1 px-2">
+                          <div className="fa fa-group fa-2x pt-2"></div>
+                          <div className="pl-3">
+                            <span
+                              style={{
+                                fontSize: "17px",
+                                fontFamily: "sans-serif",
+                              }}
+                            >
+                              <b>2 peers</b>
+                            </span>
+                            <div className="" style={{ fontSize: "14px" }}>
+                              Accepted your referral invite
+                            </div>
+                          </div>
+                        </div>
+                        <div className="font-weight-bolder py-4 text-primary">
+                          *T&C apply
+                        </div>
+                      </div>
                     </div>
                   </div>
 
