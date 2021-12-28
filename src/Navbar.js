@@ -350,7 +350,7 @@ function Navbar() {
         >
             <div className=" justify-content-end d-flex pt-3">
               <div
-                className="close pr-3"
+                className="close text-white pr-3"
                 data-dismiss="modal"
                 style={{ cursor: "pointer" }}
               >
@@ -362,7 +362,7 @@ function Navbar() {
                 className="font-weight-bolder pb-4"
                 style={{ fontSize: "26px" }}
               >
-                OTP
+              Enter Basic Details
               </div>
               <div className="justify-content-center d-flex pb-3">
                 <img src={parents} className="img-fluid"></img>
