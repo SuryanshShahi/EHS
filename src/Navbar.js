@@ -12,6 +12,11 @@ function Navbar() {
   const [back, setBack] = useState(false);
   const [location1, setLocation] = useState([]);
   const [value, setValue] = useState();
+  const [otp, setOtp] = useState("");
+
+  const changeotp = (otp) => {
+    setOtp(otp);
+  };
 
   const backtotop = () => {
     if (window.scrollY >= 150) {
@@ -278,10 +283,19 @@ function Navbar() {
                 </span>
               </span>
               <div className="justify-content-center d-flex pt-3 pb-4">
-           
                 <OtpInput
-                className="otp"
-                  onChange={(otp) => console.log(otp)}
+                  className="otp"
+                  inputStyle={{  
+                    width: '2rem',  
+                    height: '2rem',  
+                    margin: '20px 1rem',  
+                    fontSize: '17px',  
+                    outline:"none",
+                    borderRadius: 4,  
+                    border: '2px solid rgba(0,0,0,0.3)',                      
+                }}  
+                  value={otp}
+                  onChange={changeotp}
                   numInputs={6}
                   separator={<span>-</span>}
                 />
