@@ -285,15 +285,15 @@ function Navbar() {
               <div className="justify-content-center d-flex pt-3 pb-4">
                 <OtpInput
                   className="otp"
-                  inputStyle={{  
-                    width: '2rem',  
-                    height: '2rem',  
-                    margin: '20px 1rem',  
-                    fontSize: '17px',  
-                    outline:"none",
-                    borderRadius: 4,  
-                    border: '2px solid rgba(0,0,0,0.3)',                      
-                }}  
+                  inputStyle={{
+                    width: "2rem",
+                    height: "2rem",
+                    margin: "20px 1rem",
+                    fontSize: "17px",
+                    outline: "none",
+                    borderRadius: 4,
+                    border: "2px solid rgba(0,0,0,0.3)",
+                  }}
                   value={otp}
                   onChange={changeotp}
                   numInputs={6}
@@ -302,7 +302,7 @@ function Navbar() {
               </div>
               <div className="justify-content-center d-flex py-3">
                 <div
-                  className="btn btn-primary border-0 text-white align-items-center d-flex justify-content-center font-weight-bold"
+                  className="btn btn-primary border-0 text-white align-items-center d-flex justify-content-center"
                   style={{
                     borderRadius: "50px",
                     // background: "rgb(39 13 253 / 77%)",
@@ -322,6 +322,9 @@ function Navbar() {
                 to="/"
                 className="font-weight-bolder text-decoration-none"
                 style={{ fontSize: "14px" }}
+                data-target="#mymodal"
+                  data-toggle="modal"
+                  data-dismiss="modal"
               >
                 Resend OTP
               </NavLink>
@@ -334,9 +337,18 @@ function Navbar() {
         <div className="modal-dialog">
           <div
             className="modal-content justify-content-center d-flex border-0"
-            style={{ background: "#E8E4FD" }}
+            style={{background:"#eee"
+               }}
           >
-            <div className="ml-auto pt-3">
+          <div
+          className="container text-center px-lg-4 pb-5 pt-3"
+          style={{
+            borderRadius: "5px 5px 0px 0px",
+            background:
+              "linear-gradient(rgb(22 16 115) 0%, rgb(88 4 89) 100%)",
+          }}
+        >
+            <div className=" justify-content-end d-flex pt-3">
               <div
                 className="close pr-3"
                 data-dismiss="modal"
@@ -345,7 +357,7 @@ function Navbar() {
                 &times;
               </div>
             </div>
-            <div className="container text-center px-lg-4 pb-5 pt-4">
+            <div className="container text-center text-white px-lg-4 pb-5 pt-4">
               <div
                 className="font-weight-bolder pb-4"
                 style={{ fontSize: "26px" }}
@@ -354,88 +366,95 @@ function Navbar() {
               </div>
               <div className="justify-content-center d-flex pb-3">
                 <img src={parents} className="img-fluid"></img>
-              </div>
+              </div>         
+            </div>
+            </div>
 
+            <div className="mx-5" style={{ marginTop: "-40px" }}>
+              <div
+                className="container bg-white py-5 px-5"
+                style={{
+                  borderRadius: "10px",
+                  boxShadow: "rgb(128 128 128 / 55%) 0px 0px 10px 2px",
+                }}
+              >
               <div className="justify-content-center d-flex pt-3 pb-1">
+              <input
+                type="text"
+                className="form-control bg-transparent text-center"
+                placeholder="Enter Full Name"
+                style={{
+                  borderRadius: "50px",
+                  borderWidth: "2.5px",
+                  borderColor: "black",
+                  color: "black",
+                }}
+              ></input>
+            </div>
+            <div className="justify-content-center d-flex pt-3 pb-4">
+              <input
+                type="Email"
+                className="text-center form-control bg-transparent"
+                placeholder="Enter Email"
+                style={{
+                  borderRadius: "50px",
+                  borderWidth: "2.5px",
+                  borderColor: "black",
+                  color: "black",
+                }}
+              ></input>
+            </div>
+            <div className="justify-content-center d-flex pt-3 pb-4">
+              <div className="align-items-center d-flex mr-5">
                 <input
-                  type="text"
-                  className="form-control bg-transparent text-center"
-                  placeholder="Enter Full Name"
-                  style={{
-                    borderRadius: "50px",
-                    borderWidth: "2.5px",
-                    borderColor: "black",
-                    color: "black",
-                  }}
-                ></input>
+                  type="radio"
+                  id="male"
+                  name="btn"
+                  style={{ width: "17px", height: "17px", cursor: "pointer" }}
+                />
+                <label for="male">
+                  <b>&nbsp;&nbsp;Male</b>
+                </label>
               </div>
-              <div className="justify-content-center d-flex pt-3 pb-4">
+              <div className="align-items-center d-flex ml-5">
                 <input
-                  type="Email"
-                  className="text-center form-control bg-transparent"
-                  placeholder="Enter Email"
-                  style={{
-                    borderRadius: "50px",
-                    borderWidth: "2.5px",
-                    borderColor: "black",
-                    color: "black",
-                  }}
-                ></input>
+                  type="radio"
+                  id="female"
+                  name="btn"
+                  style={{ width: "17px", height: "17px", cursor: "pointer" }}
+                />
+                <label for="female">
+                  <b>&nbsp;&nbsp;Female</b>
+                </label>
               </div>
-              <div className="justify-content-center d-flex pt-3 pb-4">
-                <div className="align-items-center d-flex mr-5">
-                  <input
-                    type="radio"
-                    id="male"
-                    name="btn"
-                    style={{ width: "17px", height: "17px", cursor: "pointer" }}
-                  />
-                  <label for="male">
-                    <b>&nbsp;&nbsp;Male</b>
-                  </label>
-                </div>
-                <div className="align-items-center d-flex ml-5">
-                  <input
-                    type="radio"
-                    id="female"
-                    name="btn"
-                    style={{ width: "17px", height: "17px", cursor: "pointer" }}
-                  />
-                  <label for="female">
-                    <b>&nbsp;&nbsp;Female</b>
-                  </label>
-                </div>
-              </div>
+            </div>
 
-              <div className="justify-content-center d-flex py-3">
+              </div>
+              <div className="align-items-center d-flex justify-content-center pb-5">
                 <div
-                  className="btn btn-primary border-0 text-white align-items-center d-flex justify-content-center font-weight-bold"
+                  className="shadow-lg"
                   style={{
                     borderRadius: "50px",
-                    // background: "rgb(39 13 253 / 77%)",
-                    fontSize: "19px",
-                    height: "41.58px",
-                    width: "100%",
+                    marginTop: "-22px",
+                    background:
+                      "linear-gradient(rgb(22 16 115) 0%, rgb(88 4 89) 100%)",
+                    cursor: "pointer",
                   }}
                   data-target="#mymodalDetails"
                   data-toggle="modal"
                   data-dismiss="modal"
                   onClick={showUser}
                 >
-                  Submit
+                  <img
+                    src={forward}
+                    className="img-fluid"
+                    style={{ width: "45px" }}
+                  ></img>
                 </div>
               </div>
-              <br></br>
-              <NavLink
-                to="/"
-                className="font-weight-bolder text-decoration-none"
-                style={{ fontSize: "14px" }}
-                data-dismiss="modal"
-              >
-                Skip Step
-              </NavLink>
             </div>
-          </div>
+          
+            </div>
         </div>
       </div>
 
