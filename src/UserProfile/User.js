@@ -616,6 +616,7 @@ function User() {
                           Refer a colleague
                         </div>
                       </div>
+                      <div className="fa fa-long-arrow-right text-white fa-2x pt-3"></div>
                       <div
                         className="fa fa-user-circle-o mx-lg-4 mx-3 fa-4x text-white text-center"
                         style={{ maxWidth: "150px" }}
@@ -624,6 +625,7 @@ function User() {
                           Rs.50/- on joining
                         </div>
                       </div>
+                      <div className="fa fa-long-arrow-right text-white fa-2x pt-3"></div>
                       <div
                         className="fa fa-user-circle-o mx-lg-4 mx-3 fa-4x text-white text-center"
                         style={{ maxWidth: "150px" }}

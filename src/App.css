@@ -77,6 +77,16 @@
 .navbar {
   padding: 3px !important;
 }
+.otp{
+  width: 50px;
+  color: black;
+}
+.PhoneInputInput{
+  outline: none;
+  padding: 5px 5px;
+  margin: 5px 5px;
+  border: none;
+}
 #hometabs .nav-tabs .active {
   background-color: #4627cf;
 }

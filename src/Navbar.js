@@ -3,10 +3,15 @@ import { NavLink } from "react-router-dom";
 import parents from "./Images/parents.png";
 import smartphone from "./Images/smartphone.png";
 import { Link } from "react-router-dom";
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
+import forward from "./Images/forward.png";
+import OtpInput from "react-otp-input";
 
 function Navbar() {
   const [back, setBack] = useState(false);
   const [location1, setLocation] = useState([]);
+  const [value, setValue] = useState();
 
   const backtotop = () => {
     if (window.scrollY >= 150) {
@@ -31,11 +36,10 @@ function Navbar() {
   };
   return (
     <section>
-      <div id="top" className="position-absolute">..</div>
-      <nav
-        className="navbar navbar-expand-lg"
-        style={{ background: "black" }}
-      >
+      <div id="top" className="position-absolute">
+        ..
+      </div>
+      <nav className="navbar navbar-expand-lg" style={{ background: "black" }}>
         <div className="container-fluid px-5">
           <NavLink className="navbar-brand" to="/">
             <img
@@ -47,19 +51,18 @@ function Navbar() {
           </NavLink>
 
           <NavLink
-          to="/"
-          data-target="#mymodalLocation"
-          data-toggle="modal"
-          className="fa fa-map-marker text-white fa-lg pr-3 text-decoration-none d-flex"
-          style={{ cursor: "pointer" }}
-        >
-          &nbsp;&nbsp;
-        
-          <div className="font-weight-bold" style={{ fontSize: "17px" }}>
-            Chandigarh
-          </div>
-          <div className="fa fa-arrow-down pl-2"></div>
-        </NavLink>
+            to="/"
+            data-target="#mymodalLocation"
+            data-toggle="modal"
+            className="fa fa-map-marker text-white fa-lg pr-3 text-decoration-none d-flex"
+            style={{ cursor: "pointer" }}
+          >
+            &nbsp;&nbsp;
+            <div className="font-weight-bold" style={{ fontSize: "17px" }}>
+              Chandigarh
+            </div>
+            <div className="fa fa-arrow-down pl-2"></div>
+          </NavLink>
 
           <button
             className="navbar-toggler"
@@ -75,11 +78,9 @@ function Navbar() {
               style={{ color: "white", fontSize: "27px" }}
             ></span>
           </button>
-         
 
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-lg-auto mb-2 mb-lg-0 justify-content-center align-items-center d-flex">
-              
               <div
                 className="d-flex mr-lg-auto pt-lg-0 pt-4 align-items-center"
                 style={{ width: "100%", maxWidth: "300px" }}
@@ -155,20 +156,29 @@ function Navbar() {
         <div className="modal-dialog">
           <div
             className="modal-content justify-content-center d-flex border-0"
-            style={{ background: "#E8E4FD" }}
+            style={{
+              background: "#eee",
+            }}
           >
-            <div className="ml-auto pt-3">
-              <div
-                className="close pr-3"
-                data-dismiss="modal"
-                style={{ cursor: "pointer" }}
-              >
-                &times;
+            <div
+              className="container text-center px-lg-4 pb-5 pt-3"
+              style={{
+                borderRadius: "5px 5px 0px 0px",
+                background:
+                  "linear-gradient(rgb(22 16 115) 0%, rgb(88 4 89) 100%)",
+              }}
+            >
+              <div className="pt-1 justify-content-end d-flex">
+                <div
+                  className="close text-white"
+                  data-dismiss="modal"
+                  style={{ cursor: "pointer" }}
+                >
+                  &times;
+                </div>
               </div>
-            </div>
-            <div className="container text-center px-lg-4 pb-5 pt-3">
               <div
-                className="font-weight-bolder pb-4"
+                className="font-weight-bolder text-white pb-4"
                 style={{ fontSize: "26px" }}
               >
                 Continue with Phone
@@ -176,34 +186,43 @@ function Navbar() {
               <div className="justify-content-center d-flex pb-5">
                 <img src={smartphone} className="img-fluid"></img>
               </div>
-              <div className="justify-content-center d-flex pt-3 pb-4">
-                <input
+            </div>
+            <div className="mx-5" style={{ marginTop: "-40px" }}>
+              <div
+                className="container bg-white py-5 px-5"
+                style={{
+                  borderRadius: "10px",
+                  boxShadow: "rgb(128 128 128 / 55%) 0px 0px 10px 2px",
+                }}
+              >
+                <PhoneInput
+                  placeholder="Mobile Number"
+                  value={value}
                   type="tel"
-                  placeholder="Enter Phone No."
-                  className="form-control text-center bg-transparent"
-                  style={{
-                    borderRadius: "50px",
-                    borderWidth: "2.5px",
-                    borderColor: "black",
-                    color: "black",
-                  }}
-                ></input>
+                  onChange={setValue}
+                />
+                <hr style={{ marginTop: "-10px" }}></hr>
+                <div className="text-center py-3">You will receive an OTP</div>
               </div>
-              <div className="justify-content-center d-flex py-3">
+              <div className="align-items-center d-flex justify-content-center pb-5">
                 <div
-                  className="btn btn-primary border-0 text-white align-items-center d-flex justify-content-center font-weight-bold"
+                  className="shadow-lg"
                   style={{
                     borderRadius: "50px",
-                    // background: "rgb(39 13 253 / 77%)",
-                    fontSize: "19px",
-                    height: "41.58px",
-                    width: "100%",
+                    marginTop: "-22px",
+                    background:
+                      "linear-gradient(rgb(22 16 115) 0%, rgb(88 4 89) 100%)",
+                    cursor: "pointer",
                   }}
                   data-target="#mymodalOTP"
                   data-toggle="modal"
                   data-dismiss="modal"
                 >
-                  Request OTP
+                  <img
+                    src={forward}
+                    className="img-fluid"
+                    style={{ width: "45px" }}
+                  ></img>
                 </div>
               </div>
             </div>
@@ -215,18 +234,21 @@ function Navbar() {
         <div className="modal-dialog">
           <div
             className="modal-content justify-content-center d-flex border-0"
-            style={{ background: "#E8E4FD" }}
+            style={{
+              background:
+                "linear-gradient(rgb(22 16 115) 0%, rgb(88 4 89) 100%)",
+            }}
           >
             <div className="ml-auto mt-3">
               <div
-                className="close pr-3"
+                className="close text-white pr-3"
                 data-dismiss="modal"
                 style={{ cursor: "pointer" }}
               >
                 &times;
               </div>
             </div>
-            <div className="container text-center px-lg-4 pb-5 pt-4">
+            <div className="container text-center px-lg-4 pb-5 pt-4 text-white">
               <div
                 className="font-weight-bolder pb-4"
                 style={{ fontSize: "26px" }}
@@ -256,17 +278,13 @@ function Navbar() {
                 </span>
               </span>
               <div className="justify-content-center d-flex pt-3 pb-4">
-                <input
-                  type="phone"
-                  placeholder="Enter OTP"
-                  className="form-control text-center bg-transparent"
-                  style={{
-                    borderRadius: "50px",
-                    borderWidth: "2.5px",
-                    borderColor: "black",
-                    color: "black",
-                  }}
-                ></input>
+           
+                <OtpInput
+                className="otp"
+                  onChange={(otp) => console.log(otp)}
+                  numInputs={6}
+                  separator={<span>-</span>}
+                />
               </div>
               <div className="justify-content-center d-flex py-3">
                 <div
