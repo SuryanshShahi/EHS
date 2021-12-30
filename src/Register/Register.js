@@ -18,7 +18,7 @@ function Register() {
   };
   return (
     <section>
-      <div className="py-5 align-items-center d-flex" id="Register">
+      <div className="py-lg-5 py-md-5 align-items-center d-flex" id="Register">
         <div className="container-fluid row pr-lg-5">
           <div className="col-lg-6 col-md-6 col-12 justify-content-lg-end justify-content-center d-flex my-5">
             <div className="pt-5" style={{ color: "black" }}>
@@ -31,8 +31,8 @@ function Register() {
               </ul>
             </div>
           </div>
-          <div className="col-lg-6 col-md-6 col-12 justify-content-center py-4 justify-content-lg-end d-flex">
-            <div className="px-lg-5 position-relative py-3 w-75 py-4">
+          <div className="col-lg-6 col-md-6 col-12 justify-content-center py-lg-4 py-md-4 pr-md-3 justify-content-lg-end d-flex gx-0">
+            <div className="px-lg-5 position-relative py-lg-4 py-md-4" style={{width:"100%", maxWidth:"607px"}}>
               <div
                 className="pt-3 px-2"
                 style={{
