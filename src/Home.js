@@ -17,15 +17,20 @@ import {
 } from "./Data/Content";
 import MultiCarousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Ac from "./Images/air-conditioner.png";
-import fridge from "./Images/fridge.png";
-import plumber from "./Images/plumber.png";
-import electrician from "./Images/electrician.png";
-import more from "./Images/more-than.png";
-import tv from "./Images/tv.png";
-import washingM from "./Images/washing-machine.png";
-import water from "./Images/water-filter.png";
-import painter from "./Images/painter.png";
+
+import Tab from "@mui/material/Tab";
+import Box from "@mui/material/Box";
+import TabContext from "@mui/lab/TabContext";
+import TabList from "@mui/lab/TabList";
+import TabPanel from "@mui/lab/TabPanel";
+import AcUnitIcon from "@mui/icons-material/AcUnit";
+import KitchenIcon from "@mui/icons-material/Kitchen";
+import TvIcon from "@mui/icons-material/Tv";
+import OpacityIcon from '@mui/icons-material/Opacity';
+import ImagesearchRollerIcon from '@mui/icons-material/ImagesearchRoller';
+import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
+import PlumbingIcon from '@mui/icons-material/Plumbing';
+import LocalLaundryServiceIcon from '@mui/icons-material/LocalLaundryService';
 
 const responsive = {
   superLargeDesktop: {
@@ -120,6 +125,8 @@ function Home() {
     setCounter(0);
     document.getElementById("Next").style.display = "none";
     document.getElementById("show").style.display = "block";
+    document.getElementById("next").style.display = "block";
+    document.getElementById("forAddress").style.display = "none";
   };
   const background = () => {
     document.getElementById("home").style.background =
@@ -129,922 +136,967 @@ function Home() {
   const Orgbackground = () => {
     document.getElementById("home").style.background = "";
   };
+
+  const [value, setValue] = React.useState("1");
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   return (
     <section>
       <div className="py-lg-5 py-md-4" id="home">
         <div className="mx-lg-5 position-relative pb-1">
-          <div id="hometabs">
-            <ul
-              className="nav nav-tabs mx-md-5 mx-lg-5 px-2 d-flex"
-              style={{ borderRadius: "0px 22px 22px 0px", overflowX: "auto" }}
-              onClick={navtabs}
-            >
-              <li>
-                <a
-                  className="active font-weight-bolder py-2 tab text-decoration-none"
-                  type="button"
-                  id="ac"
-                  data-toggle="tab"
-                  href="#AC"
+          <TabContext value={value}>
+            <Box>
+              <TabList
+                className="mr-lg-2 mr-md-2"
+                onChange={handleChange}
+                onClick={navtabs}
+                variant="scrollable"
+                scrollButtons={true}
+                // aria-label="scrollable prevent tabs example"
+                sx={{ background: "rgba(0, 0, 0, 0.9)", maxWidth: "1000px" }}
+              >
+                <Tab
+                  label="AC Service"
+                  value="1"
+                  icon={<AcUnitIcon/>}
                   onClick={Orgbackground}
-                >
-                  <img src={Ac} className="img-fluid"></img>
-                  <div className="text-white pt-2">AC Service</div>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="mx-1 font-weight-bolder px-2 py-2 tab text-decoration-none"
-                  type="button"
-                  data-toggle="tab"
-                  href="#Fridge"
+                  sx={{ height: "100px", color: "white", fontWeight: "bolder" }}
+                ></Tab>
+                <Tab
+                  label="Fridge Repair"
+                  value="2"
+                  icon={<KitchenIcon />}
                   onClick={background}
-                >
-                  <img src={fridge} className="img-fluid"></img>
-                  <div className="text-white pt-2">Fridge Repair</div>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="mx-1 font-weight-bolder px-2 py-2 tab text-decoration-none"
-                  type="button"
-                  data-toggle="tab"
-                  style={{ width: "112px" }}
-                  href="#WashingMachine"
-                >
-                  <img src={washingM} className="img-fluid"></img>
-                  <div className="text-white pt-2">Washing Machine</div>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="mx-1 font-weight-bolder px-2 py-2 tab text-decoration-none"
-                  type="button"
-                  data-toggle="tab"
-                  href="#TV"
-                >
-                  <img src={tv} className="img-fluid"></img>
-                  <div className="text-white pt-2">TV Repair</div>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="mx-1 font-weight-bolder px-2 py-2 tab text-decoration-none"
-                  type="button"
-                  data-toggle="tab"
-                  href="#RO"
-                >
-                  <img src={water} className="img-fluid"></img>
-                  <div className="text-white pt-2">RO Service</div>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="mx-1 font-weight-bolder px-2 py-2 tab text-decoration-none"
-                  type="button"
-                  data-toggle="tab"
-                  href="#Painter"
-                >
-                  <img src={painter} className="img-fluid"></img>
-                  <div className="text-white pt-2">Painter</div>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="mx-1 font-weight-bolder px-2 py-2 tab text-decoration-none"
-                  type="button"
-                  data-toggle="tab"
-                  href="#Electrician"
-                >
-                  <img src={electrician} className="img-fluid"></img>
-                  <div className="text-white pt-2">Electrician</div>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="mx-1 font-weight-bolder px-2 py-2 tab text-decoration-none"
-                  type="button"
-                  data-toggle="tab"
-                  href="#Plumber"
-                >
-                  <img src={plumber} className="img-fluid"></img>
-                  <div className="text-white pt-2">Plumber</div>
-                </a>
-              </li>
-              <li style={{ paddingRight: "6px" }}>
-                <a
-                  className="mx-1 font-weight-bolder px-2 py-2 tab text-decoration-none"
-                  type="button"
-                  data-toggle="tab"
-                  href=""
-                >
-                  <img src={more} className="img-fluid"></img>
-                  <div className="text-white pt-2">More Services</div>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div
-            className="px-2 mx-md-5 mx-lg-5 pt-3"
-            style={{
-              background: "rgba(0, 0, 0, 0.7)",
-              maxWidth: "550px",
-            }}
-          >
-            <div
-              className="tab-content text-white px-4 content overflow-auto"
-              id="show"
-              style={{ height: "450px" }}
-            >
-              <div id="AC" className="active tab-pane">
-                <div className="py-2">
-                  {AC.map((elem) => {
-                    const { name, amount, id, subServices } = elem;
-                    return (
-                      <ul className="list-unstyled">
-                        <h5>
-                          <b>{name}</b>
-                        </h5>
-                        <li className="row py-1" key={id}>
-                          <div className="col">{subServices[0]["name1"]}</div>
-                          <div className="col text-center">{amount}</div>
-                          <div className="col d-flex justify-content-end pb-2 pr-4 counter">
-                            <div
-                              className="text-white btn"
-                              onClick={() => handleDecrement(id)}
-                              style={{
-                                fontSize: "45px",
-                                marginTop: "-30px",
-                                cursor: "pointer",
-                                height: "0px",
-                              }}
-                            >
-                              -
-                            </div>
-                            <span className="px-2" style={{ fontSize: "17px" }}>
-                              {count}
-                            </span>
-                            <div
-                              className="text-white btn"
-                              onClick={() => handleIncrement(id)}
-                              style={{
-                                fontSize: "30px",
-                                marginTop: "-19px",
-                                cursor: "pointer",
-                                height: "0px",
-                              }}
-                            >
-                              +
-                            </div>
-                          </div>
-                        </li>
-                        <li className="row py-1">
-                          <div className="col">Window {name}</div>
-                          <div className="col text-center">{amount}</div>
-                          <div className="col d-flex justify-content-end pr-4 counter">
-                            <div
-                              className="text-white btn"
-                              onClick={() => handleDecrement1(id)}
-                              style={{
-                                fontSize: "45px",
-                                marginTop: "-30px",
-                                cursor: "pointer",
-                                height: "0px",
-                              }}
-                            >
-                              -
-                            </div>
-                            <span className="px-2" style={{ fontSize: "17px" }}>
-                              {counter}
-                            </span>
-                            <div
-                              className="text-white btn"
-                              onClick={() => handleIncrement1(id)}
-                              style={{
-                                fontSize: "30px",
-                                marginTop: "-19px",
-                                cursor: "pointer",
-                                height: "0px",
-                              }}
-                            >
-                              +
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    );
-                  })}
-                </div>
-              </div>
+                  sx={{ height: "100px", color: "white", fontWeight: "bolder" }}
+                ></Tab>
+                <Tab
+                  label="Washing Machine"
+                  value="3"
+                  icon={<LocalLaundryServiceIcon/> }
+                  fontSize= "large"
+                  sx={{fontSize:"30"}}
+                  sx={{
+                    height: "100px",
+                    color: "white",
+                    fontWeight: "bolder",
+                    outline: "none",
+                  }}
+                ></Tab>
+                <Tab
+                  label="TV Repair"
+                  value="4"
+                  icon={<TvIcon />}
+                  sx={{
+                    height: "100px",
+                    color: "white",
+                    fontWeight: "bolder",
+                    outline: "none",
+                  }}
+                ></Tab>
+                <Tab
+                  label="RO Service"
+                  value="5"
+                  icon={<OpacityIcon/>}
+                  sx={{
+                    height: "100px",
+                    color: "white",
+                    fontWeight: "bolder",
+                    outline: "none",
+                  }}
+                ></Tab>
+                <Tab
+                  label="Painter"
+                  value="6"
+                  icon={<ImagesearchRollerIcon/>}
+                  sx={{
+                    height: "100px",
+                    color: "white",
+                    fontWeight: "bolder",
+                    outline: "none",
+                  }}
+                ></Tab>
+                <Tab
+                  label="Electrician"
+                  value="7"
+                  icon={<ElectricalServicesIcon/>}
+                  sx={{
+                    height: "100px",
+                    color: "white",
+                    fontWeight: "bolder",
+                    outline: "none",
+                  }}
+                ></Tab>
+                <Tab
+                  label="Plumber"
+                  icon={<PlumbingIcon/>}
+                  value="8"
+                  sx={{
+                    height: "100px",
+                    color: "white",
+                    fontWeight: "bolder",
+                    outline: "none",
+                  }}
+                ></Tab>
+              </TabList>
 
-              <div id="Fridge" className="tab-pane fade">
-                <div className="py-2">
-                  <ul className="list-unstyled">
-                    <h5>
-                      <b>Repair</b>
-                    </h5>
-                    <li className="row py-1">
-                      <div className="col">
-                        Fully Automatic (Top load) Checkup
-                      </div>
-                      <div className="col-2">
-                        <input
-                          type="checkbox"
-                          className="form-check"
-                          style={{ cursor: "pointer", width: "18px" }}
-                        ></input>
-                      </div>
-                    </li>
-                    <li className="row py-1">
-                      <div className="col">
-                        Fully Automatic (Front load) Checkup
-                      </div>
-                      <div className="col-2">
-                        <input
-                          type="checkbox"
-                          className="form-check"
-                          style={{ cursor: "pointer", width: "18px" }}
-                        ></input>
-                      </div>
-                    </li>
-                    <li className="row py-1">
-                      <div className="col">Semi Automatic Checkup</div>
-                      <div className="col-2">
-                        <input
-                          type="checkbox"
-                          className="form-check"
-                          style={{ cursor: "pointer", width: "18px" }}
-                        ></input>
-                      </div>
-                    </li>
-                    <div
-                      className="text-center text-success py-4"
-                      style={{ fontSize: "14px" }}
-                    >
-                      *Visiting Charges Rs 299 For Checking
-                    </div>
-
-                    <h5>
-                      <b>Installation</b>
-                    </h5>
-                    {Fridge.map((elem) => {
-                      const { name, amount, id } = elem;
-                      return (
-                        <div>
-                          <li className="row py-1">
-                            <div className="col">{name}</div>
-                            <div className="col">{amount}</div>
-                            <div className="col d-flex justify-content-end pr-4 counter">
-                              <div
-                                className="text-white btn"
-                                onClick={() => handleDecrement(id)}
-                                style={{
-                                  fontSize: "45px",
-                                  marginTop: "-30px",
-                                  cursor: "pointer",
-                                  height: "0px",
-                                }}
-                              >
-                                -
-                              </div>
-                              <span
-                                className="px-2"
-                                style={{ fontSize: "17px" }}
-                              >
-                                {count}
-                              </span>
-                              <div
-                                className="text-white btn"
-                                onClick={() => handleIncrement(id)}
-                                style={{
-                                  fontSize: "30px",
-                                  marginTop: "-19px",
-                                  cursor: "pointer",
-                                  height: "0px",
-                                }}
-                              >
-                                +
-                              </div>
-                            </div>
-                          </li>
-                        </div>
-                      );
-                    })}
-                  </ul>
-                </div>
-              </div>
-
-              <div id="WashingMachine" className="tab-pane fade">
-                <div className="py-2">
-                  {WashingMachine.map((elem) => {
-                    const { name, amount, subServices } = elem;
-                    return (
-                      <ul className="list-unstyled">
-                        <h5>
-                          <b>{name}</b>
-                        </h5>
-                        <li className="row py-1">
-                          <div className="col">{subServices[0]["name1"]}</div>
-                          <div className="col text-center">{amount}</div>
-                          <div className="col"></div>
-                        </li>
-                        <li className="row py-1">
-                          <div className="col">Window {name}</div>
-                          <div className="col text-center">{amount}</div>
-                          <div className="col"></div>
-                        </li>
-                      </ul>
-                    );
-                  })}
-                </div>
-              </div>
-
-              <div id="TV" className="tab-pane fade">
-                <div className="py-2">
-                  {TV.map((elem) => {
-                    const { name, amount, subServices } = elem;
-                    return (
-                      <ul className="list-unstyled">
-                        <h5>
-                          <b>{name}</b>
-                        </h5>
-                        <li className="row py-1">
-                          <div className="col">{subServices[0]["name1"]}</div>
-                          <div className="col text-center">{amount}</div>
-                          <div className="col"></div>
-                        </li>
-                        <li className="row py-1">
-                          <div className="col">Window {name}</div>
-                          <div className="col text-center">{amount}</div>
-                          <div className="col"></div>
-                        </li>
-                      </ul>
-                    );
-                  })}
-                </div>
-              </div>
-
-              <div id="RO" className="tab-pane fade">
-                <div className="py-2">
-                  {RO.map((elem) => {
-                    const { name, amount, subServices } = elem;
-                    return (
-                      <ul className="list-unstyled">
-                        <h5>
-                          <b>{name}</b>
-                        </h5>
-                        <li className="row py-1">
-                          <div className="col">{subServices[0]["name1"]}</div>
-                          <div className="col text-center">{amount}</div>
-                          <div className="col"></div>
-                        </li>
-                        <li className="row py-1">
-                          <div className="col">Window {name}</div>
-                          <div className="col text-center">{amount}</div>
-                          <div className="col"></div>
-                        </li>
-                      </ul>
-                    );
-                  })}
-                </div>
-              </div>
-
-              <div id="Painter" className="tab-pane fade">
-                <div className="py-2">
-                  {Painter.map((elem) => {
-                    const { name, amount, subServices } = elem;
-                    return (
-                      <ul className="list-unstyled">
-                        <h5>
-                          <b>{name}</b>
-                        </h5>
-                        <li className="row py-1">
-                          <div className="col">{subServices[0]["name1"]}</div>
-                          <div className="col text-center">{amount}</div>
-                          <div className="col"></div>
-                        </li>
-                        <li className="row py-1">
-                          <div className="col">Window {name}</div>
-                          <div className="col text-center">{amount}</div>
-                          <div className="col"></div>
-                        </li>
-                      </ul>
-                    );
-                  })}
-                </div>
-              </div>
-
-              <div id="Electrician" className="tab-pane fade">
-                <div className="py-2">
-                  {Electrician.map((elem) => {
-                    const { name, amount, subServices } = elem;
-                    return (
-                      <ul className="list-unstyled">
-                        <h5>
-                          <b>{name}</b>
-                        </h5>
-                        <li className="row py-1">
-                          <div className="col">{subServices[0]["name1"]}</div>
-                          <div className="col text-center">{amount}</div>
-                          <div className="col"></div>
-                        </li>
-                        <li className="row py-1">
-                          <div className="col">Window {name}</div>
-                          <div className="col text-center">{amount}</div>
-                          <div className="col"></div>
-                        </li>
-                      </ul>
-                    );
-                  })}
-                </div>
-              </div>
-
-              <div id="Plumber" className="tab-pane fade">
-                <div className="py-2">
-                  {Plumber.map((elem) => {
-                    const { name, amount, subServices, id } = elem;
-                    return (
-                      <ul className="list-unstyled">
-                        <h5>
-                          <b>{name}</b>
-                        </h5>
-                        <li className="row py-1">
-                          <div className="col">{subServices[0]["name1"]}</div>
-                          <div className="col text-center">{amount}</div>
-                          <div className="col d-flex justify-content-end pr-4 counter">
-                            <div
-                              className="text-white btn"
-                              onClick={() => handleDecrement(id)}
-                              style={{
-                                fontSize: "45px",
-                                marginTop: "-30px",
-                                cursor: "pointer",
-                                height: "0px",
-                              }}
-                            >
-                              -
-                            </div>
-                            <span className="px-2" style={{ fontSize: "17px" }}>
-                              {count}
-                            </span>
-                            <div
-                              className="text-white btn"
-                              onClick={() => handleIncrement(id)}
-                              style={{
-                                fontSize: "30px",
-                                marginTop: "-19px",
-                                cursor: "pointer",
-                                height: "0px",
-                              }}
-                            >
-                              +
-                            </div>
-                          </div>
-                        </li>
-                        <li className="row py-1">
-                          <div className="col">Window {name}</div>
-                          <div className="col text-center">{amount}</div>
-                          <div className="col d-flex justify-content-end pr-4 counter">
-                            <div
-                              className="text-white btn"
-                              onClick={() => handleDecrement1(id)}
-                              style={{
-                                fontSize: "45px",
-                                marginTop: "-30px",
-                                cursor: "pointer",
-                                height: "0px",
-                              }}
-                            >
-                              -
-                            </div>
-                            <span className="px-2" style={{ fontSize: "17px" }}>
-                              {counter}
-                            </span>
-                            <div
-                              className="text-white btn"
-                              onClick={() => handleIncrement1(id)}
-                              style={{
-                                fontSize: "30px",
-                                marginTop: "-19px",
-                                cursor: "pointer",
-                                height: "0px",
-                              }}
-                            >
-                              +
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-
-            <div
-              id="Next"
-              style={{
-                height: "450px",
-                display: "none",
-                overflowY: "auto",
-                color: "white",
-              }}
-            >
-              <div className="py-2 px-4">
-                <ul className="list-unstyled">
-                  <h5>
-                    <b>Service Details</b>
-                  </h5>
-                  {Second.map((elem) => {
-                    const { name1, amount, quantity } = elem;
-                    return (
-                      <div>
-                        <li className="row text-center py-1">
-                          <div className="col">{name1}</div>
-                          <div className="col">{quantity}</div>
-                          <div className="col">Rs {amount}</div>
-                        </li>
-                      </div>
-                    );
-                  })}
-                  <div className="row text-center font-weight-bold py-1">
-                    <div className="col">Total amount</div>
-                    <div className="col">Rs {summation()}</div>
-                  </div>
-
-                  <br></br>
-                  <h5>
-                    <b>Choose Date</b>
-                  </h5>
-                  <div className="text-center pt-4 mt-4 pb-4">
-                    <label for="Date"></label>
-                    <input
-                      type="date"
-                      id="Date"
-                      name="Date"
-                      className="border-0 text-center pr-3"
-                      style={{
-                        outline: "none",
-                        height: "40px",
-                        borderRadius: "50px",
-                        color: "white",
-                        background: "#ffffff59",
-                        cursor: "pointer",
-                        fontSize: "17px",
-                      }}
-                    />
-                  </div>
-                  <br></br>
-                  <div>
-                    <h5>
-                      <b>Choose Time Slot</b>
-                    </h5>
-                    <div className="row time">
-                      <div className="col-4 pt-3">
-                        <div className="btn px-3">9 Am to 11 Am</div>
-                      </div>
-                      <div className="col-4 pt-3">
-                        <div className="btn px-3">9 Am to 11 Am</div>
-                      </div>
-                      <div className="col-4 pt-3">
-                        <div className="btn px-3">9 Am to 11 Am</div>
-                      </div>
-                      <div className="col-4 pt-3">
-                        <div className="btn px-3">9 Am to 11 Am</div>
-                      </div>
-                      <div className="col-4 pt-3">
-                        <div className="btn px-3">9 Am to 11 Am</div>
-                      </div>
-                      <div className="col-4 pt-3">
-                        <div className="btn px-3">9 Am to 11 Am</div>
-                      </div>
-                      <div className="col-4 pt-3">
-                        <div className="btn px-3">9 Am to 11 Am</div>
-                      </div>
-                      <div className="col-4 pt-3">
-                        <div className="btn px-3">9 Am to 11 Am</div>
-                      </div>
-                      <div className="col-4 pt-3">
-                        <div className="btn px-3">9 Am to 11 Am</div>
-                      </div>
-                    </div>
-                  </div>
-                </ul>
-              </div>
-            </div>
-
-            <div className="mx-4 py-4 row homebtn">
-              <div className="col-lg-6 col-md-6 col-sm-6 col-19">
-                <NavLink to="/washingMachine">
-                  <div
-                    className="btn border-0 text-white float-left"
-                    style={{
-                      borderRadius: "50px",
-                      width: "100%",
-                      padding: "11px 0px",
-                    }}
-                  >
-                    Know More
-                  </div>
-                </NavLink>
-              </div>
               <div
-                className="col-lg-6 col-md-6 col-sm-6 col-19 pt-3 pt-lg-0 pt-md-0 pt-sm-0"
-                id="next"
+                style={{ background: "rgba(0, 0, 0, 0.9)", maxWidth: "550px" }}
               >
                 <div
-                  className="btn border-0 tab text-white"
+                  id="show"
                   style={{
-                    borderRadius: "50px",
-                    width: "100%",
-                    padding: "11px 0px",
+                    height: "450px",
+                    overflow: "auto",
+                    fontSize: "14px",
                   }}
-                  onClick={next}
                 >
-                  Next
-                </div>
-              </div>
-              <div
-                className="col-lg-6 col-md-6 col-sm-6 col-19 pt-3 pt-lg-0 pt-md-0 pt-sm-0"
-                id="forAddress"
-                style={{ display: "none" }}
-              >
-                <div
-                  className="btn border-0 tab text-white"
-                  style={{
-                    borderRadius: "50px",
-                    width: "100%",
-                    padding: "11px 0px",
-                  }}
-                  data-target="#foraddress"
-                  data-toggle="modal"
-                >
-                  Next
-                </div>
-              </div>
-
-              <div className="modal fade " id="foraddress">
-                <div className="modal-dialog modal-lg modal-dialog-centered">
-                  <div
-                    className="modal-content justify-content-center d-flex border-0"
-                    style={{ background: "#E8E4FD" }}
-                  >
-                    <div className="ml-auto pt-3">
-                      <div
-                        className="close pr-3"
-                        data-dismiss="modal"
-                        style={{ cursor: "pointer", fontSize: "30px" }}
-                      >
-                        &times;
-                      </div>
-                    </div>
-                    <div className="container px-lg-4 pb-4">
-                      <div
-                        className="font-weight-bolder text-center pb-5"
-                        style={{ fontSize: "26px" }}
-                      >
-                        Select Address
-                      </div>
-                      <div className="px-4">
-                        {BookingAddress.map((elem) => {
-                          const { Address } = elem;
+                  <TabPanel value="1">
+                    <div id="AC" className="text-white">
+                      <div className="py-2">
+                        {AC.map((elem) => {
+                          const { name, amount, id, subServices } = elem;
                           return (
-                            <div>
-                              <div className="form-check pb-4">
-                                <input
-                                  className="form-check-input"
-                                  type="radio"
-                                  style={{ width: "17px", height: "17px" }}
-                                  name="radio"
-                                  id="radio"
-                                  checked
-                                />
-                                <label className="form-check-label" for="radio">
-                                  <b>{Address}</b>
-                                </label>
-                              </div>
-                            </div>
+                            <ul className="list-unstyled">
+                              <h5>
+                                <b style={{ fontSize: "17px" }}>{name}</b>
+                              </h5>
+                              <li className="row py-1" key={id}>
+                                <div className="col">
+                                  {subServices[0]["name1"]}
+                                </div>
+                                <div className="col text-center">{amount}</div>
+                                <div className="col d-flex justify-content-end pb-2 pr-4 counter">
+                                  <div
+                                    className="text-white btn"
+                                    onClick={() => handleDecrement(id)}
+                                    style={{
+                                      fontSize: "45px",
+                                      marginTop: "-30px",
+                                      cursor: "pointer",
+                                      height: "0px",
+                                    }}
+                                  >
+                                    -
+                                  </div>
+                                  <span
+                                    className="px-2"
+                                    style={{ fontSize: "17px" }}
+                                  >
+                                    {count}
+                                  </span>
+                                  <div
+                                    className="text-white btn"
+                                    onClick={() => handleIncrement(id)}
+                                    style={{
+                                      fontSize: "30px",
+                                      marginTop: "-19px",
+                                      cursor: "pointer",
+                                      height: "0px",
+                                    }}
+                                  >
+                                    +
+                                  </div>
+                                </div>
+                              </li>
+                              <li className="row py-1">
+                                <div className="col">Window {name}</div>
+                                <div className="col text-center">{amount}</div>
+                                <div className="col d-flex justify-content-end pr-4 counter">
+                                  <div
+                                    className="text-white btn"
+                                    onClick={() => handleDecrement1(id)}
+                                    style={{
+                                      fontSize: "45px",
+                                      marginTop: "-30px",
+                                      cursor: "pointer",
+                                      height: "0px",
+                                    }}
+                                  >
+                                    -
+                                  </div>
+                                  <span
+                                    className="px-2"
+                                    style={{ fontSize: "17px" }}
+                                  >
+                                    {counter}
+                                  </span>
+                                  <div
+                                    className="text-white btn"
+                                    onClick={() => handleIncrement1(id)}
+                                    style={{
+                                      fontSize: "30px",
+                                      marginTop: "-19px",
+                                      cursor: "pointer",
+                                      height: "0px",
+                                    }}
+                                  >
+                                    +
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
                           );
                         })}
-                        <div
-                          className="fa fa-plus-circle font-weight-bold fa-lg d-flex pt-2"
-                          style={{ cursor: "pointer" }}
-                        >
-                          &nbsp;&nbsp;
-                          <span
-                            style={{
-                              color: "#4A56E2",
-                              fontFamily: "sans-serif",
-                              cursor: "pointer",
-                              fontSize: "1rem",
-                            }}
-                          >
-                            Add New Address
-                          </span>
-                        </div>
-                        <div
-                          className="rounded-pill btn btn-secondary border-0 w-100 align-bottom font-weight-bold"
-                          style={{ background: "#4A56E2", marginTop: "150px" }}
-                          data-target="#forPayment"
-                          data-toggle="modal"
-                          data-dismiss="modal"
-                        >
-                          Continue With This Address
-                        </div>
                       </div>
                     </div>
+                  </TabPanel>
+
+                  <TabPanel value="2">
+                    <div id="Fridge" className="text-white">
+                      <div className="py-2">
+                        <ul className="list-unstyled">
+                          <h5>
+                            <b style={{ fontSize: "17px" }}>Repair</b>
+                          </h5>
+                          <li className="row py-1">
+                            <div className="col">
+                              Fully Automatic (Top load) Checkup
+                            </div>
+                            <div className="col-2">
+                              <input
+                                type="checkbox"
+                                className="form-check"
+                                style={{ cursor: "pointer", width: "18px" }}
+                              ></input>
+                            </div>
+                          </li>
+                          <li className="row py-1">
+                            <div className="col">
+                              Fully Automatic (Front load) Checkup
+                            </div>
+                            <div className="col-2">
+                              <input
+                                type="checkbox"
+                                className="form-check"
+                                style={{ cursor: "pointer", width: "18px" }}
+                              ></input>
+                            </div>
+                          </li>
+                          <li className="row py-1">
+                            <div className="col">Semi Automatic Checkup</div>
+                            <div className="col-2">
+                              <input
+                                type="checkbox"
+                                className="form-check"
+                                style={{ cursor: "pointer", width: "18px" }}
+                              ></input>
+                            </div>
+                          </li>
+                          <div
+                            className="text-center text-success py-4"
+                            style={{ fontSize: "14px" }}
+                          >
+                            *Visiting Charges Rs 299 For Checking
+                          </div>
+
+                          <h5>
+                            <b>Installation</b>
+                          </h5>
+                          {Fridge.map((elem) => {
+                            const { name, amount, id } = elem;
+                            return (
+                              <div>
+                                <li className="row py-1">
+                                  <div className="col">{name}</div>
+                                  <div className="col">{amount}</div>
+                                  <div className="col d-flex justify-content-end pr-4 counter">
+                                    <div
+                                      className="text-white btn"
+                                      onClick={() => handleDecrement(id)}
+                                      style={{
+                                        fontSize: "45px",
+                                        marginTop: "-30px",
+                                        cursor: "pointer",
+                                        height: "0px",
+                                      }}
+                                    >
+                                      -
+                                    </div>
+                                    <span
+                                      className="px-2"
+                                      style={{ fontSize: "17px" }}
+                                    >
+                                      {count}
+                                    </span>
+                                    <div
+                                      className="text-white btn"
+                                      onClick={() => handleIncrement(id)}
+                                      style={{
+                                        fontSize: "30px",
+                                        marginTop: "-19px",
+                                        cursor: "pointer",
+                                        height: "0px",
+                                      }}
+                                    >
+                                      +
+                                    </div>
+                                  </div>
+                                </li>
+                              </div>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    </div>
+                  </TabPanel>
+
+                  <TabPanel value="3">
+                    <div id="WashingMachine" className="text-white">
+                      <div className="py-2">
+                        {WashingMachine.map((elem) => {
+                          const { name, amount, subServices } = elem;
+                          return (
+                            <ul className="list-unstyled">
+                              <h5>
+                                <b style={{ fontSize: "17px" }}>{name}</b>
+                              </h5>
+                              <li className="row py-1">
+                                <div className="col">
+                                  {subServices[0]["name1"]}
+                                </div>
+                                <div className="col text-center">{amount}</div>
+                                <div className="col"></div>
+                              </li>
+                              <li className="row py-1">
+                                <div className="col">Window {name}</div>
+                                <div className="col text-center">{amount}</div>
+                                <div className="col"></div>
+                              </li>
+                            </ul>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </TabPanel>
+
+                  <TabPanel value="4">
+                    <div id="TV" className="text-white">
+                      <div className="py-2">
+                        {TV.map((elem) => {
+                          const { name, amount, subServices } = elem;
+                          return (
+                            <ul className="list-unstyled">
+                              <h5>
+                                <b style={{ fontSize: "17px" }}>{name}</b>
+                              </h5>
+                              <li className="row py-1">
+                                <div className="col">
+                                  {subServices[0]["name1"]}
+                                </div>
+                                <div className="col text-center">{amount}</div>
+                                <div className="col"></div>
+                              </li>
+                              <li className="row py-1">
+                                <div className="col">Window {name}</div>
+                                <div className="col text-center">{amount}</div>
+                                <div className="col"></div>
+                              </li>
+                            </ul>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </TabPanel>
+
+                  <TabPanel value="5">
+                    <div id="RO" className="text-white">
+                      <div className="py-2">
+                        {RO.map((elem) => {
+                          const { name, amount, subServices } = elem;
+                          return (
+                            <ul className="list-unstyled">
+                              <h5>
+                                <b style={{ fontSize: "17px" }}>{name}</b>
+                              </h5>
+                              <li className="row py-1">
+                                <div className="col">
+                                  {subServices[0]["name1"]}
+                                </div>
+                                <div className="col text-center">{amount}</div>
+                                <div className="col"></div>
+                              </li>
+                              <li className="row py-1">
+                                <div className="col">Window {name}</div>
+                                <div className="col text-center">{amount}</div>
+                                <div className="col"></div>
+                              </li>
+                            </ul>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </TabPanel>
+
+                  <TabPanel value="6">
+                    <div id="Painter" className="text-white">
+                      <div className="py-2">
+                        {Painter.map((elem) => {
+                          const { name, amount, subServices } = elem;
+                          return (
+                            <ul className="list-unstyled">
+                              <h5>
+                                <b style={{ fontSize: "17px" }}>{name}</b>
+                              </h5>
+                              <li className="row py-1">
+                                <div className="col">
+                                  {subServices[0]["name1"]}
+                                </div>
+                                <div className="col text-center">{amount}</div>
+                                <div className="col"></div>
+                              </li>
+                              <li className="row py-1">
+                                <div className="col">Window {name}</div>
+                                <div className="col text-center">{amount}</div>
+                                <div className="col"></div>
+                              </li>
+                            </ul>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </TabPanel>
+
+                  <TabPanel value="7">
+                    <div id="Electrician" className="text-white">
+                      <div className="py-2">
+                        {Electrician.map((elem) => {
+                          const { name, amount, subServices } = elem;
+                          return (
+                            <ul className="list-unstyled">
+                              <h5>
+                                <b style={{ fontSize: "17px" }}>{name}</b>
+                              </h5>
+                              <li className="row py-1">
+                                <div className="col">
+                                  {subServices[0]["name1"]}
+                                </div>
+                                <div className="col text-center">{amount}</div>
+                                <div className="col"></div>
+                              </li>
+                              <li className="row py-1">
+                                <div className="col">Window {name}</div>
+                                <div className="col text-center">{amount}</div>
+                                <div className="col"></div>
+                              </li>
+                            </ul>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </TabPanel>
+
+                  <TabPanel value="8">
+                    <div id="Plumber" className="text-white">
+                      <div className="py-2">
+                        {Plumber.map((elem) => {
+                          const { name, amount, subServices, id } = elem;
+                          return (
+                            <ul className="list-unstyled">
+                              <h5>
+                                <b style={{ fontSize: "17px" }}>{name}</b>
+                              </h5>
+                              <li className="row py-1">
+                                <div className="col">
+                                  {subServices[0]["name1"]}
+                                </div>
+                                <div className="col text-center">{amount}</div>
+                                <div className="col d-flex justify-content-end pr-4 counter">
+                                  <div
+                                    className="text-white btn"
+                                    onClick={() => handleDecrement(id)}
+                                    style={{
+                                      fontSize: "45px",
+                                      marginTop: "-30px",
+                                      cursor: "pointer",
+                                      height: "0px",
+                                    }}
+                                  >
+                                    -
+                                  </div>
+                                  <span
+                                    className="px-2"
+                                    style={{ fontSize: "17px" }}
+                                  >
+                                    {count}
+                                  </span>
+                                  <div
+                                    className="text-white btn"
+                                    onClick={() => handleIncrement(id)}
+                                    style={{
+                                      fontSize: "30px",
+                                      marginTop: "-19px",
+                                      cursor: "pointer",
+                                      height: "0px",
+                                    }}
+                                  >
+                                    +
+                                  </div>
+                                </div>
+                              </li>
+                              <li className="row py-1">
+                                <div className="col">Window {name}</div>
+                                <div className="col text-center">{amount}</div>
+                                <div className="col d-flex justify-content-end pr-4 counter">
+                                  <div
+                                    className="text-white btn"
+                                    onClick={() => handleDecrement1(id)}
+                                    style={{
+                                      fontSize: "45px",
+                                      marginTop: "-30px",
+                                      cursor: "pointer",
+                                      height: "0px",
+                                    }}
+                                  >
+                                    -
+                                  </div>
+                                  <span
+                                    className="px-2"
+                                    style={{ fontSize: "17px" }}
+                                  >
+                                    {counter}
+                                  </span>
+                                  <div
+                                    className="text-white btn"
+                                    onClick={() => handleIncrement1(id)}
+                                    style={{
+                                      fontSize: "30px",
+                                      marginTop: "-19px",
+                                      cursor: "pointer",
+                                      height: "0px",
+                                    }}
+                                  >
+                                    +
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </TabPanel>
+                </div>
+
+                <div
+                  className="mx-2"
+                  id="Next"
+                  style={{
+                    height: "450px",
+                    display: "none",
+                    overflowY: "auto",
+                    color: "white",
+                    maxWidth: "550px",
+                    background: "black",
+                  }}
+                >
+                  <div className="pt-4 pb-2 px-4">
+                    <ul className="list-unstyled">
+                      <h5>
+                        <b style={{ fontSize: "17px" }}>Service Details</b>
+                      </h5>
+                      {Second.map((elem) => {
+                        const { name1, amount, quantity } = elem;
+                        return (
+                          <div>
+                            <li className="row text-center py-1">
+                              <div className="col">{name1}</div>
+                              <div className="col">{quantity}</div>
+                              <div className="col">Rs {amount}</div>
+                            </li>
+                          </div>
+                        );
+                      })}
+                      <div className="row text-center font-weight-bold py-1">
+                        <div className="col">Total amount</div>
+                        <div className="col">Rs {summation()}</div>
+                      </div>
+
+                      <br></br>
+                      <h5>
+                        <b>Choose Date</b>
+                      </h5>
+                      <div className="text-center pt-4 mt-4 pb-4">
+                        <label for="Date"></label>
+                        <input
+                          type="date"
+                          id="Date"
+                          name="Date"
+                          className="border-0 text-center pr-3"
+                          style={{
+                            outline: "none",
+                            height: "40px",
+                            borderRadius: "50px",
+                            color: "white",
+                            background: "#ffffff59",
+                            cursor: "pointer",
+                            fontSize: "17px",
+                          }}
+                        />
+                      </div>
+                      <br></br>
+                      <div>
+                        <h5>
+                          <b>Choose Time Slot</b>
+                        </h5>
+                        <div className="row time">
+                          <div className="col-4 pt-3">
+                            <div className="btn px-3">9 Am to 11 Am</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-3">9 Am to 11 Am</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-3">9 Am to 11 Am</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-3">9 Am to 11 Am</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-3">9 Am to 11 Am</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-3">9 Am to 11 Am</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-3">9 Am to 11 Am</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-3">9 Am to 11 Am</div>
+                          </div>
+                          <div className="col-4 pt-3">
+                            <div className="btn px-3">9 Am to 11 Am</div>
+                          </div>
+                        </div>
+                      </div>
+                    </ul>
                   </div>
                 </div>
-              </div>
 
-              <div className="modal fade " id="forPayment">
-                <div className="modal-dialog modal-lg modal-dialog-centered">
-                  <div
-                    className="modal-content justify-content-center d-flex border-0"
-                    style={{ background: "#E8E4FD" }}
-                  >
-                    <div className="ml-auto pt-3">
+                <div className="mx-4 py-4 row homebtn">
+                  <div className="col-lg-6 col-md-6 col-sm-6 col-19">
+                    <NavLink to="/washingMachine">
                       <div
-                        className="close pr-3"
-                        data-dismiss="modal"
-                        style={{ cursor: "pointer", fontSize: "30px" }}
+                        className="btn border-0 text-white float-left"
+                        style={{
+                          borderRadius: "50px",
+                          width: "100%",
+                          padding: "11px 0px",
+                        }}
                       >
-                        &times;
+                        Know More
                       </div>
+                    </NavLink>
+                  </div>
+                  <div
+                    className="col-lg-6 col-md-6 col-sm-6 col-19 pt-3 pt-lg-0 pt-md-0 pt-sm-0"
+                    id="next"
+                  >
+                    <div
+                      className="btn border-0 tab text-white"
+                      style={{
+                        borderRadius: "50px",
+                        width: "100%",
+                        padding: "11px 0px",
+                      }}
+                      onClick={next}
+                    >
+                      Next
                     </div>
-                    <div className="container px-lg-4 pb-4">
-                      <div className="row">
-                        <div className="col-6 px-5">
-                          <div
-                            className="font-weight-bolder"
-                            id="paymentMethod"
-                          >
-                            <span style={{ fontSize: "24px" }}>
-                              {" "}
-                              Payment Method
-                            </span>
+                  </div>
+                  <div
+                    className="col-lg-6 col-md-6 col-sm-6 col-19 pt-3 pt-lg-0 pt-md-0 pt-sm-0"
+                    id="forAddress"
+                    style={{ display: "none" }}
+                  >
+                    <div
+                      className="btn border-0 tab text-white"
+                      style={{
+                        borderRadius: "50px",
+                        width: "100%",
+                        padding: "11px 0px",
+                      }}
+                      data-target="#foraddress"
+                      data-toggle="modal"
+                    >
+                      Next
+                    </div>
+                  </div>
 
-                            <div
-                              className="nav nav-tabs"
-                              style={{ background: "none" }}
-                            >
-                              <div
-                                className="active btn font-weight-bolder mt-3 w-100 py-2 tab text-decoration-none"
-                                type="button"
-                                data-toggle="tab"
-                                style={{
-                                  borderRadius: "20px",
-                                  minWidth: "150px",
-                                }}
-                              >
-                                Pay Online After Service
-                              </div>
-                              <div
-                                className="btn font-weight-bolder mt-3 w-100 py-2 tab text-decoration-none"
-                                type="button"
-                                data-toggle="tab"
-                                style={{
-                                  borderRadius: "20px",
-                                  minWidth: "150px",
-                                }}
-                              >
-                                Pay Cash After Service
-                              </div>
-                              <div
-                                className="btn font-weight-bolder mt-3 w-100 py-2 tab text-decoration-none"
-                                type="button"
-                                data-toggle="tab"
-                                style={{
-                                  borderRadius: "20px",
-                                  minWidth: "150px",
-                                }}
-                              >
-                                Pay with Debit Card
-                              </div>
-                              <div
-                                className="btn font-weight-bolder mt-3 w-100 py-2 tab text-decoration-none"
-                                type="button"
-                                data-toggle="tab"
-                                style={{
-                                  borderRadius: "20px",
-                                  minWidth: "150px",
-                                }}
-                              >
-                                Pay with Credit Card
-                              </div>
-                              <div
-                                className="btn font-weight-bolder mt-3 w-100 py-2 tab text-decoration-none"
-                                type="button"
-                                data-toggle="tab"
-                                style={{
-                                  borderRadius: "20px",
-                                  minWidth: "150px",
-                                }}
-                              >
-                                Wallets
-                              </div>
-                            </div>
+                  <div className="modal fade " id="foraddress">
+                    <div className="modal-dialog modal-lg modal-dialog-centered">
+                      <div
+                        className="modal-content justify-content-center d-flex border-0"
+                        style={{ background: "#E8E4FD" }}
+                      >
+                        <div className="ml-auto pt-3">
+                          <div
+                            className="close pr-3"
+                            data-dismiss="modal"
+                            style={{ cursor: "pointer", fontSize: "30px" }}
+                          >
+                            &times;
                           </div>
                         </div>
-                        <div className="col-6 px-5 payment">
+                        <div className="container px-lg-4 pb-4">
                           <div
-                            className="font-weight-bolder pb-3"
-                            style={{ fontSize: "24px" }}
+                            className="font-weight-bolder text-center pb-5"
+                            style={{ fontSize: "26px" }}
                           >
-                            Payment Summary
+                            Select Address
                           </div>
-                          <div
-                            className="container bg-white"
-                            style={{
-                              borderRadius: "20px",
-                              borderColor: "black",
-                              borderStyle: "solid",
-                              borderWidth: "2px 2px",
-                            }}
-                          >
-                            <div className="">
-                              <div
-                                className="pt-4"
-                                style={{ fontFamily: "sans-serif" }}
-                              >
-                                Service Total
-                                <span
-                                  className="float-right font-weight-bolder"
-                                  style={{ fontFamily: "sans-serif" }}
-                                >
-                                  Rs {summation()}
-                                </span>
-                              </div>
-                              <div
-                                className="pt-4"
-                                style={{ fontFamily: "sans-serif" }}
-                              >
-                                Extra Charges
-                                <span
-                                  className="float-right font-weight-bolder"
-                                  style={{ fontFamily: "sans-serif" }}
-                                >
-                                  Rs 100
-                                </span>
-                              </div>
-                              <div
-                                className="pt-5 font-weight-bolder"
-                                style={{ fontFamily: "sans-serif" }}
-                              >
-                                Total Service Amount
-                                <span
-                                  className="float-right"
-                                  style={{ fontFamily: "sans-serif" }}
-                                >
-                                  Rs 3100
-                                </span>
-                              </div>
-                              <div
-                                className="py-4 font-weight-bolder"
-                                style={{ fontFamily: "sans-serif" }}
-                              >
-                                Amount Payable
-                                <span
-                                  className="float-right"
-                                  style={{ fontFamily: "sans-serif" }}
-                                >
-                                  Rs 3100
-                                </span>
-                              </div>
-                              <div className=""></div>
-                              <div className=""></div>
-                            </div>
-                          </div>
-                          <div className="justify-content-center d-flex pl-3 pt-1">
+                          <div className="px-4">
+                            {BookingAddress.map((elem) => {
+                              const { Address } = elem;
+                              return (
+                                <div>
+                                  <div className="form-check pb-4">
+                                    <input
+                                      className="form-check-input"
+                                      type="radio"
+                                      style={{ width: "17px", height: "17px" }}
+                                      name="radio"
+                                      id="radio"
+                                      checked
+                                    />
+                                    <label
+                                      className="form-check-label"
+                                      for="radio"
+                                    >
+                                      <b>{Address}</b>
+                                    </label>
+                                  </div>
+                                </div>
+                              );
+                            })}
                             <div
-                              className="font-weight-bolder"
-                              style={{ fontSize: "11px" }}
+                              className="fa fa-plus-circle font-weight-bold fa-lg d-flex pt-2"
+                              style={{ cursor: "pointer" }}
                             >
-                              By Procedding, You accept our{" "}
-                              <span className="text-primary">
-                                Terms & Conditions, Privacy Policy &
-                                Cancellation Policy.
+                              &nbsp;&nbsp;
+                              <span
+                                style={{
+                                  color: "#4A56E2",
+                                  fontFamily: "sans-serif",
+                                  cursor: "pointer",
+                                  fontSize: "1rem",
+                                }}
+                              >
+                                Add New Address
                               </span>
                             </div>
+                            <div
+                              className="rounded-pill btn btn-secondary border-0 w-100 align-bottom font-weight-bold"
+                              style={{
+                                background: "#4A56E2",
+                                marginTop: "150px",
+                              }}
+                              data-target="#forPayment"
+                              data-toggle="modal"
+                              data-dismiss="modal"
+                            >
+                              Continue With This Address
+                            </div>
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
 
-                      <NavLink
-                        to="/userProfile"
-                        className="rounded-pill btn btn-secondary border-0 w-100 align-bottom font-weight-bold"
-                        style={{ background: "#4A56E2", marginTop: "100px" }}
-                        data-dismiss="modal"
-                        onClick={completeBooking}
+                  <div className="modal fade " id="forPayment">
+                    <div className="modal-dialog modal-lg modal-dialog-centered">
+                      <div
+                        className="modal-content justify-content-center d-flex border-0"
+                        style={{ background: "#E8E4FD" }}
                       >
-                        Complete Booking
-                      </NavLink>
+                        <div className="ml-auto pt-3">
+                          <div
+                            className="close pr-3"
+                            data-dismiss="modal"
+                            style={{ cursor: "pointer", fontSize: "30px" }}
+                          >
+                            &times;
+                          </div>
+                        </div>
+                        <div className="container px-lg-4 pb-4">
+                          <div className="row">
+                            <div className="col-lg-6 col-12 px-5 d-flex">
+                              <div
+                                className="font-weight-bolder"
+                                id="paymentMethod"
+                              >
+                                <span style={{ fontSize: "24px" }}>
+                                  {" "}
+                                  Payment Method
+                                </span>
+
+                                <div
+                                  className="nav nav-tabs"
+                                  style={{ background: "none" }}
+                                >
+                                  <div
+                                    className="active btn font-weight-bolder mt-3 w-100 py-2 tab text-decoration-none"
+                                    type="button"
+                                    data-toggle="tab"
+                                    style={{
+                                      borderRadius: "20px",
+                                      minWidth: "150px",
+                                    }}
+                                  >
+                                    Pay Online After Service
+                                  </div>
+                                  <div
+                                    className="btn font-weight-bolder mt-3 w-100 py-2 tab text-decoration-none"
+                                    type="button"
+                                    data-toggle="tab"
+                                    style={{
+                                      borderRadius: "20px",
+                                      minWidth: "150px",
+                                    }}
+                                  >
+                                    Pay Cash After Service
+                                  </div>
+                                  <div
+                                    className="btn font-weight-bolder mt-3 w-100 py-2 tab text-decoration-none"
+                                    type="button"
+                                    data-toggle="tab"
+                                    style={{
+                                      borderRadius: "20px",
+                                      minWidth: "150px",
+                                    }}
+                                  >
+                                    Pay with Debit Card
+                                  </div>
+                                  <div
+                                    className="btn font-weight-bolder mt-3 w-100 py-2 tab text-decoration-none"
+                                    type="button"
+                                    data-toggle="tab"
+                                    style={{
+                                      borderRadius: "20px",
+                                      minWidth: "150px",
+                                    }}
+                                  >
+                                    Pay with Credit Card
+                                  </div>
+                                  <div
+                                    className="btn font-weight-bolder mt-3 w-100 py-2 tab text-decoration-none"
+                                    type="button"
+                                    data-toggle="tab"
+                                    style={{
+                                      borderRadius: "20px",
+                                      minWidth: "150px",
+                                    }}
+                                  >
+                                    Wallets
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-lg-6 col-12 pt-lg-0 pt-4 px-5 payment">
+                              <div
+                                className="font-weight-bolder pb-3"
+                                style={{ fontSize: "24px" }}
+                              >
+                                Payment Summary
+                              </div>
+                              <div
+                                className="container bg-white"
+                                style={{
+                                  borderRadius: "20px",
+                                  borderColor: "black",
+                                  borderStyle: "solid",
+                                  borderWidth: "2px 2px",
+                                }}
+                              >
+                                <div className="">
+                                  <div
+                                    className="pt-4"
+                                    style={{ fontFamily: "sans-serif" }}
+                                  >
+                                    Service Total
+                                    <span
+                                      className="float-right font-weight-bolder"
+                                      style={{ fontFamily: "sans-serif" }}
+                                    >
+                                      Rs {summation()}
+                                    </span>
+                                  </div>
+                                  <div
+                                    className="pt-4"
+                                    style={{ fontFamily: "sans-serif" }}
+                                  >
+                                    Extra Charges
+                                    <span
+                                      className="float-right font-weight-bolder"
+                                      style={{ fontFamily: "sans-serif" }}
+                                    >
+                                      Rs 100
+                                    </span>
+                                  </div>
+                                  <div
+                                    className="pt-5 font-weight-bolder"
+                                    style={{ fontFamily: "sans-serif" }}
+                                  >
+                                    Total Service Amount
+                                    <span
+                                      className="float-right"
+                                      style={{ fontFamily: "sans-serif" }}
+                                    >
+                                      Rs 3100
+                                    </span>
+                                  </div>
+                                  <div
+                                    className="py-4 font-weight-bolder"
+                                    style={{ fontFamily: "sans-serif" }}
+                                  >
+                                    Amount Payable
+                                    <span
+                                      className="float-right"
+                                      style={{ fontFamily: "sans-serif" }}
+                                    >
+                                      Rs 3100
+                                    </span>
+                                  </div>
+                                  <div className=""></div>
+                                  <div className=""></div>
+                                </div>
+                              </div>
+                              <div className="justify-content-center d-flex pl-3 pt-1">
+                                <div
+                                  className="font-weight-bolder"
+                                  style={{ fontSize: "11px" }}
+                                >
+                                  By Procedding, You accept our{" "}
+                                  <span className="text-primary">
+                                    Terms & Conditions, Privacy Policy &
+                                    Cancellation Policy.
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <NavLink
+                            to="/userProfile"
+                            className="rounded-pill btn btn-secondary border-0 w-100 align-bottom font-weight-bold"
+                            style={{
+                              background: "#4A56E2",
+                              marginTop: "100px",
+                            }}
+                            data-dismiss="modal"
+                            onClick={completeBooking}
+                          >
+                            Complete Booking
+                          </NavLink>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </Box>
+          </TabContext>
         </div>
       </div>
 
@@ -1060,7 +1112,9 @@ function Home() {
             >
               Appliance Repair Service
             </div>
-            <div style={{color:"#524E4E", fontFamily:"Nunito"}}><b>Servicing, installation, uninstallation & repair</b></div>
+            <div style={{ color: "#524E4E", fontFamily: "Nunito" }}>
+              <b>Servicing, installation, uninstallation & repair</b>
+            </div>
           </div>
         </div>
         <MultiCarousel {...setting}>
@@ -1097,7 +1151,9 @@ function Home() {
             >
               Repair & Maintenence
             </div>
-            <div style={{color:"#524E4E", fontFamily:"Nunito"}}><b>Minor repair, fitting, servicing & many more</b></div>
+            <div style={{ color: "#524E4E", fontFamily: "Nunito" }}>
+              <b>Minor repair, fitting, servicing & many more</b>
+            </div>
           </div>
         </div>
         <MultiCarousel {...settings}>
@@ -1137,7 +1193,9 @@ function Home() {
             >
               Painter & Interior Designing
             </div>
-            <div style={{color:"#524E4E", fontFamily:"Nunito"}}><b>House painter, house decor, false ceiling & designing</b></div>
+            <div style={{ color: "#524E4E", fontFamily: "Nunito" }}>
+              <b>House painter, house decor, false ceiling & designing</b>
+            </div>
           </div>
         </div>
         <MultiCarousel {...settings}>

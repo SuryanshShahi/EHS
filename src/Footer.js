@@ -13,7 +13,7 @@ function Footer() {
         className="pt-2 text-white footer"
         style={{ background: "black", fontFamily:"Poppins" }}
       >
-        <div className="row mx-5 py-4">
+        <div className="row mx-lg-5 mx-md-5 mx-2 py-4">
           <div className="col-lg-3 col-6 pb-3">
             <b>CITIES WE SERVE</b>
             <ul className="list-unstyled pt-2">
@@ -73,11 +73,11 @@ function Footer() {
           <div className="col-lg-4 col-12 d-flex justify-content-center align-items-center">
             <img
               src="https://www.epicvila.com/image/logo1.png"
-              className="img-fluid pr-5"
+              className="img-fluid"
               alt="image"
               width={135}
             ></img>
-            <span style={{ fontSize: "14px" }}>
+            <span id="copyrightOrg" className="pl-5" style={{ fontSize: "14px" }}>
               COPYRIGHT 2017-2021 EPIC VILA PRO SERVICES PRIVATE LIMITED
             </span>
           </div>
@@ -103,7 +103,7 @@ function Footer() {
               className="img-fluid px-3 px-sm-4 px-md-4 px-lg-4"
             ></img>
           </div>
-          <div className="col-lg-4 col-12 d-flex justify-content-center align-items-center pt-4 mt-2 pt-lg-0">
+          <div className="col-lg-4 col-12 d-flex justify-content-center align-items-center pt-4 mt-2 pt-lg-0 pr-lg-4">
             <img
               src={play}
               className="img-fluid ml-lg-auto"
@@ -111,6 +111,9 @@ function Footer() {
             ></img>
             &nbsp;&nbsp;App Available on Playstore
           </div>
+          <span id="copyright" className="text-center pt-4" style={{ fontSize: "14px", display:"none" }}>
+              COPYRIGHT 2017-2021 EPIC VILA PRO SERVICES PRIVATE LIMITED
+            </span>
         </div>
       </footer>
     </section>
@@ -119,11 +122,4 @@ function Footer() {
 
 export default Footer;
 
-// <div className="col-lg-4 col-md-6 col-12">
-// <iframe
-//   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3432.650246939581!2d76.74300621472712!3d30.6438130969645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feb0ef52bb239%3A0xeb63e5e8a6be72fc!2sEpic%20Vila!5e0!3m2!1sen!2sin!4v1629208244622!5m2!1sen!2sin"
-//   style={{ border: "0", width: "100%", height: "100%" }}
-//   allowfullscreen=""
-//   loading="lazy"
-// ></iframe>
-// </div>
+
