@@ -78,7 +78,14 @@
 .navbar {
   padding: 3px !important;
 }
-
+@media (max-width: 500px) {
+  #location{
+    display: block !important;
+  }
+  #locationLarge{
+    display: none;
+  }
+}
 .PhoneInputInput{
   outline: none;
   padding: 5px 5px;
@@ -266,6 +273,7 @@
     margin-top: 40px !important;
   }
 }
+
 
 #paymentMethod .nav-tabs .active {
   background-color: black;

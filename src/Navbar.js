@@ -54,20 +54,21 @@ function Navbar() {
               width={120}
             ></img>
           </NavLink>
-
-          <NavLink
-            to="/"
-            data-target="#mymodalLocation"
-            data-toggle="modal"
-            className="fa fa-map-marker text-white fa-lg pr-3 text-decoration-none d-flex"
-            style={{ cursor: "pointer" }}
-          >
-            &nbsp;&nbsp;
-            <div className="font-weight-bold" style={{ fontSize: "17px" }}>
-              Chandigarh
-            </div>
-            <div className="fa fa-arrow-down pl-2"></div>
-          </NavLink>
+          <div id="locationLarge">
+            <NavLink
+              to="/"
+              data-target="#mymodalLocation"
+              data-toggle="modal"
+              className="fa fa-map-marker text-white fa-lg pr-3 text-decoration-none d-flex"
+              style={{ cursor: "pointer" }}
+            >
+              &nbsp;&nbsp;
+              <div className="font-weight-bold" style={{ fontSize: "17px" }}>
+                Chandigarh
+              </div>
+              <div className="fa fa-arrow-down pl-2"></div>
+            </NavLink>
+          </div>
 
           <button
             className="navbar-toggler"
@@ -86,6 +87,24 @@ function Navbar() {
 
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-lg-auto mb-2 mb-lg-0 justify-content-center align-items-center d-flex">
+              <div className="pt-3" id="location" style={{ display: "none" }}>
+                <NavLink
+                  to="/"
+                  data-target="#mymodalLocation"
+                  data-toggle="modal"
+                  className="fa fa-map-marker text-white fa-lg pr-3 text-decoration-none d-flex"
+                  style={{ cursor: "pointer" }}
+                >
+                  &nbsp;&nbsp;
+                  <div
+                    className="font-weight-bold"
+                    style={{ fontSize: "17px" }}
+                  >
+                    Chandigarh
+                  </div>
+                  <div className="fa fa-arrow-down pl-2"></div>
+                </NavLink>{" "}
+              </div>
               <div
                 className="d-flex mr-lg-auto pt-lg-0 pt-4 align-items-center"
                 style={{ width: "100%", maxWidth: "300px" }}
@@ -323,8 +342,8 @@ function Navbar() {
                 className="font-weight-bolder text-decoration-none"
                 style={{ fontSize: "14px" }}
                 data-target="#mymodal"
-                  data-toggle="modal"
-                  data-dismiss="modal"
+                data-toggle="modal"
+                data-dismiss="modal"
               >
                 Resend OTP
               </NavLink>
@@ -337,37 +356,36 @@ function Navbar() {
         <div className="modal-dialog">
           <div
             className="modal-content justify-content-center d-flex border-0"
-            style={{background:"#eee"
-               }}
+            style={{ background: "#eee" }}
           >
-          <div
-          className="container text-center px-lg-4 pb-5 pt-3"
-          style={{
-            borderRadius: "5px 5px 0px 0px",
-            background:
-              "linear-gradient(rgb(22 16 115) 0%, rgb(88 4 89) 100%)",
-          }}
-        >
-            <div className=" justify-content-end d-flex pt-3">
-              <div
-                className="close text-white pr-3"
-                data-dismiss="modal"
-                style={{ cursor: "pointer" }}
-              >
-                &times;
+            <div
+              className="container text-center px-lg-4 pb-5 pt-3"
+              style={{
+                borderRadius: "5px 5px 0px 0px",
+                background:
+                  "linear-gradient(rgb(22 16 115) 0%, rgb(88 4 89) 100%)",
+              }}
+            >
+              <div className=" justify-content-end d-flex pt-3">
+                <div
+                  className="close text-white pr-3"
+                  data-dismiss="modal"
+                  style={{ cursor: "pointer" }}
+                >
+                  &times;
+                </div>
               </div>
-            </div>
-            <div className="container text-center text-white px-lg-4 pb-5 pt-4">
-              <div
-                className="font-weight-bolder pb-4"
-                style={{ fontSize: "26px" }}
-              >
-              Enter Basic Details
+              <div className="container text-center text-white px-lg-4 pb-5 pt-4">
+                <div
+                  className="font-weight-bolder pb-4"
+                  style={{ fontSize: "26px" }}
+                >
+                  Enter Basic Details
+                </div>
+                <div className="justify-content-center d-flex pb-3">
+                  <img src={parents} className="img-fluid"></img>
+                </div>
               </div>
-              <div className="justify-content-center d-flex pb-3">
-                <img src={parents} className="img-fluid"></img>
-              </div>         
-            </div>
             </div>
 
             <div className="mx-5" style={{ marginTop: "-40px" }}>
@@ -378,57 +396,64 @@ function Navbar() {
                   boxShadow: "rgb(128 128 128 / 55%) 0px 0px 10px 2px",
                 }}
               >
-              <div className="justify-content-center d-flex pt-3 pb-1">
-              <input
-                type="text"
-                className="form-control bg-transparent text-center"
-                placeholder="Enter Full Name"
-                style={{
-                  borderRadius: "50px",
-                  borderWidth: "2.5px",
-                  borderColor: "black",
-                  color: "black",
-                }}
-              ></input>
-            </div>
-            <div className="justify-content-center d-flex pt-3 pb-4">
-              <input
-                type="Email"
-                className="text-center form-control bg-transparent"
-                placeholder="Enter Email"
-                style={{
-                  borderRadius: "50px",
-                  borderWidth: "2.5px",
-                  borderColor: "black",
-                  color: "black",
-                }}
-              ></input>
-            </div>
-            <div className="justify-content-center d-flex pt-3 pb-4">
-              <div className="align-items-center d-flex mr-5">
-                <input
-                  type="radio"
-                  id="male"
-                  name="btn"
-                  style={{ width: "17px", height: "17px", cursor: "pointer" }}
-                />
-                <label for="male">
-                  <b>&nbsp;&nbsp;Male</b>
-                </label>
-              </div>
-              <div className="align-items-center d-flex ml-5">
-                <input
-                  type="radio"
-                  id="female"
-                  name="btn"
-                  style={{ width: "17px", height: "17px", cursor: "pointer" }}
-                />
-                <label for="female">
-                  <b>&nbsp;&nbsp;Female</b>
-                </label>
-              </div>
-            </div>
-
+                <div className="justify-content-center d-flex pt-3 pb-1">
+                  <input
+                    type="text"
+                    className="form-control bg-transparent text-center"
+                    placeholder="Enter Full Name"
+                    style={{
+                      borderRadius: "50px",
+                      borderWidth: "2.5px",
+                      borderColor: "black",
+                      color: "black",
+                    }}
+                  ></input>
+                </div>
+                <div className="justify-content-center d-flex pt-3 pb-4">
+                  <input
+                    type="Email"
+                    className="text-center form-control bg-transparent"
+                    placeholder="Enter Email"
+                    style={{
+                      borderRadius: "50px",
+                      borderWidth: "2.5px",
+                      borderColor: "black",
+                      color: "black",
+                    }}
+                  ></input>
+                </div>
+                <div className="justify-content-center d-flex pt-3 pb-4">
+                  <div className="align-items-center d-flex mr-5">
+                    <input
+                      type="radio"
+                      id="male"
+                      name="btn"
+                      style={{
+                        width: "17px",
+                        height: "17px",
+                        cursor: "pointer",
+                      }}
+                    />
+                    <label for="male">
+                      <b>&nbsp;&nbsp;Male</b>
+                    </label>
+                  </div>
+                  <div className="align-items-center d-flex ml-5">
+                    <input
+                      type="radio"
+                      id="female"
+                      name="btn"
+                      style={{
+                        width: "17px",
+                        height: "17px",
+                        cursor: "pointer",
+                      }}
+                    />
+                    <label for="female">
+                      <b>&nbsp;&nbsp;Female</b>
+                    </label>
+                  </div>
+                </div>
               </div>
               <div className="align-items-center d-flex justify-content-center pb-5">
                 <div
@@ -453,8 +478,7 @@ function Navbar() {
                 </div>
               </div>
             </div>
-          
-            </div>
+          </div>
         </div>
       </div>
 
