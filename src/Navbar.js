@@ -101,7 +101,7 @@ function Navbar() {
                 <input
                   className="form-control border-0"
                   type="search"
-                  placeholder="Serarch Service"
+                  placeholder="Search Service"
                   aria-label="Search"
                   style={{
                     borderRadius: "50px",

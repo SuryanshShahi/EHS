@@ -968,34 +968,13 @@ function Home() {
                                       minWidth: "150px",
                                     }}
                                   >
-                                    Pay with Debit Card
+                                    Pay Online Now
                                   </div>
-                                  <div
-                                    className="btn font-weight-bolder mt-3 w-100 py-2 tab text-decoration-none"
-                                    type="button"
-                                    data-toggle="tab"
-                                    style={{
-                                      borderRadius: "20px",
-                                      minWidth: "150px",
-                                    }}
-                                  >
-                                    Pay with Credit Card
-                                  </div>
-                                  <div
-                                    className="btn font-weight-bolder mt-3 w-100 py-2 tab text-decoration-none"
-                                    type="button"
-                                    data-toggle="tab"
-                                    style={{
-                                      borderRadius: "20px",
-                                      minWidth: "150px",
-                                    }}
-                                  >
-                                    Wallets
-                                  </div>
+                                  
                                 </div>
                               </div>
                             </div>
-                            <div className="col-lg-6 col-12 pt-lg-0 pt-4 px-5 payment">
+                            <div className="col-lg-6 col-12 px-5 payment pt-lg-0 pt-md-4 pt-4">
                               <div
                                 className="font-weight-bolder pb-3"
                                 style={{ fontSize: "24px" }}
@@ -1078,19 +1057,19 @@ function Home() {
                               </div>
                             </div>
                           </div>
-
+<div className="mx-4">
                           <NavLink
                             to="/userProfile"
-                            className="rounded-pill btn btn-secondary border-0 w-100 align-bottom font-weight-bold"
+                            className="rounded-pill btn btn-secondary mt-4 border-0 w-100 align-bottom font-weight-bold"
                             style={{
                               background: "#4A56E2",
-                              marginTop: "100px",
                             }}
                             data-dismiss="modal"
                             onClick={completeBooking}
                           >
                             Complete Booking
                           </NavLink>
+                        </div>
                         </div>
                       </div>
                     </div>

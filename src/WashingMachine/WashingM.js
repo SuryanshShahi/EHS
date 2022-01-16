@@ -63,7 +63,7 @@ function WashingM() {
               <div
                 className="pt-3 px-2"
                 style={{
-                  background: "rgba(0, 0, 0, 0.8)",
+                  background: "rgba(0, 0, 0, 0.9)",
                   // background: "black",
                   maxWidth: "550px",
                 }}
