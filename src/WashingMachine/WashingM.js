@@ -189,7 +189,7 @@ function WashingM() {
                         const { name1, amount, quantity } = elem;
                         return (
                           <div>
-                            <li className="row text-center py-1">
+                            <li className="row py-1">
                               <div className="col">{name1}</div>
                               <div className="col">{quantity}</div>
                               <div className="col">Rs {amount}</div>
