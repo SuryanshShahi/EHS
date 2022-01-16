@@ -45,13 +45,15 @@ function Navbar() {
         ..
       </div>
       <nav className="navbar navbar-expand-lg" style={{ background: "black" }}>
-        <div className="container-fluid px-5">
+        <div className="container-fluid px-lg-5 px-md-5">
           <NavLink className="navbar-brand" to="/">
             <img
               src="https://www.epicvila.com/image/logo1.png"
               className="img-fluid"
+              id="epicHomeIcon"
               alt="image"
-              width={120}
+              style={{width:"120px"}}
+              // width={120}
             ></img>
           </NavLink>
           <div id="locationLarge">
@@ -59,11 +61,11 @@ function Navbar() {
               to="/"
               data-target="#mymodalLocation"
               data-toggle="modal"
-              className="fa fa-map-marker text-white fa-lg pr-3 text-decoration-none d-flex"
-              style={{ cursor: "pointer" }}
+              className="fa fa-map-marker text-white pr-3 text-decoration-none d-flex align-items-center"
+              style={{ cursor: "pointer", fontSize:"20px" }}
             >
               &nbsp;&nbsp;
-              <div className="font-weight-bold" style={{ fontSize: "17px" }}>
+              <div className="font-weight-bold currLocation" style={{ fontSize: "17px" }}>
                 Chandigarh
               </div>
               <div className="fa fa-arrow-down pl-2"></div>
@@ -87,24 +89,7 @@ function Navbar() {
 
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-lg-auto mb-2 mb-lg-0 justify-content-center align-items-center d-flex">
-              <div className="pt-3" id="location" style={{ display: "none" }}>
-                <NavLink
-                  to="/"
-                  data-target="#mymodalLocation"
-                  data-toggle="modal"
-                  className="fa fa-map-marker text-white fa-lg pr-3 text-decoration-none d-flex"
-                  style={{ cursor: "pointer" }}
-                >
-                  &nbsp;&nbsp;
-                  <div
-                    className="font-weight-bold"
-                    style={{ fontSize: "17px" }}
-                  >
-                    Chandigarh
-                  </div>
-                  <div className="fa fa-arrow-down pl-2"></div>
-                </NavLink>{" "}
-              </div>
+          
               <div
                 className="d-flex mr-lg-auto pt-lg-0 pt-4 align-items-center"
                 style={{ width: "100%", maxWidth: "300px" }}

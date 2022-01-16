@@ -78,12 +78,15 @@
 .navbar {
   padding: 3px !important;
 }
-@media (max-width: 500px) {
-  #location{
-    display: block !important;
+@media (max-width: 400px) {
+  #epicHomeIcon{
+    width:80px !important;
   }
-  #locationLarge{
-    display: none;
+  .currLocation{
+    font-size: 15px !important;
+  }
+  #locationLarge .fa-map-marker{
+    font-size: 17px !important;
   }
 }
 .PhoneInputInput{
