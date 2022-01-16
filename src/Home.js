@@ -26,11 +26,11 @@ import TabPanel from "@mui/lab/TabPanel";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 import KitchenIcon from "@mui/icons-material/Kitchen";
 import TvIcon from "@mui/icons-material/Tv";
-import OpacityIcon from '@mui/icons-material/Opacity';
-import ImagesearchRollerIcon from '@mui/icons-material/ImagesearchRoller';
-import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
-import PlumbingIcon from '@mui/icons-material/Plumbing';
-import LocalLaundryServiceIcon from '@mui/icons-material/LocalLaundryService';
+import OpacityIcon from "@mui/icons-material/Opacity";
+import ImagesearchRollerIcon from "@mui/icons-material/ImagesearchRoller";
+import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
+import PlumbingIcon from "@mui/icons-material/Plumbing";
+import LocalLaundryServiceIcon from "@mui/icons-material/LocalLaundryService";
 
 const responsive = {
   superLargeDesktop: {
@@ -160,7 +160,7 @@ function Home() {
                 <Tab
                   label="AC Service"
                   value="1"
-                  icon={<AcUnitIcon/>}
+                  icon={<AcUnitIcon />}
                   onClick={Orgbackground}
                   sx={{ height: "100px", color: "white", fontWeight: "bolder" }}
                 ></Tab>
@@ -174,9 +174,9 @@ function Home() {
                 <Tab
                   label="Washing Machine"
                   value="3"
-                  icon={<LocalLaundryServiceIcon/> }
-                  fontSize= "large"
-                  sx={{fontSize:"30"}}
+                  icon={<LocalLaundryServiceIcon />}
+                  fontSize="large"
+                  sx={{ fontSize: "30" }}
                   sx={{
                     height: "100px",
                     color: "white",
@@ -198,7 +198,7 @@ function Home() {
                 <Tab
                   label="RO Service"
                   value="5"
-                  icon={<OpacityIcon/>}
+                  icon={<OpacityIcon />}
                   sx={{
                     height: "100px",
                     color: "white",
@@ -209,7 +209,7 @@ function Home() {
                 <Tab
                   label="Painter"
                   value="6"
-                  icon={<ImagesearchRollerIcon/>}
+                  icon={<ImagesearchRollerIcon />}
                   sx={{
                     height: "100px",
                     color: "white",
@@ -220,7 +220,7 @@ function Home() {
                 <Tab
                   label="Electrician"
                   value="7"
-                  icon={<ElectricalServicesIcon/>}
+                  icon={<ElectricalServicesIcon />}
                   sx={{
                     height: "100px",
                     color: "white",
@@ -230,7 +230,7 @@ function Home() {
                 ></Tab>
                 <Tab
                   label="Plumber"
-                  icon={<PlumbingIcon/>}
+                  icon={<PlumbingIcon />}
                   value="8"
                   sx={{
                     height: "100px",
@@ -769,7 +769,6 @@ function Home() {
                           <div className="col-lg-4 col-md-4 col-6 pt-3 justify-content-center d-flex">
                             <div className="btn px-3">9 Am to 11 Am</div>
                           </div>
-                          
                         </div>
                       </div>
                     </ul>
@@ -791,10 +790,7 @@ function Home() {
                       </div>
                     </NavLink>
                   </div>
-                  <div
-                    className="col-lg-6 col-md-6 col-sm-6 col-6"
-                    id="next"
-                  >
+                  <div className="col-lg-6 col-md-6 col-sm-6 col-6" id="next">
                     <div
                       className="btn border-0 tab text-white"
                       style={{
@@ -970,7 +966,6 @@ function Home() {
                                   >
                                     Pay Online Now
                                   </div>
-                                  
                                 </div>
                               </div>
                             </div>
@@ -1057,19 +1052,19 @@ function Home() {
                               </div>
                             </div>
                           </div>
-<div className="mx-4">
-                          <NavLink
-                            to="/userProfile"
-                            className="rounded-pill btn btn-secondary mt-4 border-0 w-100 align-bottom font-weight-bold"
-                            style={{
-                              background: "#4A56E2",
-                            }}
-                            data-dismiss="modal"
-                            onClick={completeBooking}
-                          >
-                            Complete Booking
-                          </NavLink>
-                        </div>
+                          <div className="mx-4">
+                            <NavLink
+                              to="/userProfile"
+                              className="rounded-pill btn btn-secondary mt-4 border-0 w-100 align-bottom font-weight-bold"
+                              style={{
+                                background: "#4A56E2",
+                              }}
+                              data-dismiss="modal"
+                              onClick={completeBooking}
+                            >
+                              Complete Booking
+                            </NavLink>
+                          </div>
                         </div>
                       </div>
                     </div>
