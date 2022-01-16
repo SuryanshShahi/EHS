@@ -205,6 +205,7 @@ function WashingM() {
                         <label for="Date"></label>
                         <input
                           type="date"
+                          value="2000-05-05"
                           id="Date"
                           name="Date"
                           className="border-0 text-center pr-3"

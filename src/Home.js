@@ -700,7 +700,7 @@ function Home() {
                         const { name1, amount, quantity } = elem;
                         return (
                           <div>
-                            <li className="row text-center py-1">
+                            <li className="row py-1">
                               <div className="col">{name1}</div>
                               <div className="col">{quantity}</div>
                               <div className="col">Rs {amount}</div>
@@ -721,6 +721,7 @@ function Home() {
                         <label for="Date"></label>
                         <input
                           type="date"
+                          value="2000-05-05"
                           id="Date"
                           name="Date"
                           className="border-0 text-center pr-3"
@@ -741,33 +742,34 @@ function Home() {
                           <b>Choose Time Slot</b>
                         </h5>
                         <div className="row time">
-                          <div className="col-4 pt-3">
+                          <div className="col-lg-4 col-md-4 col-6 pt-3 justify-content-center d-flex">
                             <div className="btn px-3">9 Am to 11 Am</div>
                           </div>
-                          <div className="col-4 pt-3">
+                          <div className="col-lg-4 col-md-4 col-6 pt-3 justify-content-center d-flex">
                             <div className="btn px-3">9 Am to 11 Am</div>
                           </div>
-                          <div className="col-4 pt-3">
+                          <div className="col-lg-4 col-md-4 col-6 pt-3 justify-content-center d-flex">
                             <div className="btn px-3">9 Am to 11 Am</div>
                           </div>
-                          <div className="col-4 pt-3">
+                          <div className="col-lg-4 col-md-4 col-6 pt-3 justify-content-center d-flex">
                             <div className="btn px-3">9 Am to 11 Am</div>
                           </div>
-                          <div className="col-4 pt-3">
+                          <div className="col-lg-4 col-md-4 col-6 pt-3 justify-content-center d-flex">
                             <div className="btn px-3">9 Am to 11 Am</div>
                           </div>
-                          <div className="col-4 pt-3">
+                          <div className="col-lg-4 col-md-4 col-6 pt-3 justify-content-center d-flex">
                             <div className="btn px-3">9 Am to 11 Am</div>
                           </div>
-                          <div className="col-4 pt-3">
+                          <div className="col-lg-4 col-md-4 col-6 pt-3 justify-content-center d-flex">
                             <div className="btn px-3">9 Am to 11 Am</div>
                           </div>
-                          <div className="col-4 pt-3">
+                          <div className="col-lg-4 col-md-4 col-6 pt-3 justify-content-center d-flex">
                             <div className="btn px-3">9 Am to 11 Am</div>
                           </div>
-                          <div className="col-4 pt-3">
+                          <div className="col-lg-4 col-md-4 col-6 pt-3 justify-content-center d-flex">
                             <div className="btn px-3">9 Am to 11 Am</div>
                           </div>
+                          
                         </div>
                       </div>
                     </ul>
@@ -775,7 +777,7 @@ function Home() {
                 </div>
 
                 <div className="mx-4 py-4 row homebtn">
-                  <div className="col-lg-6 col-md-6 col-sm-6 col-19">
+                  <div className="col-lg-6 col-md-6 col-sm-6 col-6">
                     <NavLink to="/washingMachine">
                       <div
                         className="btn border-0 text-white float-left"
@@ -790,7 +792,7 @@ function Home() {
                     </NavLink>
                   </div>
                   <div
-                    className="col-lg-6 col-md-6 col-sm-6 col-19 pt-3 pt-lg-0 pt-md-0 pt-sm-0"
+                    className="col-lg-6 col-md-6 col-sm-6 col-6"
                     id="next"
                   >
                     <div
@@ -806,7 +808,7 @@ function Home() {
                     </div>
                   </div>
                   <div
-                    className="col-lg-6 col-md-6 col-sm-6 col-19 pt-3 pt-lg-0 pt-md-0 pt-sm-0"
+                    className="col-lg-6 col-md-6 col-sm-6 col-6"
                     id="forAddress"
                     style={{ display: "none" }}
                   >
