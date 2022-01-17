@@ -145,7 +145,7 @@ function Home() {
   return (
     <section>
       <div className="py-lg-5 py-md-4" id="home">
-        <div className="mx-lg-5 position-relative pb-1">
+        <div className="mx-lg-5 position-relative">
           <TabContext value={value}>
             <Box>
               <TabList
