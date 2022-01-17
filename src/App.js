@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -11,9 +12,13 @@ import Services from "./Services";
 import Footer from "./Footer";
 import WashingMachine from "./WashingMachine/WashingM";
 import Register from "./Register/Register";
-import User from "./UserProfile/User"
+import User from "./UserProfile/User";
 
 function App() {
+  useEffect(() => {
+    document.title = `Join with Epic Home Service`;
+  });
+
   return (
     <div className="App">
       <NavBar />
