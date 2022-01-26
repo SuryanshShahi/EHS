@@ -286,7 +286,7 @@ function Navbar() {
                   ></div>
                 </span>
               </span>
-              <div className="justify-content-center d-flex pt-3 pb-4">
+              <div className="justify-content-center d-flex pt-3 pb-4 otpscreenalign">
                 <OtpInput
                   className="otp"
                   inputStyle={{

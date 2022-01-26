@@ -88,6 +88,15 @@
   #locationLarge .fa-map-marker{
     font-size: 17px !important;
   }
+  .otp{
+    max-width: 1rem !important;
+    max-height: 1rem !important;
+    margin: 20px 1rem !important;
+    /* margin-right: 50px !important; */
+  }
+  .otpscreenalign{
+    margin-right: 50px !important;
+  }
 }
 .PhoneInputInput{
   outline: none;
