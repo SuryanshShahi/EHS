@@ -176,9 +176,9 @@ function Home() {
                   value="3"
                   icon={<LocalLaundryServiceIcon />}
                   fontSize="large"
-                  sx={{ fontSize: "30" }}
                   sx={{
                     height: "100px",
+                    fontSize: "30",
                     color: "white",
                     fontWeight: "bolder",
                     outline: "none",
@@ -258,11 +258,11 @@ function Home() {
                         {AC.map((elem) => {
                           const { name, amount, id, subServices } = elem;
                           return (
-                            <ul className="list-unstyled">
+                            <ul className="list-unstyled" key={id}>
                               <h5>
                                 <b style={{ fontSize: "17px" }}>{name}</b>
                               </h5>
-                              <li className="row py-1" key={id}>
+                              <li className="row py-1">
                                 <div className="col">
                                   {subServices[0]["name1"]}
                                 </div>
@@ -397,7 +397,7 @@ function Home() {
                           {Fridge.map((elem) => {
                             const { name, amount, id } = elem;
                             return (
-                              <div>
+                              <div key={id}>
                                 <li className="row py-1">
                                   <div className="col">{name}</div>
                                   <div className="col">{amount}</div>
@@ -446,9 +446,9 @@ function Home() {
                     <div id="WashingMachine" className="text-white">
                       <div className="py-2">
                         {WashingMachine.map((elem) => {
-                          const { name, amount, subServices } = elem;
+                          const { name, amount, subServices, id } = elem;
                           return (
-                            <ul className="list-unstyled">
+                            <ul className="list-unstyled" key={id}>
                               <h5>
                                 <b style={{ fontSize: "17px" }}>{name}</b>
                               </h5>
@@ -475,9 +475,9 @@ function Home() {
                     <div id="TV" className="text-white">
                       <div className="py-2">
                         {TV.map((elem) => {
-                          const { name, amount, subServices } = elem;
+                          const { name, amount, subServices, id } = elem;
                           return (
-                            <ul className="list-unstyled">
+                            <ul className="list-unstyled" key={id}>
                               <h5>
                                 <b style={{ fontSize: "17px" }}>{name}</b>
                               </h5>
@@ -504,9 +504,9 @@ function Home() {
                     <div id="RO" className="text-white">
                       <div className="py-2">
                         {RO.map((elem) => {
-                          const { name, amount, subServices } = elem;
+                          const { name, amount, subServices, id } = elem;
                           return (
-                            <ul className="list-unstyled">
+                            <ul className="list-unstyled" key={id}>
                               <h5>
                                 <b style={{ fontSize: "17px" }}>{name}</b>
                               </h5>
@@ -533,9 +533,9 @@ function Home() {
                     <div id="Painter" className="text-white">
                       <div className="py-2">
                         {Painter.map((elem) => {
-                          const { name, amount, subServices } = elem;
+                          const { name, amount, subServices, id } = elem;
                           return (
-                            <ul className="list-unstyled">
+                            <ul className="list-unstyled" key={id}>
                               <h5>
                                 <b style={{ fontSize: "17px" }}>{name}</b>
                               </h5>
@@ -593,7 +593,7 @@ function Home() {
                         {Plumber.map((elem) => {
                           const { name, amount, subServices, id } = elem;
                           return (
-                            <ul className="list-unstyled">
+                            <ul className="list-unstyled" key={id}>
                               <h5>
                                 <b style={{ fontSize: "17px" }}>{name}</b>
                               </h5>
@@ -697,9 +697,9 @@ function Home() {
                         <b style={{ fontSize: "17px" }}>Service Details</b>
                       </h5>
                       {Second.map((elem) => {
-                        const { name1, amount, quantity } = elem;
+                        const { name1, amount, quantity, id } = elem;
                         return (
-                          <div>
+                          <div key={id}>
                             <li className="row py-1">
                               <div className="col">{name1}</div>
                               <div className="col">{quantity}</div>
@@ -846,9 +846,9 @@ function Home() {
                           </div>
                           <div className="px-4">
                             {BookingAddress.map((elem) => {
-                              const { Address } = elem;
+                              const { Address, id } = elem;
                               return (
-                                <div>
+                                <div key={id}>
                                   <div className="form-check pb-4">
                                     <input
                                       className="form-check-input"
@@ -1095,13 +1095,14 @@ function Home() {
         </div>
         <MultiCarousel {...setting}>
           {Appliance.map((elem) => {
-            const { name, image, price } = elem;
+            const { name, image, price, id } = elem;
             return (
               <NavLink
+              
                 to="/products"
                 className="text-decoration-none appliance"
               >
-                <div className="px-2 pt-4">
+                <div className="px-2 pt-4" key={id}>
                   <div className="text-center pb-3">
                     <img src={image} className="img-fluid " alt="menupic"></img>
                   </div>
@@ -1134,13 +1135,13 @@ function Home() {
         </div>
         <MultiCarousel {...settings}>
           {Repair.map((elem) => {
-            const { name, image, price } = elem;
+            const { name, image, price, id } = elem;
             return (
               <NavLink
                 to="/products"
                 className="text-decoration-none appliance"
               >
-                <div className="px-2 pt-4">
+                <div className="px-2 pt-4" key={id}>
                   <div className="text-center pb-3">
                     <img src={image} className="img-fluid " alt="menupic"></img>
                   </div>
@@ -1176,13 +1177,13 @@ function Home() {
         </div>
         <MultiCarousel {...settings}>
           {Designing.map((elem) => {
-            const { name, image, price } = elem;
+            const { name, image, price, id } = elem;
             return (
               <NavLink
                 to="/products"
                 className="text-decoration-none appliance"
               >
-                <div className="px-2 pt-4">
+                <div className="px-2 pt-4" key={id}>
                   <div className="text-center pb-3">
                     <img src={image} className="img-fluid" alt="menupic"></img>
                   </div>
