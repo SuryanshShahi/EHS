@@ -5,6 +5,7 @@ import insta from "./Images/insta.png";
 import linkedin from "./Images/linkedin.png";
 import print from "./Images/print.png";
 import play from "./Images/playstore.png";
+import logo from "./Images/logo.png";
 
 function Footer() {
   return (
@@ -72,10 +73,10 @@ function Footer() {
         <div className="mx-5 py-3 row">
           <div className="col-lg-4 col-12 d-flex justify-content-center align-items-center">
             <img
-              src="https://www.epicvila.com/image/logo1.png"
+              src={logo}
               className="img-fluid"
               alt="image"
-              width={135}
+              width={100}
             ></img>
             <span id="copyrightOrg" className="pl-5" style={{ fontSize: "14px" }}>
               COPYRIGHT 2017-2021 EPIC VILA PRO SERVICES PRIVATE LIMITED

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import parents from "./Images/parents.png";
-import logo from "./Images/EHS-logo.png";
+import logo from "./Images/logo.png";
 import smartphone from "./Images/smartphone.png";
 import { Link } from "react-router-dom";
 import "react-phone-number-input/style.css";
