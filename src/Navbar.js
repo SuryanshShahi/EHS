@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import parents from "./Images/parents.png";
-import Logo from "./Images/EHS-logo.png";
+import EHSlogo from "./Images/EHS-logo.png";
 import smartphone from "./Images/smartphone.png";
 import { Link } from "react-router-dom";
 import "react-phone-number-input/style.css";
@@ -49,7 +49,7 @@ function Navbar() {
         <div className="container-fluid px-lg-5 px-md-5">
           <NavLink className="navbar-brand" to="/">
             <img
-              src={Logo}
+              src={EHSlogo}
               className="img-fluid"
               id="epicHomeIcon"
               alt="image"
